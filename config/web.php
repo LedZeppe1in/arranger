@@ -6,6 +6,7 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'arranger',
     'name' => 'Arranger',
+    'defaultRoute' => 'main/default/index',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
@@ -21,11 +22,22 @@ $config = [
     ],
 
     'components' => [
+        'language' => 'ru-RU',
         'request' => [
+            'class' => 'app\components\LangRequest',
             // site root directory
             'baseUrl' => '',
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'pLhHmzI5xBgQund7UfxwX215QMA4gTvY',
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'class' => 'app\components\LangUrlManager',
+            'rules' => [
+                '/' => 'main/default/index',
+                'contact' => 'main/default/contact',
+            ],
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -54,11 +66,14 @@ $config = [
             ],
         ],
         'db' => $db,
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-                '/' => 'main/default/index',
+        'i18n' => [
+            'translations' => [
+                'app' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'forceTranslation' => true,
+                    'sourceLanguage' => 'en-US',
+                ],
             ],
         ],
     ],

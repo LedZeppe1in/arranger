@@ -90,6 +90,21 @@ a.desc:after {
     margin: 0 0 15px 0;
 }
 
+/* Language images */
+.icon-lang {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 3px 0 0;
+}
+.icon-ru {
+    background: url(../images/languages.png) 0 -360px;
+}
+.icon-en {
+    background: url(../images/languages.png) 0 -96px;
+}
+
 /* align the logout "link" (button in form) of the navbar */
 .nav li > form > button.logout {
     padding: 15px;

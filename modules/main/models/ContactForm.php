@@ -10,12 +10,11 @@ use yii\base\Model;
  */
 class ContactForm extends Model
 {
-    public $name;
-    public $email;
-    public $subject;
-    public $body;
-    public $verifyCode;
-
+    public $name;       // Имя отправителя
+    public $email;      // Почта отправителя
+    public $subject;    // Тема сообщения
+    public $body;       // Текст сообщения
+    public $verifyCode; // Код проверки
 
     /**
      * @return array the validation rules.
@@ -38,14 +37,18 @@ class ContactForm extends Model
     public function attributeLabels()
     {
         return [
-            'verifyCode' => 'Verification Code',
+            'name' => Yii::t('app', 'CONTACT_FORM_NAME'),
+            'email' => Yii::t('app', 'CONTACT_FORM_EMAIL'),
+            'subject' => Yii::t('app', 'CONTACT_FORM_SUBJECT'),
+            'body' => Yii::t('app', 'CONTACT_FORM_BODY'),
+            'verifyCode' => Yii::t('app', 'CONTACT_FORM_VERIFICATION_CODE'),
         ];
     }
 
     /**
      * Sends an email to the specified email address using the information collected by this model.
-     * @param string $email the target email address
-     * @return bool whether the model passes validation
+     * @param  string  $email the target email address
+     * @return boolean whether the model passes validation
      */
     public function contact($email)
     {
