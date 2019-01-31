@@ -41,10 +41,9 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/main/default/index']],
-            ['label' => 'About', 'url' => ['//main/default/about']],
             ['label' => 'Contact', 'url' => ['/main/default/contact']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/main/default/login']]
+                ['label' => 'Login', 'url' => ['/main/default/sing-in']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/main/default/logout'], 'post')

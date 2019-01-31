@@ -35,8 +35,9 @@ $config = [
             'showScriptName' => false,
             'class' => 'app\components\LangUrlManager',
             'rules' => [
-                '/' => 'main/default/index',
+                'index' => 'main/default/index',
                 'contact' => 'main/default/contact',
+                'sing-in' => 'main/default/sing-in',
             ],
         ],
         'cache' => [

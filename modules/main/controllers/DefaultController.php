@@ -3,10 +3,10 @@
 namespace app\modules\main\controllers;
 
 use Yii;
-use yii\filters\AccessControl;
-use yii\web\Controller;
 use yii\web\Response;
+use yii\web\Controller;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 use app\modules\main\models\LoginForm;
 use app\modules\main\models\ContactForm;
 
@@ -69,7 +69,7 @@ class DefaultController extends Controller
      *
      * @return Response|string
      */
-    public function actionLogin()
+    public function actionSingIn()
     {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -81,7 +81,7 @@ class DefaultController extends Controller
         }
 
         $model->password = '';
-        return $this->render('login', [
+        return $this->render('sing-in', [
             'model' => $model,
         ]);
     }
@@ -114,15 +114,5 @@ class DefaultController extends Controller
         return $this->render('contact', [
             'model' => $model,
         ]);
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
     }
 }
