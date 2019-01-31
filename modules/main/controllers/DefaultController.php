@@ -65,6 +65,16 @@ class DefaultController extends Controller
     }
 
     /**
+     * Displays events.
+     *
+     * @return string
+     */
+    public function actionEvents()
+    {
+        return $this->render('events');
+    }
+
+    /**
      * Login action.
      *
      * @return Response|string

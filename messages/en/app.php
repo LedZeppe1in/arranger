@@ -44,6 +44,7 @@ return [
     'NOTICE_TEXT' => 'this important information.',
 
     /* Страницы сайта */
+    'EVENTS_PAGE_TITLE' => 'Events',
     /* Страница ошибки */
     'ERROR_PAGE_TEXT_ONE' => 'The above error occurred while the Web server was processing your request.',
     'ERROR_PAGE_TEXT_TWO' => 'Please contact us if you think this is a server error. Thank you.',

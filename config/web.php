@@ -36,6 +36,7 @@ $config = [
             'class' => 'app\components\LangUrlManager',
             'rules' => [
                 'index' => 'main/default/index',
+                'events' => 'main/default/events',
                 'contact' => 'main/default/contact',
                 'sing-in' => 'main/default/sing-in',
             ],
