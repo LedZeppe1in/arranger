@@ -37,6 +37,11 @@ $config = [
             'rules' => [
                 'index' => 'main/default/index',
                 'events' => 'main/default/events',
+                'scores' => 'main/default/scores',
+                'jingles' => 'main/default/jingles',
+                'multitracks' => 'main/default/multitracks',
+                'projects' => 'main/default/projects',
+                'publications' => 'main/default/publications',
                 'contact' => 'main/default/contact',
                 'sing-in' => 'main/default/sing-in',
             ],

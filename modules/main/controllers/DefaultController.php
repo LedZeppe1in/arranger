@@ -75,6 +75,56 @@ class DefaultController extends Controller
     }
 
     /**
+     * Displays scores.
+     *
+     * @return string
+     */
+    public function actionScores()
+    {
+        return $this->render('scores');
+    }
+
+    /**
+     * Displays jingles.
+     *
+     * @return string
+     */
+    public function actionJingles()
+    {
+        return $this->render('jingles');
+    }
+
+    /**
+     * Displays multitracks.
+     *
+     * @return string
+     */
+    public function actionMultitracks()
+    {
+        return $this->render('multitracks');
+    }
+
+    /**
+     * Displays projects.
+     *
+     * @return string
+     */
+    public function actionProjects()
+    {
+        return $this->render('projects');
+    }
+
+    /**
+     * Displays publications.
+     *
+     * @return string
+     */
+    public function actionPublications()
+    {
+        return $this->render('publications');
+    }
+
+    /**
      * Login action.
      *
      * @return Response|string

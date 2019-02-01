@@ -44,7 +44,13 @@ return [
     'NOTICE_TEXT' => 'на эту важную информацию.',
 
     /* Страницы сайта */
-    'EVENTS_PAGE_TITLE' => 'Событие',
+    'EVENTS_PAGE_TITLE' => 'События',
+    'SCORES_PAGE_TITLE' => 'Партитуры',
+    'JINGLES_PAGE_TITLE' => 'Джинглы',
+    'MULTITRACKS_PAGE_TITLE' => 'Мультитреки',
+    'PROJECTS_PAGE_TITLE' => 'Проекты',
+    'PUBLICATIONS_PAGE_TITLE' => 'Публикации',
+
     /* Страница ошибки */
     'ERROR_PAGE_TEXT_ONE' => 'Вышеупомянутая ошибка произошла при обработке веб-сервером вашего запроса.',
     'ERROR_PAGE_TEXT_TWO' => 'Пожалуйста, свяжитесь с нами, если Вы думаете, что это ошибка сервера. Спасибо.',

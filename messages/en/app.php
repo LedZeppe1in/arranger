@@ -45,6 +45,12 @@ return [
 
     /* Страницы сайта */
     'EVENTS_PAGE_TITLE' => 'Events',
+    'SCORES_PAGE_TITLE' => 'Scores',
+    'JINGLES_PAGE_TITLE' => 'Jingles',
+    'MULTITRACKS_PAGE_TITLE' => 'Multitracks',
+    'PROJECTS_PAGE_TITLE' => 'Projects',
+    'PUBLICATIONS_PAGE_TITLE' => 'Publications',
+
     /* Страница ошибки */
     'ERROR_PAGE_TEXT_ONE' => 'The above error occurred while the Web server was processing your request.',
     'ERROR_PAGE_TEXT_TWO' => 'Please contact us if you think this is a server error. Thank you.',

@@ -41,8 +41,13 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/main/default/index']],
-            ['label' => 'Contact', 'url' => ['/main/default/contact']],
             ['label' => 'Events', 'url' => ['/main/default/events']],
+            ['label' => 'Scores', 'url' => ['/main/default/scores']],
+            ['label' => 'Jingles', 'url' => ['/main/default/jingles']],
+            ['label' => 'Multitracks', 'url' => ['/main/default/multitracks']],
+            ['label' => 'Projects', 'url' => ['/main/default/projects']],
+            ['label' => 'Publications', 'url' => ['/main/default/publications']],
+            ['label' => 'Contact', 'url' => ['/main/default/contact']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/main/default/sing-in']]
             ) : (
