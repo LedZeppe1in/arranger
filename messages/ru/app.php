@@ -3,13 +3,20 @@
 return [
     /* Пункты главного меню */
     'NAV_HOME' => 'Главная',
-    'NAV_ACCOUNT' => 'Учётная запись',
-    'NAV_SIGNED_IN_AS' => 'Вы вошли как',
-    'NAV_YOUR_PROFILE' => 'Ваш профиль',
-    'NAV_CONTACT_US' => 'Обратная связь',
+    'NAV_EVENTS' => 'События',
+    'NAV_SCORES' => 'Партитуры',
+    'NAV_JINGLES' => 'Джинглы',
+    'NAV_MULTITRACKS' => 'Мультитреки',
+    'NAV_PROJECTS' => 'Проекты',
+    'NAV_PUBLICATIONS' => 'Публикации',
+    'NAV_CONTACTS' => 'Контакты',
     'NAV_SIGN_UP' => 'Регистрация',
     'NAV_SIGN_IN' => 'Вход',
     'NAV_SIGN_OUT' => 'Выход',
+    'NAV_ACCOUNT' => 'Учётная запись',
+    'NAV_SIGNED_IN_AS' => 'Вы вошли как',
+    'NAV_YOUR_PROFILE' => 'Ваш профиль',
+
     /* Пункты правого меню */
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Возможные действия',
 

@@ -40,21 +40,21 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/main/default/index']],
-            ['label' => 'Events', 'url' => ['/main/default/events']],
-            ['label' => 'Scores', 'url' => ['/main/default/scores']],
-            ['label' => 'Jingles', 'url' => ['/main/default/jingles']],
-            ['label' => 'Multitracks', 'url' => ['/main/default/multitracks']],
-            ['label' => 'Projects', 'url' => ['/main/default/projects']],
-            ['label' => 'Publications', 'url' => ['/main/default/publications']],
-            ['label' => 'Contact', 'url' => ['/main/default/contact']],
+            ['label' => Yii::t('app', 'NAV_HOME'), 'url' => ['/main/default/index']],
+            ['label' => Yii::t('app', 'NAV_EVENTS'), 'url' => ['/main/default/events']],
+            ['label' => Yii::t('app', 'NAV_SCORES'), 'url' => ['/main/default/scores']],
+            ['label' => Yii::t('app', 'NAV_JINGLES'), 'url' => ['/main/default/jingles']],
+            ['label' => Yii::t('app', 'NAV_MULTITRACKS'), 'url' => ['/main/default/multitracks']],
+            ['label' => Yii::t('app', 'NAV_PROJECTS'), 'url' => ['/main/default/projects']],
+            ['label' => Yii::t('app', 'NAV_PUBLICATIONS'), 'url' => ['/main/default/publications']],
+            ['label' => Yii::t('app', 'NAV_CONTACTS'), 'url' => ['/main/default/contact']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/main/default/sing-in']]
+                ['label' => Yii::t('app', 'NAV_SIGN_IN'), 'url' => ['/main/default/sing-in']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/main/default/logout'], 'post')
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    Yii::t('app', 'NAV_SIGN_OUT') . ' (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
