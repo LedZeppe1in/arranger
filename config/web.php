@@ -44,6 +44,8 @@ $config = [
                 'publications' => 'main/default/publications',
                 'contact' => 'main/default/contact',
                 'sing-in' => 'main/default/sing-in',
+                '/events/<_ev:(index|create)>' => 'main/events/<_ev>',
+                '/events/<_ev:(view|update|delete)>/<id:\d+>' => 'main/events/<_ev>',
             ],
         ],
         'cache' => [
