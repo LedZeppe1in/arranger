@@ -18,6 +18,18 @@ $config = [
     'modules' => [
         'main' => [
             'class' => 'app\modules\main\Module',
+        ],
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+            'as access' => [
+                'class' => 'yii\filters\AccessControl',
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ]
+                ]
+            ],
         ]
     ],
 
@@ -44,8 +56,8 @@ $config = [
                 'publications' => 'main/default/publications',
                 'contact' => 'main/default/contact',
                 'sing-in' => 'main/default/sing-in',
-                '/events/<_ev:(index|create)>' => 'main/events/<_ev>',
-                '/events/<_ev:(view|update|delete)>/<id:\d+>' => 'main/events/<_ev>',
+                '/events/<_ev:(list|create)>' => 'admin/events/<_ev>',
+                '/events/<_ev:(view|update|delete)>/<id:\d+>' => 'admin/events/<_ev>',
             ],
         ],
         'cache' => [
@@ -54,6 +66,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\modules\main\models\User',
             'enableAutoLogin' => true,
+            'loginUrl' => ['main/default/sing-in'],
         ],
         'errorHandler' => [
             'errorAction' => 'main/default/error',
@@ -84,6 +97,9 @@ $config = [
                     'sourceLanguage' => 'en-US',
                 ],
             ],
+        ],
+        'formatter' => [
+            'datetimeFormat' => 'dd.MM.Y HH:mm',
         ],
     ],
     'params' => $params,

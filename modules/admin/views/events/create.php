@@ -3,12 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\main\models\Event */
+/* @var $model app\modules\admin\models\Event */
 
-$this->title = 'Create Event';
-$this->params['breadcrumbs'][] = ['label' => 'Events', 'url' => ['index']];
+$this->title = Yii::t('app', 'EVENTS_ADMIN_PAGE_CREATE_EVENT');
+
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'EVENTS_ADMIN_PAGE_EVENTS'), 'url' => ['list']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="event-create">
 
     <h1><?= Html::encode($this->title) ?></h1>

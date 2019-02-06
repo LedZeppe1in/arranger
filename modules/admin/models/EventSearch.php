@@ -1,13 +1,13 @@
 <?php
 
-namespace app\modules\main\models;
+namespace app\modules\admin\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\modules\main\models\Event;
+use app\modules\admin\models\Event;
 
 /**
- * EventSearch represents the model behind the search form of `app\modules\main\models\Event`.
+ * EventSearch represents the model behind the search form of `app\modules\admin\models\Event`.
  */
 class EventSearch extends Event
 {
@@ -18,7 +18,7 @@ class EventSearch extends Event
     {
         return [
             [['id', 'created_at', 'updated_at'], 'integer'],
-            [['name', 'date', 'location', 'description'], 'safe'],
+            [['name', 'date', 'duration', 'location', 'link', 'description'], 'safe'],
         ];
     }
 
@@ -46,6 +46,11 @@ class EventSearch extends Event
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'forcePageParam' => false,
+                'pageSizeParam' => false,
+                'pageSize' => 10
+            ]
         ]);
 
         $this->load($params);
@@ -62,10 +67,12 @@ class EventSearch extends Event
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'date' => $this->date,
+            'duration' => $this->duration,
         ]);
 
         $query->andFilterWhere(['ilike', 'name', $this->name])
             ->andFilterWhere(['ilike', 'location', $this->location])
+            ->andFilterWhere(['ilike', 'link', $this->link])
             ->andFilterWhere(['ilike', 'description', $this->description]);
 
         return $dataProvider;

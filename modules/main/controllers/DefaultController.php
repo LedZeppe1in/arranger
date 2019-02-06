@@ -12,6 +12,8 @@ use app\modules\main\models\ContactForm;
 
 class DefaultController extends Controller
 {
+    public $layout = 'main';
+
     /**
      * {@inheritdoc}
      */

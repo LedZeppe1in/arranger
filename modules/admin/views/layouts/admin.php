@@ -33,33 +33,28 @@ AppAsset::register($this);
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-default navbar-fixed-top',
         ],
     ]);
     echo "<form class='navbar-form navbar-right'>" . WLang::widget() . "</form>";
     echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-left'],
+        'items' => [
+            ['label' => Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
+        ],
+    ]);
+    echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => Yii::t('app', 'NAV_HOME'), 'url' => ['/main/default/index']],
-            ['label' => Yii::t('app', 'NAV_EVENTS'), 'url' => ['/main/default/events']],
-            ['label' => Yii::t('app', 'NAV_SCORES'), 'url' => ['/main/default/scores']],
-            ['label' => Yii::t('app', 'NAV_JINGLES'), 'url' => ['/main/default/jingles']],
-            ['label' => Yii::t('app', 'NAV_MULTITRACKS'), 'url' => ['/main/default/multitracks']],
-            ['label' => Yii::t('app', 'NAV_PROJECTS'), 'url' => ['/main/default/projects']],
-            ['label' => Yii::t('app', 'NAV_PUBLICATIONS'), 'url' => ['/main/default/publications']],
-            ['label' => Yii::t('app', 'NAV_CONTACTS'), 'url' => ['/main/default/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => Yii::t('app', 'NAV_SIGN_IN'), 'url' => ['/main/default/sing-in']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/main/default/logout'], 'post')
-                . Html::submitButton(
-                    Yii::t('app', 'NAV_SIGN_OUT') . ' (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
+            '<li>'
+            . Html::beginForm(['/main/default/logout'], 'post')
+            . Html::submitButton(
+                Yii::t('app', 'NAV_ADMIN_SIGN_OUT') . ' (' . Yii::$app->user->identity->username . ')',
+                ['class' => 'btn btn-link logout']
             )
+            . Html::endForm()
+            . '</li>'
+
         ],
     ]);
     NavBar::end();

@@ -19,7 +19,9 @@ class m190202_130900_event extends Migration
             'updated_at' => $this->integer()->notNull(),
             'name' => $this->string()->notNull(),
             'date' => $this->dateTime()->notNull(),
-            'location' => $this->string(),
+            'duration' => $this->time()->notNull(),
+            'location' => $this->string()->notNull(),
+            'link' => $this->string(),
             'description' => $this->string(),
         ], $tableOptions);
 
