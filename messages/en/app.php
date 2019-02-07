@@ -106,8 +106,6 @@ return [
     'LOGIN_FORM_REMEMBER_ME' => 'Remember Me',
     /* Сообщения LoginForm */
     'LOGIN_FORM_MESSAGE_INCORRECT_USERNAME_OR_PASSWORD' => 'Username or password is incorrect.',
-    'LOGIN_FORM_MESSAGE_BLOCKED_ACCOUNT' => 'Your account has been blocked.',
-    'LOGIN_FORM_MESSAGE_NOT_CONFIRMED_ACCOUNT' => 'Your account is not confirmed.',
 
     /* Модели */
     /* Lang */
@@ -118,6 +116,29 @@ return [
     'LANG_MODEL_LOCAL' => 'Local',
     'LANG_MODEL_NAME' => 'Name',
     'LANG_MODEL_DEFAULT' => 'Default language',
+    /* User */
+    'USER_MODEL_ID' => 'ID',
+    'USER_MODEL_CREATED_AT' => 'Created at',
+    'USER_MODEL_UPDATED_AT' => 'Updated at',
+    'USER_MODEL_USERNAME' => 'Username',
+    'USER_MODEL_PASSWORD' => 'Password',
+    'USER_MODEL_AUTH_KEY' => 'Auth key',
+    'USER_MODEL_EMAIL_CONFIRM_TOKEN' => 'Email confirm token',
+    'USER_MODEL_PASSWORD_HASH' => 'Password hash',
+    'USER_MODEL_PASSWORD_RESET_TOKEN' => 'Password reset token',
+    'USER_MODEL_FULL_NAME' => 'Full name',
+    'USER_MODEL_EMAIL' => 'Email',
+    'USER_MODEL_PHONE' => 'Phone',
+    'USER_MODEL_YOUTUBE_LINK' => 'YouTube link',
+    'USER_MODEL_INSTAGRAM_LINK' => 'Instagram link',
+    'USER_MODEL_FACEBOOK_LINK' => 'Facebook link',
+    'USER_MODEL_TWITTER_LINK' => 'Twitter link',
+    'USER_MODEL_VK_LINK' => 'VK link',
+    'USER_MODEL_BIOGRAPHY' => 'Biography',
+    /* Сообщения модели User */
+    'USER_MODEL_MESSAGE_USERNAME' => 'This username has already been taken.',
+    'USER_MODEL_MESSAGE_UPDATED_YOUR_DETAILS' => 'You have successfully changed your details.',
+    'USER_MODEL_MESSAGE_UPDATED_YOUR_PASSWORD' => 'You have successfully changed password.',
     /* Event */
     'EVENT_MODEL_ID' => 'ID',
     'EVENT_MODEL_CREATED_AT' => 'Created at',

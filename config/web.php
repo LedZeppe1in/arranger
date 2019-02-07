@@ -64,7 +64,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\modules\main\models\User',
+            'identityClass' => 'app\modules\admin\models\User',
             'enableAutoLogin' => true,
             'loginUrl' => ['main/default/sing-in'],
         ],
