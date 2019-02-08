@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\time\TimePicker;
+use dosamigos\ckeditor\CKEditor;
 use kartik\datetime\DateTimePicker;
 
 /* @var $this yii\web\View */
@@ -40,7 +41,10 @@ use kartik\datetime\DateTimePicker;
 
     <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textarea(['maxlength' => true, 'rows'=>6]) ?>
+    <?= $form->field($model, 'description')->widget(CKEditor::className(), [
+        'options' => ['rows' => 10],
+        'preset' => 'basic'
+    ]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? '<span class="glyphicon glyphicon-floppy-disk"></span> ' .

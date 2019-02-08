@@ -58,6 +58,9 @@ return [
     'CAPTCHA_NOTICE_TWO' => 'Letters are not case sensitive.',
     'CAPTCHA_NOTICE_THREE' => 'Click on the letters to change the verification code shown in the picture above.',
 
+    /* Общие уведомления */
+    'GENERAL_NOTICE_NO_RESULTS_FOUND' => 'No results found.',
+
     /* Страница ошибки */
     'ERROR_PAGE_TEXT_ONE' => 'The above error occurred while the Web server was processing your request.',
     'ERROR_PAGE_TEXT_TWO' => 'Please contact us if you think this is a server error. Thank you.',

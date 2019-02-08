@@ -22,6 +22,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 ['update-biography'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <div class="well"><?= $model->biography ?></div>
+    <div class="well">
+        <?= $model->biography ? $model->biography : Yii::t('app', 'GENERAL_NOTICE_NO_RESULTS_FOUND') ?>
+    </div>
 
 </div>

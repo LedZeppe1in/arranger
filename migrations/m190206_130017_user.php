@@ -30,7 +30,7 @@ class m190206_130017_user extends Migration
             'facebook_link' => $this->string(),
             'twitter_link' => $this->string(),
             'vk_link' => $this->string(),
-            'biography' => $this->string(),
+            'biography' => $this->text(),
         ], $tableOptions);
 
         $this->createIndex('idx_user_username', '{{%user}}', 'username');

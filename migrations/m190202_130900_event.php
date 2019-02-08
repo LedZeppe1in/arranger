@@ -22,7 +22,7 @@ class m190202_130900_event extends Migration
             'duration' => $this->time()->notNull(),
             'location' => $this->string()->notNull(),
             'link' => $this->string(),
-            'description' => $this->string(),
+            'description' => $this->text(),
         ], $tableOptions);
 
         $this->createIndex('idx_event_name', '{{%event}}', 'name');

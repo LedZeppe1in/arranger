@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dosamigos\ckeditor\CKEditor;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\User */
@@ -16,7 +17,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->errorSummary($model); ?>
 
-    <?= $form->field($model, 'biography')->textarea(['maxlength' => true, 'rows'=>6]) ?>
+    <?= $form->field($model, 'biography')->widget(CKEditor::className(), [
+        'options' => ['rows' => 10],
+        'preset' => 'basic'
+    ]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('<span class="glyphicon glyphicon-refresh"></span> ' . Yii::t('app', 'BUTTON_UPDATE'),
