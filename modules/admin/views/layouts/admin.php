@@ -39,18 +39,31 @@ AppAsset::register($this);
     echo "<form class='navbar-form navbar-right'>" . WLang::widget() . "</form>";
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-left'],
+        'encodeLabels' => false,
         'items' => [
-            ['label' => Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
+            ['label' => '<span class="glyphicon glyphicon-user"></span> ' .
+                Yii::t('app', 'NAV_ADMIN_ACCOUNT'), 'url' => ['/admin/user/account']],
+            ['label' => '<span class="glyphicon glyphicon-bullhorn"></span> ' .
+                Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
+            ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
+                Yii::t('app', 'NAV_ADMIN_SCORES'), 'url' => '#'],
+            ['label' => '<span class="glyphicon glyphicon-music"></span> ' .
+                Yii::t('app', 'NAV_ADMIN_TRACKS'), 'url' => '#'],
+            ['label' => '<span class="glyphicon glyphicon-blackboard"></span> ' .
+                Yii::t('app', 'NAV_ADMIN_PROJECTS'), 'url' => '#'],
+            ['label' => '<span class="glyphicon glyphicon-file"></span> ' .
+                Yii::t('app', 'NAV_ADMIN_PUBLICATIONS'), 'url' => '#'],
         ],
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
+        'encodeLabels' => false,
         'items' => [
             '<li>'
             . Html::beginForm(['/main/default/logout'], 'post')
             . Html::submitButton(
-                Yii::t('app', 'NAV_ADMIN_SIGN_OUT') . ' (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
+                '<span class="glyphicon glyphicon-log-out"></span> ' . Yii::t('app', 'NAV_ADMIN_SIGN_OUT') .
+                ' (' . Yii::$app->user->identity->username . ')', ['class' => 'btn btn-link logout']
             )
             . Html::endForm()
             . '</li>'

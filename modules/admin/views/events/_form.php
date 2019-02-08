@@ -43,9 +43,10 @@ use kartik\datetime\DateTimePicker;
     <?= $form->field($model, 'description')->textarea(['maxlength' => true, 'rows'=>6]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'BUTTON_CREATE') : Yii::t('app', 'BUTTON_UPDATE'),
-            ['class' => 'btn btn-success', 'name'=>$model->isNewRecord ? 'create-event-button' :
-                'update-event-button']) ?>
+        <?= Html::submitButton($model->isNewRecord ? '<span class="glyphicon glyphicon-floppy-disk"></span> ' .
+            Yii::t('app', 'BUTTON_SAVE') : '<span class="glyphicon glyphicon-refresh"></span> ' .
+                Yii::t('app', 'BUTTON_UPDATE'), ['class' => 'btn btn-success',
+                    'name'=>$model->isNewRecord ? 'create-event-button' : 'update-event-button']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

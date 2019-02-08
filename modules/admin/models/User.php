@@ -59,6 +59,7 @@ class User extends ActiveRecord implements IdentityInterface
             ['full_name', 'string', 'min' => 5, 'max' => 100],
             [['email', 'phone'], 'string', 'max' => 255],
             [['youtube_link', 'instagram_link', 'facebook_link', 'twitter_link', 'vk_link'], 'string', 'max' => 600],
+            ['biography', 'safe'],
         ];
     }
 
@@ -96,11 +97,6 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
-    public static function findIdentityByAccessToken($token, $type = null)
-    {
-        throw new NotSupportedException('findIdentityByAccessToken is not implemented.');
-    }
-
     /**
      * Поиск пользователя по идентификатору.
      * @param int|string $id
@@ -109,6 +105,11 @@ class User extends ActiveRecord implements IdentityInterface
     public static function findIdentity($id)
     {
         return static::findOne(['id' => $id]);
+    }
+
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        throw new NotSupportedException('findIdentityByAccessToken is not implemented.');
     }
 
     /**

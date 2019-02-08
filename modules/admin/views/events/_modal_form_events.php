@@ -18,25 +18,27 @@ Modal::begin([
         </p>
     </div>
 
-<?php $form = ActiveForm::begin([
-    'id' => 'delete-event-form',
-    'method' => 'post',
-    'action' => ['/events/delete/' . $model->id],
-    'enableAjaxValidation'=>true,
-    'enableClientValidation'=>true,
-]); ?>
+    <?php $form = ActiveForm::begin([
+        'id' => 'delete-event-form',
+        'method' => 'post',
+        'action' => ['/events/delete/' . $model->id],
+        'enableAjaxValidation'=>true,
+        'enableClientValidation'=>true,
+    ]); ?>
 
-<?= Html::submitButton(Yii::t('app', 'BUTTON_DELETE'), ['class' => 'btn btn-success']) ?>
+    <?= Html::submitButton('<span class="glyphicon glyphicon-ok"></span> ' . Yii::t('app', 'BUTTON_DELETE'),
+        ['class' => 'btn btn-danger']) ?>
 
-<?= Button::widget([
-    'label' => Yii::t('app', 'BUTTON_CANCEL'),
-    'options' => [
-        'class' => 'btn-danger',
-        'style' => 'margin:5px',
-        'data-dismiss'=>'modal'
-    ]
-]); ?>
+    <?= Button::widget([
+        'label' => '<span class="glyphicon glyphicon-remove"></span> ' .Yii::t('app', 'BUTTON_CANCEL'),
+        'encodeLabel' => false,
+        'options' => [
+            'class' => 'btn-primary',
+            'style' => 'margin:5px',
+            'data-dismiss'=>'modal'
+        ]
+    ]); ?>
 
-<?php ActiveForm::end(); ?>
+    <?php ActiveForm::end(); ?>
 
 <?php Modal::end(); ?>

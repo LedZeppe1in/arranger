@@ -18,6 +18,10 @@ return [
     /* Пункты главного меню административной части сайта */
     'NAV_ADMIN_ACCOUNT' => 'Учётная запись',
     'NAV_ADMIN_EVENTS' => 'События',
+    'NAV_ADMIN_SCORES' => 'Партитуры',
+    'NAV_ADMIN_TRACKS' => 'Треки',
+    'NAV_ADMIN_PROJECTS' => 'Проекты',
+    'NAV_ADMIN_PUBLICATIONS' => 'Публикации',
     'NAV_ADMIN_SIGN_OUT' => 'Выход',
 
     /* Пункты правого меню */
@@ -80,6 +84,19 @@ return [
     'SIGN_IN_PAGE_RESET_LINK' => 'сбросить его',
 
     /* Страницы административной части сайта */
+    /* Страницы учетной записи пользователя (администратора) */
+    'USER_ADMIN_PAGE_ACCOUNT' => 'Учётная запись',
+    'USER_ADMIN_PAGE_UPDATE_DATA' => 'Обновление личных данных',
+    'USER_ADMIN_PAGE_UPDATE_BIOGRAPHY' => 'Обновление биографии',
+    'USER_ADMIN_PAGE_UPDATE_PASSWORD' => 'Смена пароля',
+    /* Кнопки на страницах учетной записи пользователя (администратора) */
+    'USER_ADMIN_PAGE_BUTTON_UPDATE_DATA' => 'Изменить личные данные',
+    'USER_ADMIN_PAGE_BUTTON_UPDATE_BIOGRAPHY' => 'Изменить биографию',
+    'USER_ADMIN_PAGE_BUTTON_UPDATE_PASSWORD' => 'Сменить пароль',
+    /* Сообщения на страницах аучетной записи пользователя (администратора) */
+    'USER_ADMIN_PAGE_MESSAGE_UPDATED_DATA' => 'Вы успешно обновили личные данные.',
+    'USER_ADMIN_PAGE_MESSAGE_UPDATED_BIOGRAPHY' => 'Вы успешно обновили биографию.',
+    'USER_ADMIN_PAGE_MESSAGE_UPDATE_PASSWORD' => 'Вы успешно обновили пароль.',
     /* Страницы администрирования событий */
     'EVENTS_ADMIN_PAGE_EVENT' => 'Событие',
     'EVENTS_ADMIN_PAGE_EVENTS' => 'События',

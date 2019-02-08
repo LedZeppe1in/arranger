@@ -5,7 +5,6 @@ namespace app\modules\admin\controllers;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 use yii\web\NotFoundHttpException;
 use app\modules\admin\models\Event;
 use app\modules\admin\models\EventSearch;
@@ -139,6 +138,6 @@ class EventsController extends Controller
             return $model;
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        throw new NotFoundHttpException(Yii::t('app', 'ERROR_MESSAGE_PAGE_NOT_FOUND'));
     }
 }

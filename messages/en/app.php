@@ -18,6 +18,10 @@ return [
     /* Пункты главного меню административной части сайта */
     'NAV_ADMIN_ACCOUNT' => 'Account',
     'NAV_ADMIN_EVENTS' => 'Events',
+    'NAV_ADMIN_SCORES' => 'Scores',
+    'NAV_ADMIN_TRACKS' => 'Tracks',
+    'NAV_ADMIN_PROJECTS' => 'Projects',
+    'NAV_ADMIN_PUBLICATIONS' => 'Publications',
     'NAV_ADMIN_SIGN_OUT' => 'Sign out',
 
     /* Пункты правого меню */
@@ -80,6 +84,19 @@ return [
     'SIGN_IN_PAGE_RESET_LINK' => 'reset it',
 
     /* Страницы административной части сайта */
+    /* Страницы учетной записи пользователя (администратора) */
+    'USER_ADMIN_PAGE_ACCOUNT' => 'Account',
+    'USER_ADMIN_PAGE_UPDATE_DATA' => 'Update account data',
+    'USER_ADMIN_PAGE_UPDATE_BIOGRAPHY' => 'Update biography',
+    'USER_ADMIN_PAGE_UPDATE_PASSWORD' => 'Update password',
+    /* Кнопки на страницах учетной записи пользователя (администратора) */
+    'USER_ADMIN_PAGE_BUTTON_UPDATE_DATA' => 'Update account data',
+    'USER_ADMIN_PAGE_BUTTON_UPDATE_BIOGRAPHY' => 'Update biography',
+    'USER_ADMIN_PAGE_BUTTON_UPDATE_PASSWORD' => 'Update password',
+    /* Сообщения на страницах аучетной записи пользователя (администратора) */
+    'USER_ADMIN_PAGE_MESSAGE_UPDATED_DATA' => 'You have successfully changed account data.',
+    'USER_ADMIN_PAGE_MESSAGE_UPDATED_BIOGRAPHY' => 'You have successfully changed biography.',
+    'USER_ADMIN_PAGE_MESSAGE_UPDATE_PASSWORD' => 'You have successfully changed password.',
     /* Страницы администрирования событий */
     'EVENTS_ADMIN_PAGE_EVENT' => 'Event',
     'EVENTS_ADMIN_PAGE_EVENTS' => 'Events',
