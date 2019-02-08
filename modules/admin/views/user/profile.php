@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\User */
 
-$this->title = Yii::t('app', 'USER_ADMIN_PAGE_ACCOUNT');
+$this->title = Yii::t('app', 'USER_ADMIN_PAGE_MY_PROFILE');
 
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -18,10 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('<span class="glyphicon glyphicon-edit"></span> ' .
-            Yii::t('app', 'USER_ADMIN_PAGE_BUTTON_UPDATE_DATA'), ['update'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('<span class="glyphicon glyphicon-user"></span> ' .
-            Yii::t('app', 'USER_ADMIN_PAGE_BUTTON_UPDATE_BIOGRAPHY'),
-                ['update-biography'], ['class' => 'btn btn-success']) ?>
+            Yii::t('app', 'USER_ADMIN_PAGE_BUTTON_UPDATE_DATA'), ['update-profile'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('<span class="glyphicon glyphicon-pencil"></span> ' .
             Yii::t('app', 'USER_ADMIN_PAGE_BUTTON_UPDATE_PASSWORD'),
                 ['update-password'], ['class' => 'btn btn-primary']) ?>
@@ -69,9 +66,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]) ?>
-
-    <h2><?= Yii::t('app', 'USER_MODEL_BIOGRAPHY') ?></h2>
-
-    <div class="well"><?= $model->biography ?></div>
 
 </div>

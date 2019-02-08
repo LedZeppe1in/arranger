@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->title = Yii::t('app', 'USER_ADMIN_PAGE_UPDATE_BIOGRAPHY');
 
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'USER_ADMIN_PAGE_ACCOUNT'), 'url' => ['account']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'USER_ADMIN_PAGE_MY_BIOGRAPHY'), 'url' => ['biography']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <?= $this->render('_form_biography_update', [
+    <?= $this->render('_form_update_biography', [
         'model' => $model,
     ]) ?>
 

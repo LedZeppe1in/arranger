@@ -55,7 +55,7 @@ AppAsset::register($this);
             Yii::$app->user->isGuest ? (
                 ['label' => Yii::t('app', 'NAV_SIGN_IN'), 'url' => ['/main/default/sing-in']]
             ) : (
-                '<li>' . Html::a(Yii::t('app', 'NAV_ADMINISTRATION'), ['/admin/user/account']) . '</li>' .
+                '<li>' . Html::a(Yii::t('app', 'NAV_ADMINISTRATION'), ['/admin/user/profile']) . '</li>' .
                 '<li>'
                 . Html::beginForm(['/main/default/logout'], 'post')
                 . Html::submitButton(

@@ -153,7 +153,7 @@ class DefaultController extends Controller
      *
      * @return Response
      */
-    public function actionLogout()
+    public function actionSingOut()
     {
         Yii::$app->user->logout();
 

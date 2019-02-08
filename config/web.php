@@ -56,7 +56,7 @@ $config = [
                 'publications' => 'main/default/publications',
                 'contact' => 'main/default/contact',
                 'sing-in' => 'main/default/sing-in',
-                '/user/<_u:(account|update|update-biography|update-password)>' => 'admin/user/<_u>',
+                '/user/<_u:(profile|biography|update-profile|update-biography|update-password)>' => 'admin/user/<_u>',
                 '/events/<_ev:(list|create)>' => 'admin/events/<_ev>',
                 '/events/<_ev:(view|update|delete)>/<id:\d+>' => 'admin/events/<_ev>',
             ],

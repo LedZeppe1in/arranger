@@ -41,8 +41,6 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-left'],
         'encodeLabels' => false,
         'items' => [
-            ['label' => '<span class="glyphicon glyphicon-user"></span> ' .
-                Yii::t('app', 'NAV_ADMIN_ACCOUNT'), 'url' => ['/admin/user/account']],
             ['label' => '<span class="glyphicon glyphicon-bullhorn"></span> ' .
                 Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
             ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
@@ -59,15 +57,29 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'encodeLabels' => false,
         'items' => [
-            '<li>'
-            . Html::beginForm(['/main/default/logout'], 'post')
-            . Html::submitButton(
-                '<span class="glyphicon glyphicon-log-out"></span> ' . Yii::t('app', 'NAV_ADMIN_SIGN_OUT') .
-                ' (' . Yii::$app->user->identity->username . ')', ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>'
-
+//            '<li>'
+//            . Html::beginForm(['/main/default/logout'], 'post')
+//            . Html::submitButton(
+//                '<span class="glyphicon glyphicon-log-out"></span> ' . Yii::t('app', 'NAV_ADMIN_SIGN_OUT') .
+//                ' (' . Yii::$app->user->identity->username . ')', ['class' => 'btn btn-link logout']
+//            )
+//            . Html::endForm()
+//            . '</li>'
+            ['label' => '<span class="glyphicon glyphicon-home"></span> ' . Yii::t('app', 'NAV_ADMIN_ACCOUNT'),
+                'items' => [
+                    ['label' => Yii::t('app', 'NAV_ADMIN_SIGNED_IN_AS')],
+                    ['label' => '<b style="font-size:small">' . Yii::$app->user->identity->username . '</b>'],
+                    '<li class="divider"></li>',
+                    ['label' => '<span class="glyphicon glyphicon-user"></span> ' .
+                        Yii::t('app', 'NAV_ADMIN_MY_PROFILE'), 'url' => ['/admin/user/profile']],
+                    ['label' => '<span class="glyphicon glyphicon-book"></span> ' .
+                        Yii::t('app', 'NAV_ADMIN_MY_BIOGRAPHY'), 'url' => ['/admin/user/biography']],
+                    '<li class="divider"></li>',
+                    ['label' => '<span class="glyphicon glyphicon-log-out"></span> ' .
+                        Yii::t('app', 'NAV_ADMIN_SIGN_OUT'), 'url' => ['/main/default/sing-out'],
+                        'linkOptions' => ['data-method' => 'post']],
+                ]
+            ],
         ],
     ]);
     NavBar::end();

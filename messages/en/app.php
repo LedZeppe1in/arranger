@@ -17,12 +17,15 @@ return [
     'NAV_SIGN_IN' => 'Sign in',
     /* Пункты главного меню административной части сайта */
     'NAV_ADMIN_ACCOUNT' => 'Account',
+    'NAV_ADMIN_SIGNED_IN_AS' => 'Signed in as',
+    'NAV_ADMIN_MY_PROFILE' => 'My profile',
+    'NAV_ADMIN_MY_BIOGRAPHY' => 'My biography',
+    'NAV_ADMIN_SIGN_OUT' => 'Sign out',
     'NAV_ADMIN_EVENTS' => 'Events',
     'NAV_ADMIN_SCORES' => 'Scores',
     'NAV_ADMIN_TRACKS' => 'Tracks',
     'NAV_ADMIN_PROJECTS' => 'Projects',
     'NAV_ADMIN_PUBLICATIONS' => 'Publications',
-    'NAV_ADMIN_SIGN_OUT' => 'Sign out',
 
     /* Пункты правого меню */
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Possible actions',
@@ -85,7 +88,8 @@ return [
 
     /* Страницы административной части сайта */
     /* Страницы учетной записи пользователя (администратора) */
-    'USER_ADMIN_PAGE_ACCOUNT' => 'Account',
+    'USER_ADMIN_PAGE_MY_PROFILE' => 'My profile',
+    'USER_ADMIN_PAGE_MY_BIOGRAPHY' => 'My biography',
     'USER_ADMIN_PAGE_UPDATE_DATA' => 'Update account data',
     'USER_ADMIN_PAGE_UPDATE_BIOGRAPHY' => 'Update biography',
     'USER_ADMIN_PAGE_UPDATE_PASSWORD' => 'Update password',

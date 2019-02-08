@@ -31,9 +31,20 @@ class UserController extends Controller
      * Displays a single User model.
      * @return mixed
      */
-    public function actionAccount()
+    public function actionProfile()
     {
-        return $this->render('account', [
+        return $this->render('profile', [
+            'model' => $this->findModel(Yii::$app->user->identity->getId()),
+        ]);
+    }
+
+    /**
+     * Displays a user biography.
+     * @return mixed
+     */
+    public function actionBiography()
+    {
+        return $this->render('biography', [
             'model' => $this->findModel(Yii::$app->user->identity->getId()),
         ]);
     }
@@ -43,7 +54,7 @@ class UserController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionUpdate()
+    public function actionUpdateProfile()
     {
         $model = $this->findModel(Yii::$app->user->identity->getId());
 
@@ -52,9 +63,9 @@ class UserController extends Controller
             if ($model->update())
                 Yii::$app->getSession()->setFlash('success', Yii::t('app', 'USER_MODEL_MESSAGE_UPDATED_YOUR_DETAILS'));
 
-            return $this->redirect('account');
+            return $this->redirect('profile');
         } else {
-            return $this->render('update', [
+            return $this->render('update-profile', [
                 'model' => $model,
             ]);
         }
@@ -74,7 +85,7 @@ class UserController extends Controller
             if ($model->update())
                 Yii::$app->getSession()->setFlash('success', Yii::t('app', 'USER_ADMIN_PAGE_MESSAGE_UPDATED_BIOGRAPHY'));
 
-            return $this->redirect('account');
+            return $this->redirect('biography');
         } else {
             return $this->render('update-biography', [
                 'model' => $model,
@@ -99,7 +110,7 @@ class UserController extends Controller
             if ($model->update())
                 Yii::$app->getSession()->setFlash('success', Yii::t('app', 'USER_ADMIN_PAGE_MESSAGE_UPDATE_PASSWORD'));
 
-            return $this->redirect('account');
+            return $this->redirect('profile');
         } else {
             return $this->render('update-password', [
                 'model' => $model,
