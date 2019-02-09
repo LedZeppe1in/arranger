@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Demix
- * Date: 01.02.2019
- * Time: 20:49
- */
+
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;

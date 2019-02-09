@@ -4,12 +4,12 @@ return [
     /* Пункты главного меню клиентской части сайта */
     'NAV_HOME' => 'Home',
     'NAV_EVENTS' => 'Events',
-    'NAV_SCORES' => 'Scores',
+    'NAV_SHEET_MUSIC' => 'Sheet music',
     'NAV_BIG_BAND' => 'Big Band',
     'NAV_JAZZ_COMBO' => 'Jazz Combo',
     'NAV_POP_MUSIC' => 'Pop Music',
     'NAV_JINGLES' => 'Jingles',
-    'NAV_MULTITRACKS' => 'Multitracks',
+    'NAV_STEMS' => 'Stems',
     'NAV_PROJECTS' => 'Projects',
     'NAV_PUBLICATIONS' => 'Publications',
     'NAV_CONTACTS' => 'Contacts',
@@ -22,8 +22,8 @@ return [
     'NAV_ADMIN_MY_BIOGRAPHY' => 'My biography',
     'NAV_ADMIN_SIGN_OUT' => 'Sign out',
     'NAV_ADMIN_EVENTS' => 'Events',
-    'NAV_ADMIN_SCORES' => 'Scores',
-    'NAV_ADMIN_TRACKS' => 'Tracks',
+    'NAV_ADMIN_SHEET_MUSIC' => 'Sheet music',
+    'NAV_ADMIN_MUSIC_TRACKS' => 'Music tracks',
     'NAV_ADMIN_PROJECTS' => 'Projects',
     'NAV_ADMIN_PUBLICATIONS' => 'Publications',
 
@@ -69,11 +69,11 @@ return [
     /* Страница событий */
     'EVENTS_PAGE_TITLE' => 'Events',
     /* Страница партитур */
-    'SCORES_PAGE_TITLE' => 'Scores',
+    'SHEET_MUSIC_PAGE_TITLE' => 'Sheet music',
     /* Страница джинглов */
     'JINGLES_PAGE_TITLE' => 'Jingles',
     /* Страница мультитреков */
-    'MULTITRACKS_PAGE_TITLE' => 'Multitracks',
+    'STEMS_PAGE_TITLE' => 'Stems',
     /* Страница проектов */
     'PROJECTS_PAGE_TITLE' => 'Projects',
     /* Страница публикаций */

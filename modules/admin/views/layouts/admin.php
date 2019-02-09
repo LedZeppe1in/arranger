@@ -44,9 +44,9 @@ AppAsset::register($this);
             ['label' => '<span class="glyphicon glyphicon-bullhorn"></span> ' .
                 Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
             ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
-                Yii::t('app', 'NAV_ADMIN_SCORES'), 'url' => '#'],
+                Yii::t('app', 'NAV_ADMIN_SHEET_MUSIC'), 'url' => '#'],
             ['label' => '<span class="glyphicon glyphicon-music"></span> ' .
-                Yii::t('app', 'NAV_ADMIN_TRACKS'), 'url' => '#'],
+                Yii::t('app', 'NAV_ADMIN_MUSIC_TRACKS'), 'url' => '#'],
             ['label' => '<span class="glyphicon glyphicon-blackboard"></span> ' .
                 Yii::t('app', 'NAV_ADMIN_PROJECTS'), 'url' => '#'],
             ['label' => '<span class="glyphicon glyphicon-file"></span> ' .
@@ -57,14 +57,6 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'encodeLabels' => false,
         'items' => [
-//            '<li>'
-//            . Html::beginForm(['/main/default/logout'], 'post')
-//            . Html::submitButton(
-//                '<span class="glyphicon glyphicon-log-out"></span> ' . Yii::t('app', 'NAV_ADMIN_SIGN_OUT') .
-//                ' (' . Yii::$app->user->identity->username . ')', ['class' => 'btn btn-link logout']
-//            )
-//            . Html::endForm()
-//            . '</li>'
             ['label' => '<span class="glyphicon glyphicon-home"></span> ' . Yii::t('app', 'NAV_ADMIN_ACCOUNT'),
                 'items' => [
                     ['label' => Yii::t('app', 'NAV_ADMIN_SIGNED_IN_AS')],

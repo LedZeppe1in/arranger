@@ -77,13 +77,13 @@ class DefaultController extends Controller
     }
 
     /**
-     * Displays scores.
+     * Displays sheet music.
      *
      * @return string
      */
-    public function actionScores()
+    public function actionSheetMusic()
     {
-        return $this->render('scores');
+        return $this->render('sheet-music');
     }
 
     /**
@@ -97,13 +97,13 @@ class DefaultController extends Controller
     }
 
     /**
-     * Displays multitracks.
+     * Displays stems.
      *
      * @return string
      */
-    public function actionMultitracks()
+    public function actionStems()
     {
-        return $this->render('multitracks');
+        return $this->render('stems');
     }
 
     /**

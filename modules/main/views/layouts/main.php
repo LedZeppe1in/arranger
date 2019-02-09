@@ -41,9 +41,9 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-left'],
         'items' => [
             ['label' => Yii::t('app', 'NAV_EVENTS'), 'url' => ['/main/default/events']],
-            ['label' => Yii::t('app', 'NAV_SCORES'), 'url' => ['/main/default/scores']],
+            ['label' => Yii::t('app', 'NAV_SHEET_MUSIC'), 'url' => ['/main/default/sheet-music']],
             ['label' => Yii::t('app', 'NAV_JINGLES'), 'url' => ['/main/default/jingles']],
-            ['label' => Yii::t('app', 'NAV_MULTITRACKS'), 'url' => ['/main/default/multitracks']],
+            ['label' => Yii::t('app', 'NAV_STEMS'), 'url' => ['/main/default/stems']],
             ['label' => Yii::t('app', 'NAV_PROJECTS'), 'url' => ['/main/default/projects']],
             ['label' => Yii::t('app', 'NAV_PUBLICATIONS'), 'url' => ['/main/default/publications']],
             ['label' => Yii::t('app', 'NAV_CONTACTS'), 'url' => ['/main/default/contact']]
