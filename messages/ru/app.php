@@ -31,8 +31,9 @@ return [
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Возможные действия',
 
     /* Нижний колонтитул (подвал) */
-    'FOOTER_NAME'=>'НИКИТА ДОРОДНЫХ',
+    'FOOTER_COPYRIGHT'=>'Все права защищены',
     'FOOTER_POWERED_BY' => 'Разработано',
+    'FOOTER_DEVELOPER' => 'Проект НикДим',
 
     /* Общие кнопки */
     'BUTTON_ADD' => 'Добавить',

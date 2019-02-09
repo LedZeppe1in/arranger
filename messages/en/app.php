@@ -31,8 +31,9 @@ return [
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Possible actions',
 
     /* Нижний колонтитул (подвал) */
-    'FOOTER_NAME'=>'NIKITA DORODNYKH',
+    'FOOTER_COPYRIGHT'=>'Copyright',
     'FOOTER_POWERED_BY' => 'Powered by',
+    'FOOTER_DEVELOPER' => 'NikDim project',
 
     /* Общие кнопки */
     'BUTTON_ADD' => 'Add',
