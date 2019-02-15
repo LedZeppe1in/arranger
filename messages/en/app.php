@@ -174,4 +174,17 @@ return [
     'EVENT_MODEL_LOCATION' => 'Location',
     'EVENT_MODEL_LINK' => 'Link',
     'EVENT_MODEL_DESCRIPTION' => 'Event program',
+    /* SheetMusic */
+    'SHEET_MUSIC_MODEL_ID' => 'ID',
+    'SHEET_MUSIC_MODEL_CREATED_AT' => 'Created at',
+    'SHEET_MUSIC_MODEL_UPDATED_AT' => 'Updated at',
+    'SHEET_MUSIC_MODEL_NAME' => 'Name',
+    'SHEET_MUSIC_MODEL_TYPE' => 'Type',
+    'SHEET_MUSIC_MODEL_PRICE' => 'Price',
+    'SHEET_MUSIC_MODEL_FILE' => 'File',
+    'SHEET_MUSIC_MODEL_DESCRIPTION' => 'Description',
+    /* Значения полей модели SheetMusic */
+    'SHEET_MUSIC_MODEL_TYPE_BIG_BAND' => 'Big band',
+    'SHEET_MUSIC_MODEL_TYPE_JAZZ_COMBO' => 'Jazz combo',
+    'SHEET_MUSIC_MODEL_TYPE_POP_MUSIC' => 'Pop music',
 ];
