@@ -117,6 +117,18 @@ return [
     'EVENTS_ADMIN_PAGE_MESSAGE_CREATE_EVENT' => 'You have successfully created a new event.',
     'EVENTS_ADMIN_PAGE_MESSAGE_UPDATED_EVENT' => 'You have successfully updated event.',
     'EVENTS_ADMIN_PAGE_MESSAGE_DELETED_EVENT' => 'You have successfully deleted event.',
+    /* Страницы администрирования партитур */
+    'SHEET_MUSIC_ADMIN_PAGE_SHEET_MUSIC_ONE' => 'Sheet music',
+    'SHEET_MUSIC_ADMIN_PAGE_SHEET_MUSIC' => 'Sheet music',
+    'SHEET_MUSIC_ADMIN_PAGE_CREATE_SHEET_MUSIC' => 'Create sheet music',
+    'SHEET_MUSIC_ADMIN_PAGE_VIEW_SHEET_MUSIC' => 'View sheet music',
+    'SHEET_MUSIC_ADMIN_PAGE_UPDATE_SHEET_MUSIC' => 'Update sheet music',
+    'SHEET_MUSIC_ADMIN_PAGE_DELETE_SHEET_MUSIC' => 'Delete sheet music',
+    'SHEET_MUSIC_ADMIN_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this sheet music?',
+    /* Сообщения на страницах администрирования партитур */
+    'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_CREATE_SHEET_MUSIC' => 'You have successfully created a new sheet music.',
+    'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_UPDATED_SHEET_MUSIC' => 'You have successfully updated sheet music.',
+    'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_DELETED_SHEET_MUSIC' => 'You have successfully deleted sheet music.',
 
     /* Формы */
     /* ContactForm */

@@ -44,7 +44,7 @@ AppAsset::register($this);
             ['label' => '<span class="glyphicon glyphicon-bullhorn"></span> ' .
                 Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
             ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
-                Yii::t('app', 'NAV_ADMIN_SHEET_MUSIC'), 'url' => '#'],
+                Yii::t('app', 'NAV_ADMIN_SHEET_MUSIC'), 'url' => '/admin/sheet-music/list'],
             ['label' => '<span class="glyphicon glyphicon-music"></span> ' .
                 Yii::t('app', 'NAV_ADMIN_MUSIC_TRACKS'), 'url' => '#'],
             ['label' => '<span class="glyphicon glyphicon-blackboard"></span> ' .

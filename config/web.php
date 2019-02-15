@@ -59,6 +59,8 @@ $config = [
                 '/user/<_u:(profile|biography|update-profile|update-biography|update-password)>' => 'admin/user/<_u>',
                 '/events/<_ev:(list|create)>' => 'admin/events/<_ev>',
                 '/events/<_ev:(view|update|delete)>/<id:\d+>' => 'admin/events/<_ev>',
+                '/sheet-music/<_ev:(list|create)>' => 'admin/sheet-music/<_ev>',
+                '/sheet-music/<_ev:(view|update|delete)>/<id:\d+>' => 'admin/sheet-music/<_ev>',
             ],
         ],
         'cache' => [
