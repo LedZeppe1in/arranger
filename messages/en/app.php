@@ -199,4 +199,6 @@ return [
     'SHEET_MUSIC_MODEL_TYPE_BIG_BAND' => 'Big band',
     'SHEET_MUSIC_MODEL_TYPE_JAZZ_COMBO' => 'Jazz combo',
     'SHEET_MUSIC_MODEL_TYPE_POP_MUSIC' => 'Pop music',
+    /* Сообщения модели SheetMusic */
+    'SHEET_MUSIC_MODEL_MESSAGE_PRICE' => 'Incorrect price.',
 ];

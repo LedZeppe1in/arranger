@@ -47,7 +47,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => Html::a($model->link, $model->link),
                 'format' => 'raw'
             ],
-            'description',
+            [
+                'label' => Yii::t('app', 'EVENT_MODEL_DESCRIPTION'),
+                'value' => $model->description,
+                'format' => 'raw'
+            ],
         ],
     ]) ?>
 

@@ -38,8 +38,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => $model->getTypeName(),
             ],
             'price',
-            'file',
-            'description',
+            [
+                'label' => Yii::t('app', 'SHEET_MUSIC_MODEL_FILE'),
+                'value' => Html::a($model->file, $model->file, ['target' => '_blank']),
+                'format' => 'raw'
+            ],
+            [
+                'label' => Yii::t('app', 'SHEET_MUSIC_MODEL_DESCRIPTION'),
+                'value' => $model->description,
+                'format' => 'raw'
+            ],
         ],
     ]) ?>
 

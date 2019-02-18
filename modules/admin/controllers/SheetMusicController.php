@@ -3,7 +3,9 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
+use yii\helpers\FileHelper;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
 use app\modules\admin\models\SheetMusic;
@@ -68,11 +70,32 @@ class SheetMusicController extends Controller
     {
         $model = new SheetMusic();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            Yii::$app->getSession()->setFlash('success',
-                Yii::t('app', 'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_CREATE_SHEET_MUSIC'));
+        if ($model->load(Yii::$app->request->post())) {
+            $file = UploadedFile::getInstance($model, 'sheet_music_file');
+            if ($file && $file->tempName) {
+                $model->sheet_music_file = $file;
+                if ($model->validate(['sheet_music_file'])) {
+                    // Формирование пути к файлу партитуры (без папки с id записи БД)
+                    $dir = Yii::getAlias('@webroot') . '/uploads/';
+                    $fileName = $model->sheet_music_file->baseName . '.' . $model->sheet_music_file->extension;
+                    $model->file = $dir . $fileName;
+                    // Сохранение данных о новой партитуре в БД
+                    if ($model->save()) {
+                        // Формирование новой директории для файла партитуры
+                        $dir .= $model->id . '/';
+                        // Создание новой директории для файла партитуры
+                        FileHelper::createDirectory($dir);
+                        // Обновление пути к для файлу партитуры в БД
+                        $model->updateAttributes(['file' => $dir . $fileName]);
+                        // Сохранение файла партитуры на сервере
+                        $model->sheet_music_file->saveAs($dir . $fileName);
+                        Yii::$app->getSession()->setFlash('success',
+                            Yii::t('app', 'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_CREATE_SHEET_MUSIC'));
 
-            return $this->redirect(['view', 'id' => $model->id]);
+                        return $this->redirect(['view', 'id' => $model->id]);
+                    }
+                }
+            }
         }
 
         return $this->render('create', [
@@ -92,6 +115,24 @@ class SheetMusicController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $file = UploadedFile::getInstance($model, 'sheet_music_file');
+            if ($file && $file->tempName) {
+                $model->sheet_music_file = $file;
+                if ($model->validate(['sheet_music_file'])) {
+                    // Определение директории где расположен файл партитуры
+                    $pos = strrpos($model->file, '/');
+                    $dir = substr($model->file, 0, $pos) . '/';
+                    // Запоминание нового имя файла партитуры
+                    $fileName = $model->sheet_music_file->baseName . '.' . $model->sheet_music_file->extension;
+                    // Удаление старого файла партитуры
+                    unlink($model->file);
+                    // Сохранение нового файла партитуры
+                    $model->sheet_music_file->saveAs($dir . $fileName);
+                    // Сохранение нового пути к файлу партитуры в БД
+                    $model->updateAttributes(['file' => $dir . $fileName]);
+                }
+            }
+            // Вывод сообщения об удачном изменении записи
             Yii::$app->getSession()->setFlash('success',
                 Yii::t('app', 'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_UPDATED_SHEET_MUSIC'));
 
@@ -112,7 +153,14 @@ class SheetMusicController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        // Определение директории где расположен файл партитуры
+        $pos = strrpos($model->file, '/');
+        $dir = substr($model->file, 0, $pos);
+        // Удаление файла партитуры и директории где она хранилась
+        FileHelper::removeDirectory($dir);
+        // Удалние записи из БД
+        $model->delete();
         Yii::$app->getSession()->setFlash('success',
             Yii::t('app', 'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_DELETED_SHEET_MUSIC'));
 

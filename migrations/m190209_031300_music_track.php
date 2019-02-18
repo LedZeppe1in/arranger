@@ -20,7 +20,7 @@ class m190209_031300_music_track extends Migration
             'name' => $this->string()->notNull(),
             'type' => $this->smallInteger()->notNull()->defaultValue(0),
             'duration' => $this->time()->notNull(),
-            'price' => $this->money()->notNull(),
+            'price' => $this->money(12, 2)->notNull(),
             'preview' => $this->text()->notNull(),
             'file' => $this->text()->notNull(),
             'description' => $this->text(),

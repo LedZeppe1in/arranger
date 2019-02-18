@@ -14,6 +14,7 @@ use app\modules\admin\models\SheetMusic;
 
     <?php $form = ActiveForm::begin([
         'id' => $model->isNewRecord ? 'create-sheet-music-form' : 'update-sheet-music-form',
+        'options' => ['enctype' => 'multipart/form-data']
     ]); ?>
 
     <?= $form->errorSummary($model); ?>
@@ -24,7 +25,7 @@ use app\modules\admin\models\SheetMusic;
 
     <?= $form->field($model, 'price')->textInput() ?>
 
-    <?= $form->field($model, 'file')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'sheet_music_file')->fileInput() ?>
 
     <?= $form->field($model, 'description')->widget(CKEditor::className(), [
         'options' => ['rows' => 10],
