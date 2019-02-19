@@ -2,8 +2,6 @@
 
 namespace app\modules\admin\models;
 
-use RecursiveDirectoryIterator;
-use RecursiveIteratorIterator;
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;
@@ -97,23 +95,5 @@ class SheetMusic extends \yii\db\ActiveRecord
     public function getTypeName()
     {
         return ArrayHelper::getValue(self::getTypesArray(), $this->type);
-    }
-
-    public function getImage()
-    {
-
-        $imagePath = $this->file;//Yii::getAlias('@webroot') . '/uploads/' . $this->id . '/' . $this->file;
-
-        $fileInfo = finfo_open(FILEINFO_MIME_TYPE);
-        $contentType = finfo_file($fileInfo, $imagePath);
-        finfo_close($fileInfo);
-
-        $fp = fopen($imagePath, 'r');
-
-        header("Content-Type: " . $contentType);
-        header("Content-Length: " . filesize($imagePath));
-
-        ob_end_clean();
-        fpassthru($fp);
     }
 }

@@ -201,4 +201,20 @@ return [
     'SHEET_MUSIC_MODEL_TYPE_POP_MUSIC' => 'Pop music',
     /* Сообщения модели SheetMusic */
     'SHEET_MUSIC_MODEL_MESSAGE_PRICE' => 'Неправильно указана цена.',
+    /* MusicTrack */
+    'MUSIC_TRACK_MODEL_ID' => 'ID',
+    'MUSIC_TRACK_MODEL_CREATED_AT' => 'Создана',
+    'MUSIC_TRACK_MODEL_UPDATED_AT' => 'Обновлена',
+    'MUSIC_TRACK_MODEL_NAME' => 'Название',
+    'MUSIC_TRACK_MODEL_TYPE' => 'Тип',
+    'MUSIC_TRACK_MODEL_DURATION' => 'Продолжительность',
+    'MUSIC_TRACK_MODEL_PRICE' => 'Цена',
+    'MUSIC_TRACK_MODEL_PREVIEW' => 'Превью',
+    'MUSIC_TRACK_MODEL_FILE' => 'Файл',
+    'MUSIC_TRACK_MODEL_DESCRIPTION' => 'Описание',
+    /* Значения полей модели MusicTrack */
+    'MUSIC_TRACK_MODEL_TYPE_JINGLE' => 'Джингл',
+    'MUSIC_TRACK_MODEL_TYPE_STEMS' => 'Мультитрек',
+    /* Сообщения модели MusicTrack */
+    'MUSIC_TRACK_MODEL_MESSAGE_PRICE' => 'Неправильно указана цена.',
 ];
