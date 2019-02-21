@@ -129,7 +129,18 @@ return [
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_CREATE_SHEET_MUSIC' => 'Вы успешно создали новую партитуру.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_UPDATED_SHEET_MUSIC' => 'Вы успешно обновили данную партитуру.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_DELETED_SHEET_MUSIC' => 'Вы успешно удалили партитуру.',
-
+    /* Страницы администрирования проектов */
+    'PROJECTS_ADMIN_PAGE_PROJECT' => 'Проект',
+    'PROJECTS_ADMIN_PAGE_PROJECTS' => 'Проекты',
+    'PROJECTS_ADMIN_PAGE_CREATE_PROJECT' => 'Создать проект',
+    'PROJECTS_ADMIN_PAGE_VIEW_PROJECT' => 'Просмотр проекта',
+    'PROJECTS_ADMIN_PAGE_UPDATE_PROJECT' => 'Изменить проект',
+    'PROJECTS_ADMIN_PAGE_DELETE_PROJECT' => 'Удалить проект',
+    'PROJECTS_ADMIN_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данный проект?',
+    /* Сообщения на страницах администрирования проектов */
+    'PROJECTS_ADMIN_PAGE_MESSAGE_CREATE_PROJECT' => 'Вы успешно создали новый проект.',
+    'PROJECTS_ADMIN_PAGE_MESSAGE_UPDATED_PROJECT' => 'Вы успешно обновили данный проект.',
+    'PROJECTS_ADMIN_PAGE_MESSAGE_DELETED_PROJECT' => 'Вы успешно удалили проект.',
     /* Формы */
     /* ContactForm */
     'CONTACT_FORM_NAME' => 'ФИО',
@@ -217,4 +228,11 @@ return [
     'MUSIC_TRACK_MODEL_TYPE_STEMS' => 'Мультитрек',
     /* Сообщения модели MusicTrack */
     'MUSIC_TRACK_MODEL_MESSAGE_PRICE' => 'Неправильно указана цена.',
+    /* Project */
+    'PROJECT_MODEL_ID'=> 'ID',
+    'PROJECT_MODEL_CREATED_AT' => 'Создано',
+    'PROJECT_MODEL_UPDATED_AT' => 'Обновлено',
+    'PROJECT_MODEL_NAME' => 'Название',
+    'PROJECT_MODEL_LINK' => 'Ссылка',
+    'PROJECT_MODEL_DESCRIPTION' => 'Описание',
 ];

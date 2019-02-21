@@ -129,7 +129,18 @@ return [
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_CREATE_SHEET_MUSIC' => 'You have successfully created a new sheet music.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_UPDATED_SHEET_MUSIC' => 'You have successfully updated sheet music.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_DELETED_SHEET_MUSIC' => 'You have successfully deleted sheet music.',
-
+    /* Страницы администрирования проектов */
+    'PROJECTS_ADMIN_PAGE_PROJECT' => 'Project',
+    'PROJECTS_ADMIN_PAGE_PROJECTS' => 'Projects',
+    'PROJECTS_ADMIN_PAGE_CREATE_PROJECT' => 'Create project',
+    'PROJECTS_ADMIN_PAGE_VIEW_PROJECT' => 'View project',
+    'PROJECTS_ADMIN_PAGE_UPDATE_PROJECT' => 'Update project',
+    'PROJECTS_ADMIN_PAGE_DELETE_PROJECT' => 'Delete project',
+    'PROJECTS_ADMIN_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this project?',
+    /* Сообщения на страницах администрирования проектов */
+    'PROJECTS_ADMIN_PAGE_MESSAGE_CREATE_PROJECT' => 'You have successfully created a new project.',
+    'PROJECTS_ADMIN_PAGE_MESSAGE_UPDATED_PROJECT' => 'You have successfully updated project.',
+    'PROJECTS_ADMIN_PAGE_MESSAGE_DELETED_PROJECT' => 'You have successfully deleted project.',
     /* Формы */
     /* ContactForm */
     'CONTACT_FORM_NAME' => 'Name',
@@ -217,4 +228,11 @@ return [
     'MUSIC_TRACK_MODEL_TYPE_STEMS' => 'Stems',
     /* Сообщения модели MusicTrack */
     'MUSIC_TRACK_MODEL_MESSAGE_PRICE' => 'Incorrect price.',
+    /* Project */
+    'PROJECT_MODEL_ID'=> 'ID',
+    'PROJECT_MODEL_CREATED_AT' => 'Created at',
+    'PROJECT_MODEL_UPDATED_AT' => 'Updated at',
+    'PROJECT_MODEL_NAME' => 'Name',
+    'PROJECT_MODEL_LINK' => 'Link',
+    'PROJECT_MODEL_DESCRIPTION' => 'Description',
 ];

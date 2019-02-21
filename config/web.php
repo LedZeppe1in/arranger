@@ -61,6 +61,8 @@ $config = [
                 '/events/<_ev:(view|update|delete)>/<id:\d+>' => 'admin/events/<_ev>',
                 '/sheet-music/<_ev:(list|create)>' => 'admin/sheet-music/<_ev>',
                 '/sheet-music/<_ev:(view|update|delete)>/<id:\d+>' => 'admin/sheet-music/<_ev>',
+                '/projects/<_ev:(list|create)>' => 'admin/projects/<_ev>',
+                '/projects/<_ev:(view|update|delete)>/<id:\d+>' => 'admin/projects/<_ev>',
             ],
         ],
         'cache' => [

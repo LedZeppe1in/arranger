@@ -4,35 +4,32 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\modules\admin\models\EventSearch */
+/* @var $searchModel app\modules\admin\models\ProjectSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'EVENTS_ADMIN_PAGE_EVENTS');
+$this->title = Yii::t('app', 'PROJECTS_ADMIN_PAGE_PROJECTS');
 
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="event-list">
+<div class="project-list">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p><?= Html::a('<span class="glyphicon glyphicon-edit"></span> ' . Yii::t('app', 'EVENTS_ADMIN_PAGE_CREATE_EVENT'),
+    <p><?= Html::a('<span class="glyphicon glyphicon-edit"></span> ' . Yii::t('app', 'PROJECTS_ADMIN_PAGE_CREATE_PROJECT'),
             ['create'], ['class' => 'btn btn-success']) ?></p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
+            //['class' => 'yii\grid\SerialColumn'], не знаю нужна ли строка
+            //'id',
+            //'created_at',
+            //'updated_at',
             'name',
-            [
-                'attribute' => 'date',
-                'format' => ['date', 'dd.MM.Y HH:mm']
-            ],
-            [
-                'attribute' => 'duration',
-                'format' => ['time', 'HH:mm']
-            ],
-            'location',
+            //'link:ntext',
+            //'description:ntext',
             [
             'class' => 'yii\grid\ActionColumn',
             'headerOptions' => ['class' => 'action-column'],
