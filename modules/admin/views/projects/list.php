@@ -16,24 +16,27 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p><?= Html::a('<span class="glyphicon glyphicon-edit"></span> ' . Yii::t('app', 'PROJECTS_ADMIN_PAGE_CREATE_PROJECT'),
-            ['create'], ['class' => 'btn btn-success']) ?></p>
+    <p>
+        <?= Html::a('<span class="glyphicon glyphicon-edit"></span> ' .
+            Yii::t('app', 'PROJECTS_ADMIN_PAGE_CREATE_PROJECT'), ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            //['class' => 'yii\grid\SerialColumn'], не знаю нужна ли строка
-            //'id',
-            //'created_at',
-            //'updated_at',
             'name',
-            //'link:ntext',
-            //'description:ntext',
             [
-            'class' => 'yii\grid\ActionColumn',
-            'headerOptions' => ['class' => 'action-column'],
-            'template' => '{view} {update} {delete}',
+                'attribute'=>'link',
+                'format' => 'raw',
+                'value' => function($data) {
+                    return $data->getLink();
+                },
+            ],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'headerOptions' => ['class' => 'action-column'],
+                'template' => '{view} {update} {delete}',
             ],
         ],
     ]); ?>

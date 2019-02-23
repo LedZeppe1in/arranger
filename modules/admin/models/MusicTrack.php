@@ -84,7 +84,7 @@ class MusicTrack extends \yii\db\ActiveRecord
 
     /**
      * Получение списка типов треков.
-     * @return array - массив всех возможных типов партитур
+     * @return array - массив всех возможных типов треков
      */
     public static function getTypesArray()
     {

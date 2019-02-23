@@ -4,6 +4,7 @@ namespace app\modules\admin\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
+use yii\helpers\Html;
 
 /**
  * This is the model class for table "{{%project}}".
@@ -18,7 +19,7 @@ use yii\behaviors\TimestampBehavior;
 class Project extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * @return string table name
      */
     public static function tableName()
     {
@@ -26,19 +27,19 @@ class Project extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * @return array the validation rules
      */
     public function rules()
     {
         return [
             [['name', 'link'], 'required'],
-            [['link', 'description'], 'string', 'max' => 600],
             [['name'], 'string', 'max' => 255],
+            [['link', 'description'], 'string', 'max' => 600],
         ];
     }
 
     /**
-     * {@inheritdoc}
+     * @return array customized attribute labels
      */
     public function attributeLabels()
     {
@@ -58,4 +59,14 @@ class Project extends \yii\db\ActiveRecord
             TimestampBehavior::className(),
         ];
     }
+
+    /**
+     * Получение ссылки на проект.
+     * @return mixed
+     */
+    public function getLink()
+    {
+        return Html::a($this->link, $this->link);
+    }
+
 }

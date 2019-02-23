@@ -230,8 +230,8 @@ return [
     'MUSIC_TRACK_MODEL_MESSAGE_PRICE' => 'Неправильно указана цена.',
     /* Project */
     'PROJECT_MODEL_ID'=> 'ID',
-    'PROJECT_MODEL_CREATED_AT' => 'Создано',
-    'PROJECT_MODEL_UPDATED_AT' => 'Обновлено',
+    'PROJECT_MODEL_CREATED_AT' => 'Создан',
+    'PROJECT_MODEL_UPDATED_AT' => 'Обновлен',
     'PROJECT_MODEL_NAME' => 'Название',
     'PROJECT_MODEL_LINK' => 'Ссылка',
     'PROJECT_MODEL_DESCRIPTION' => 'Описание',

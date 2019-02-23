@@ -17,12 +17,6 @@ use dosamigos\ckeditor\CKEditor;
 
     <?= $form->errorSummary($model); ?>
 
-    <?php
-    /*<?= $form->field($model, 'created_at')->textInput() ?>*/
-
-     /*<?= $form->field($model, 'updated_at')->textInput() ?>*/
-    ?>
-
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
@@ -35,8 +29,8 @@ use dosamigos\ckeditor\CKEditor;
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? '<span class="glyphicon glyphicon-floppy-disk"></span> ' .
             Yii::t('app', 'BUTTON_SAVE') : '<span class="glyphicon glyphicon-refresh"></span> ' .
-            Yii::t('app', 'BUTTON_UPDATE'), ['class' => 'btn btn-success',
-            'name'=>$model->isNewRecord ? 'create-project-button' : 'update-project-button']) ?>
+                Yii::t('app', 'BUTTON_UPDATE'), ['class' => 'btn btn-success',
+                    'name'=>$model->isNewRecord ? 'create-project-button' : 'update-project-button']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
