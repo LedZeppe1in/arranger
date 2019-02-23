@@ -129,6 +129,18 @@ return [
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_CREATE_SHEET_MUSIC' => 'You have successfully created a new sheet music.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_UPDATED_SHEET_MUSIC' => 'You have successfully updated sheet music.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_DELETED_SHEET_MUSIC' => 'You have successfully deleted sheet music.',
+    /* Страницы администрирования треков */
+    'MUSIC_TRACKS_ADMIN_PAGE_MUSIC_TRACK' => 'Music track',
+    'MUSIC_TRACKS_ADMIN_PAGE_MUSIC_TRACKS' => 'Music tracks',
+    'MUSIC_TRACKS_ADMIN_PAGE_CREATE_MUSIC_TRACK' => 'Create music track',
+    'MUSIC_TRACKS_ADMIN_PAGE_VIEW_MUSIC_TRACK' => 'View music track',
+    'MUSIC_TRACKS_ADMIN_PAGE_UPDATE_MUSIC_TRACK' => 'Update music track',
+    'MUSIC_TRACKS_ADMIN_PAGE_DELETE_MUSIC_TRACK' => 'Delete music track',
+    'MUSIC_TRACKS_ADMIN_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this music track?',
+    /* Сообщения на страницах администрирования треков */
+    'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_CREATE_MUSIC_TRACK' => 'You have successfully created a new music track.',
+    'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_UPDATED_MUSIC_TRACK' => 'You have successfully updated music track.',
+    'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_DELETED_MUSIC_TRACK' => 'You have successfully deleted music track.',
     /* Страницы администрирования проектов */
     'PROJECTS_ADMIN_PAGE_PROJECT' => 'Project',
     'PROJECTS_ADMIN_PAGE_PROJECTS' => 'Projects',

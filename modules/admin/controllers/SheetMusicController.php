@@ -3,9 +3,9 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
-use yii\helpers\FileHelper;
 use yii\web\Controller;
 use yii\web\UploadedFile;
+use yii\helpers\FileHelper;
 use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
 use app\modules\admin\models\SheetMusic;
@@ -76,7 +76,7 @@ class SheetMusicController extends Controller
                 $model->sheet_music_file = $file;
                 if ($model->validate(['sheet_music_file'])) {
                     // Формирование пути к файлу партитуры (без папки с id записи БД)
-                    $dir = Yii::getAlias('@webroot') . '/uploads/';
+                    $dir = Yii::getAlias('@webroot') . '/uploads/sheet-music/';
                     $fileName = $model->sheet_music_file->baseName . '.' . $model->sheet_music_file->extension;
                     $model->file = $dir . $fileName;
                     // Сохранение данных о новой партитуре в БД

@@ -12,7 +12,7 @@ $this->title = Yii::t('app', 'EVENTS_ADMIN_PAGE_EVENTS');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="event-list">
+<div class="events-list">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

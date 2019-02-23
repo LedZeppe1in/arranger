@@ -49,7 +49,7 @@ AppAsset::register($this);
                 ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
                     Yii::t('app', 'NAV_ADMIN_SHEET_MUSIC'), 'url' => '/admin/sheet-music/list'],
                 ['label' => '<span class="glyphicon glyphicon-music"></span> ' .
-                    Yii::t('app', 'NAV_ADMIN_MUSIC_TRACKS'), 'url' => '#'],
+                    Yii::t('app', 'NAV_ADMIN_MUSIC_TRACKS'), 'url' => '/admin/music-tracks/list'],
                 ['label' => '<span class="glyphicon glyphicon-blackboard"></span> ' .
                     Yii::t('app', 'NAV_ADMIN_PROJECTS'), 'url' => '/admin/projects/list'],
                 ['label' => '<span class="glyphicon glyphicon-file"></span> ' .

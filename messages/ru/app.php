@@ -129,6 +129,18 @@ return [
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_CREATE_SHEET_MUSIC' => 'Вы успешно создали новую партитуру.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_UPDATED_SHEET_MUSIC' => 'Вы успешно обновили данную партитуру.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_DELETED_SHEET_MUSIC' => 'Вы успешно удалили партитуру.',
+    /* Страницы администрирования треков */
+    'MUSIC_TRACKS_ADMIN_PAGE_MUSIC_TRACK' => 'Трек',
+    'MUSIC_TRACKS_ADMIN_PAGE_MUSIC_TRACKS' => 'Треки',
+    'MUSIC_TRACKS_ADMIN_PAGE_CREATE_MUSIC_TRACK' => 'Создать трек',
+    'MUSIC_TRACKS_ADMIN_PAGE_VIEW_MUSIC_TRACK' => 'Просмотр трек',
+    'MUSIC_TRACKS_ADMIN_PAGE_UPDATE_MUSIC_TRACK' => 'Изменить трек',
+    'MUSIC_TRACKS_ADMIN_PAGE_DELETE_MUSIC_TRACK' => 'Удалить трек',
+    'MUSIC_TRACKS_ADMIN_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данный трек?',
+    /* Сообщения на страницах администрирования треков */
+    'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_CREATE_MUSIC_TRACK' => 'Вы успешно создали новый трек.',
+    'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_UPDATED_MUSIC_TRACK' => 'Вы успешно обновили данный трек.',
+    'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_DELETED_MUSIC_TRACK' => 'Вы успешно удалили трек.',
     /* Страницы администрирования проектов */
     'PROJECTS_ADMIN_PAGE_PROJECT' => 'Проект',
     'PROJECTS_ADMIN_PAGE_PROJECTS' => 'Проекты',

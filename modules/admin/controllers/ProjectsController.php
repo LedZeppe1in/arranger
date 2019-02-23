@@ -105,7 +105,7 @@ class ProjectsController extends Controller
 
     /**
      * Deletes an existing Project model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * If deletion is successful, the browser will be redirected to the 'list' page.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
