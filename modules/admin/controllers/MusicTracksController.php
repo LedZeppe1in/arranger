@@ -122,15 +122,15 @@ class MusicTracksController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            // Загрузка файлов превью и трека
             $preview_file = UploadedFile::getInstance($model, 'preview_file');
             $music_track_file = UploadedFile::getInstance($model, 'music_track_file');
-            if ($preview_file && $preview_file->tempName && $music_track_file && $music_track_file->tempName) {
+            // Формирование пути к файлам превью и трека
+            $dir = Yii::getAlias('@webroot') . '/uploads/music-tracks/' . $model->id . '/';
+            // Если загружен файл превью
+            if ($preview_file && $preview_file->tempName) {
                 $model->preview_file = $preview_file;
-                $model->music_track_file = $music_track_file;
-                if ($model->validate(['preview_file']) && $model->validate(['music_track_file'])) {
-                    // Определение директории где расположен файл превью
-                    $pos = strrpos($model->preview, '/');
-                    $dir = substr($model->preview, 0, $pos) . '/';
+                if ($model->validate(['preview_file'])) {
                     // Запоминание нового имя файла превью
                     $preview_file_name = $model->preview_file->baseName . '.' . $model->preview_file->extension;
                     // Удаление старого файла превью
@@ -139,9 +139,12 @@ class MusicTracksController extends Controller
                     $model->preview_file->saveAs($dir . $preview_file_name);
                     // Сохранение нового пути к файлу превью в БД
                     $model->updateAttributes(['preview' => $dir . $preview_file_name]);
-                    // Определение директории где расположен файл трека
-                    $pos = strrpos($model->file, '/');
-                    $dir = substr($model->file, 0, $pos) . '/';
+                }
+            }
+            // Если загружен файл трека
+            if ($music_track_file && $music_track_file->tempName) {
+                $model->music_track_file = $music_track_file;
+                if ($model->validate(['music_track_file'])) {
                     // Запоминание нового имя файла трека
                     $music_track_file_name = $model->music_track_file->baseName . '.' .
                         $model->music_track_file->extension;
