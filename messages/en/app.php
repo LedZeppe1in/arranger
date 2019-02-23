@@ -153,6 +153,18 @@ return [
     'PROJECTS_ADMIN_PAGE_MESSAGE_CREATE_PROJECT' => 'You have successfully created a new project.',
     'PROJECTS_ADMIN_PAGE_MESSAGE_UPDATED_PROJECT' => 'You have successfully updated project.',
     'PROJECTS_ADMIN_PAGE_MESSAGE_DELETED_PROJECT' => 'You have successfully deleted project.',
+    /* Страницы администрирования публикаций */
+    'PUBLICATIONS_ADMIN_PAGE_PUBLICATION' => 'Publication',
+    'PUBLICATIONS_ADMIN_PAGE_PUBLICATIONS' => 'Publications',
+    'PUBLICATIONS_ADMIN_PAGE_CREATE_PUBLICATION' => 'Create publication',
+    'PUBLICATIONS_ADMIN_PAGE_VIEW_PUBLICATION' => 'View publication',
+    'PUBLICATIONS_ADMIN_PAGE_UPDATE_PUBLICATION' => 'Update publication',
+    'PUBLICATIONS_ADMIN_PAGE_DELETE_PUBLICATION' => 'Delete publication',
+    'PUBLICATIONS_ADMIN_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this publication?',
+    /* Сообщения на страницах администрирования публикаций */
+    'PUBLICATIONS_ADMIN_PAGE_MESSAGE_CREATE_PUBLICATION' => 'You have successfully created a new publication.',
+    'PUBLICATIONS_ADMIN_PAGE_MESSAGE_UPDATED_PUBLICATION' => 'You have successfully updated publication.',
+    'PUBLICATIONS_ADMIN_PAGE_MESSAGE_DELETED_PUBLICATION' => 'You have successfully deleted publication.',
     /* Формы */
     /* ContactForm */
     'CONTACT_FORM_NAME' => 'Name',
@@ -247,4 +259,11 @@ return [
     'PROJECT_MODEL_NAME' => 'Name',
     'PROJECT_MODEL_LINK' => 'Link',
     'PROJECT_MODEL_DESCRIPTION' => 'Description',
+    /* Publication */
+    'PUBLICATION_MODEL_ID'=> 'ID',
+    'PUBLICATION_MODEL_CREATED_AT' => 'Created at',
+    'PUBLICATION_MODEL_UPDATED_AT' => 'Updated at',
+    'PUBLICATION_MODEL_NAME' => 'Name',
+    'PUBLICATION_MODEL_LINK' => 'Link',
+    'PUBLICATION_MODEL_TEXT' => 'Text',
 ];

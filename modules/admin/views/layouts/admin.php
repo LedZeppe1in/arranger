@@ -53,7 +53,7 @@ AppAsset::register($this);
                 ['label' => '<span class="glyphicon glyphicon-blackboard"></span> ' .
                     Yii::t('app', 'NAV_ADMIN_PROJECTS'), 'url' => '/admin/projects/list'],
                 ['label' => '<span class="glyphicon glyphicon-file"></span> ' .
-                    Yii::t('app', 'NAV_ADMIN_PUBLICATIONS'), 'url' => '#'],
+                    Yii::t('app', 'NAV_ADMIN_PUBLICATIONS'), 'url' => '/admin/publications/list'],
             ],
         ]);
         echo Nav::widget([

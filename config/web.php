@@ -65,6 +65,8 @@ $config = [
                 '/music-tracks/<_mt:(view|update|delete)>/<id:\d+>' => 'admin/music-tracks/<_mt>',
                 '/projects/<_pr:(list|create)>' => 'admin/projects/<_pr>',
                 '/projects/<_pr:(view|update|delete)>/<id:\d+>' => 'admin/projects/<_pr>',
+                '/publications/<_pr:(list|create)>' => 'admin/publications/<_pr>',
+                '/publications/<_pr:(view|update|delete)>/<id:\d+>' => 'admin/publications/<_pr>',
             ],
         ],
         'cache' => [

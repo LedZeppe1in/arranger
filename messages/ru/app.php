@@ -153,6 +153,18 @@ return [
     'PROJECTS_ADMIN_PAGE_MESSAGE_CREATE_PROJECT' => 'Вы успешно создали новый проект.',
     'PROJECTS_ADMIN_PAGE_MESSAGE_UPDATED_PROJECT' => 'Вы успешно обновили данный проект.',
     'PROJECTS_ADMIN_PAGE_MESSAGE_DELETED_PROJECT' => 'Вы успешно удалили проект.',
+    /* Страницы администрирования публикаций */
+    'PUBLICATIONS_ADMIN_PAGE_PUBLICATION' => 'Публикация',
+    'PUBLICATIONS_ADMIN_PAGE_PUBLICATIONS' => 'Публикации',
+    'PUBLICATIONS_ADMIN_PAGE_CREATE_PUBLICATION' => 'Создать публикацию',
+    'PUBLICATIONS_ADMIN_PAGE_VIEW_PUBLICATION' => 'Просмотр публикации',
+    'PUBLICATIONS_ADMIN_PAGE_UPDATE_PUBLICATION' => 'Изменить публикацию',
+    'PUBLICATIONS_ADMIN_PAGE_DELETE_PUBLICATION' => 'Удалить публикацию',
+    'PUBLICATIONS_ADMIN_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данную публикацию?',
+    /* Сообщения на страницах администрирования публикаций */
+    'PUBLICATIONS_ADMIN_PAGE_MESSAGE_CREATE_PUBLICATION' => 'Вы успешно создали новую публикацию.',
+    'PUBLICATIONS_ADMIN_PAGE_MESSAGE_UPDATED_PUBLICATION' => 'Вы успешно обновили данную публикацию.',
+    'PUBLICATIONS_ADMIN_PAGE_MESSAGE_DELETED_PUBLICATION' => 'Вы успешно удалили публикацию.',
     /* Формы */
     /* ContactForm */
     'CONTACT_FORM_NAME' => 'ФИО',
@@ -247,4 +259,11 @@ return [
     'PROJECT_MODEL_NAME' => 'Название',
     'PROJECT_MODEL_LINK' => 'Ссылка',
     'PROJECT_MODEL_DESCRIPTION' => 'Описание',
+    /* Publication */
+    'PUBLICATION_MODEL_ID'=> 'ID',
+    'PUBLICATION_MODEL_CREATED_AT' => 'Создан',
+    'PUBLICATION_MODEL_UPDATED_AT' => 'Обновлен',
+    'PUBLICATION_MODEL_NAME' => 'Название',
+    'PUBLICATION_MODEL_LINK' => 'Ссылка',
+    'PUBLICATION_MODEL_TEXT' => 'Текст',
 ];
