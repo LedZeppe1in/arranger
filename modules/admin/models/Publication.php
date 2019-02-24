@@ -3,8 +3,8 @@
 namespace app\modules\admin\models;
 
 use Yii;
-use yii\behaviors\TimestampBehavior;
 use yii\helpers\Html;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%publication}}".
@@ -19,7 +19,7 @@ use yii\helpers\Html;
 class Publication extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * @return string table name
      */
     public static function tableName()
     {
@@ -27,19 +27,19 @@ class Publication extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * @return array the validation rules
      */
     public function rules()
     {
         return [
-            [['name'], 'required'],
-            [['name'], 'string', 'max' => 255],
+            ['name', 'required'],
+            ['name', 'string', 'max' => 255],
             [['link', 'text'], 'string', 'max' => 600],
         ];
     }
 
     /**
-     * {@inheritdoc}
+     * @return array customized attribute labels
      */
     public function attributeLabels()
     {
@@ -61,7 +61,7 @@ class Publication extends \yii\db\ActiveRecord
     }
 
     /**
-     * Получение ссылки на проект.
+     * Получение ссылки на публикацию.
      * @return mixed
      */
     public function getLink()

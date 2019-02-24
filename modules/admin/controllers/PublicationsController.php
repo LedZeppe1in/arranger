@@ -3,11 +3,11 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
+use yii\web\Controller;
+use yii\filters\VerbFilter;
+use yii\web\NotFoundHttpException;
 use app\modules\admin\models\Publication;
 use app\modules\admin\models\PublicationSearch;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * PublicationController implements the CRUD actions for Publication model.
@@ -109,7 +109,7 @@ class PublicationsController extends Controller
 
     /**
      * Deletes an existing Publication model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * If deletion is successful, the browser will be redirected to the 'list' page.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
