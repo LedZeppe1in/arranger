@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'price',
             [
                 'label' => Yii::t('app', 'SHEET_MUSIC_MODEL_FILE'),
-                'value' => Html::a($model->file, $model->file, ['target' => '_blank']),
+                'value' => Html::a($model->file, ['/sheet-music/pdf/' . $model->id], ['target' => '_blank']),
                 'format' => 'raw'
             ],
             [

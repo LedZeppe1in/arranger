@@ -168,6 +168,22 @@ class SheetMusicController extends Controller
     }
 
     /**
+     * Вывод pdf-файла партитуры на экран.
+     * @param integer $id
+     * @return $this
+     * @throws NotFoundHttpException
+     */
+    public function actionPdf($id) {
+        $model = $this->findModel($id);
+        // Получение названия файла партитуры
+        $file_name = basename($model->file);
+        // Формирование полного пути до файла партитуры
+        $completePath = Yii::getAlias('@webroot') . '/uploads/sheet-music/' . $model->id . '/' . $file_name;
+
+        return Yii::$app->response->sendFile($completePath, $file_name, ['inline'=>true]);
+    }
+
+    /**
      * Finds the SheetMusic model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id

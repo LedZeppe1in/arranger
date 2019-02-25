@@ -47,13 +47,13 @@ AppAsset::register($this);
                 ['label' => '<span class="glyphicon glyphicon-bullhorn"></span> ' .
                     Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
                 ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
-                    Yii::t('app', 'NAV_ADMIN_SHEET_MUSIC'), 'url' => '/admin/sheet-music/list'],
+                    Yii::t('app', 'NAV_ADMIN_SHEET_MUSIC'), 'url' => ['/admin/sheet-music/list']],
                 ['label' => '<span class="glyphicon glyphicon-music"></span> ' .
-                    Yii::t('app', 'NAV_ADMIN_MUSIC_TRACKS'), 'url' => '/admin/music-tracks/list'],
+                    Yii::t('app', 'NAV_ADMIN_MUSIC_TRACKS'), 'url' => ['/admin/music-tracks/list']],
                 ['label' => '<span class="glyphicon glyphicon-blackboard"></span> ' .
-                    Yii::t('app', 'NAV_ADMIN_PROJECTS'), 'url' => '/admin/projects/list'],
+                    Yii::t('app', 'NAV_ADMIN_PROJECTS'), 'url' => ['/admin/projects/list']],
                 ['label' => '<span class="glyphicon glyphicon-file"></span> ' .
-                    Yii::t('app', 'NAV_ADMIN_PUBLICATIONS'), 'url' => '/admin/publications/list'],
+                    Yii::t('app', 'NAV_ADMIN_PUBLICATIONS'), 'url' => ['/admin/publications/list']],
             ],
         ]);
         echo Nav::widget([
