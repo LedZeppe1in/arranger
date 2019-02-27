@@ -109,6 +109,7 @@ $config = [
         ],
         'formatter' => [
             'datetimeFormat' => 'dd.MM.Y HH:mm',
+            'timeZone' => 'UTC',
         ],
     ],
     'params' => $params,

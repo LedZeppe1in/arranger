@@ -33,10 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'name',
-            [
-                'attribute' => 'date',
-                'format' => ['date', 'dd.MM.Y HH:mm']
-            ],
+            'date',
             [
                 'attribute' => 'duration',
                 'format' => ['time', 'HH:mm']

@@ -71,7 +71,7 @@ class Event extends \yii\db\ActiveRecord
      * Представление даты и времени в правильном формате в поле ввода.
      */
     public function afterFind() {
-        parent::afterFind ();
+        parent::afterFind();
         $this->date = Yii::$app->formatter->asDatetime($this->date);
     }
 }
