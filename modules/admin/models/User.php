@@ -3,10 +3,10 @@
 namespace app\modules\admin\models;
 
 use Yii;
-use yii\base\NotSupportedException;
-use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
+use yii\base\NotSupportedException;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%user}}".
@@ -19,7 +19,8 @@ use yii\web\IdentityInterface;
  * @property string $email_confirm_token
  * @property string $password_hash
  * @property string $password_reset_token
- * @property string $full_name
+ * @property string $full_name_ru
+ * @property string $full_name_en
  * @property string $email
  * @property string $phone
  * @property string $youtube_link
@@ -27,7 +28,8 @@ use yii\web\IdentityInterface;
  * @property string $facebook_link
  * @property string $twitter_link
  * @property string $vk_link
- * @property string $biography
+ * @property string $biography_ru
+ * @property string $biography_en
  */
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -54,12 +56,15 @@ class User extends ActiveRecord implements IdentityInterface
                 'message' => Yii::t('app', 'USER_MODEL_MESSAGE_USERNAME')],
             ['password', 'required', 'on' => 'create_and_update_password_hash'],
             ['password', 'string', 'min' => 5, 'on' => 'create_and_update_password_hash'],
-            [['full_name', 'email', 'phone'], 'required'],
-            ['full_name', 'match', 'pattern' => '/^[ A-Za-zА-Яа-яs,]+$/u'],
-            ['full_name', 'string', 'min' => 5, 'max' => 100],
+            [['full_name_ru', 'full_name_en', 'email', 'phone'], 'required'],
+            ['full_name_ru', 'match', 'pattern' => '/^[ А-Яа-яs,]+$/u',
+                'message' => Yii::t('app', 'USER_MODEL_MESSAGE_FULL_NAME_RU')],
+            ['full_name_en', 'match', 'pattern' => '/^[ A-Za-zs,]+$/u',
+                'message' => Yii::t('app', 'USER_MODEL_MESSAGE_FULL_NAME_EN')],
+            [['full_name_ru', 'full_name_en'], 'string', 'min' => 5, 'max' => 100],
             [['email', 'phone'], 'string', 'max' => 255],
             [['youtube_link', 'instagram_link', 'facebook_link', 'twitter_link', 'vk_link'], 'string', 'max' => 600],
-            ['biography', 'safe'],
+            [['biography_ru', 'biography_en'], 'safe'],
         ];
     }
 
@@ -78,7 +83,8 @@ class User extends ActiveRecord implements IdentityInterface
             'email_confirm_token' => Yii::t('app', 'USER_MODEL_EMAIL_CONFIRM_TOKEN'),
             'password_hash' => Yii::t('app', 'USER_MODEL_PASSWORD_HASH'),
             'password_reset_token' => Yii::t('app', 'USER_MODEL_PASSWORD_RESET_TOKEN'),
-            'full_name' => Yii::t('app', 'USER_MODEL_FULL_NAME'),
+            'full_name_ru' => Yii::t('app', 'USER_MODEL_FULL_NAME_RU'),
+            'full_name_en' => Yii::t('app', 'USER_MODEL_FULL_NAME_EN'),
             'email' => Yii::t('app', 'USER_MODEL_EMAIL'),
             'phone' => Yii::t('app', 'USER_MODEL_PHONE'),
             'youtube_link' => Yii::t('app', 'USER_MODEL_YOUTUBE_LINK'),
@@ -86,7 +92,8 @@ class User extends ActiveRecord implements IdentityInterface
             'facebook_link' => Yii::t('app', 'USER_MODEL_FACEBOOK_LINK'),
             'twitter_link' => Yii::t('app', 'USER_MODEL_TWITTER_LINK'),
             'vk_link' => Yii::t('app', 'USER_MODEL_VK_LINK'),
-            'biography' => Yii::t('app', 'USER_MODEL_BIOGRAPHY'),
+            'biography_ru' => Yii::t('app', 'USER_MODEL_BIOGRAPHY_RU'),
+            'biography_en' => Yii::t('app', 'USER_MODEL_BIOGRAPHY_EN'),
         ];
     }
 

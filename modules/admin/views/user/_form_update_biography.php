@@ -17,7 +17,12 @@ use dosamigos\ckeditor\CKEditor;
 
     <?= $form->errorSummary($model); ?>
 
-    <?= $form->field($model, 'biography')->widget(CKEditor::className(), [
+    <?= $form->field($model, 'biography_ru')->widget(CKEditor::className(), [
+        'options' => ['rows' => 10],
+        'preset' => 'basic'
+    ]) ?>
+
+    <?= $form->field($model, 'biography_en')->widget(CKEditor::className(), [
         'options' => ['rows' => 10],
         'preset' => 'basic'
     ]) ?>

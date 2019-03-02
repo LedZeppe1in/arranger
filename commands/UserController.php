@@ -34,7 +34,8 @@ class UserController extends Controller
         $model->username = 'admin';
         $model->setPassword('admin');
         $model->generateAuthKey();
-        $model->full_name = 'Рузняев Андрей';
+        $model->full_name_ru = 'Андрей Рузняев';
+        $model->full_name_en = 'Andrey Ruznyaev';
         $model->email = 'ruzbone@gmail.com, a.ruzz@yandex.ru';
         $model->phone = '+7 926 012 24 51';
         $model->youtube_link = 'https://www.youtube.com/channel/UCWxt6ZM6MBpcMXshsouIBBg?view_as=subscriber';

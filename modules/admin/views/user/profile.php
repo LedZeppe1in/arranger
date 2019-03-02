@@ -36,7 +36,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['date', 'dd.MM.Y HH:mm']
             ],
             'username',
-            'full_name',
+            'full_name_ru',
+            'full_name_en',
             'email:email',
             'phone',
             [

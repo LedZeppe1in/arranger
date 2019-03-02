@@ -22,7 +22,8 @@ class m190206_130017_user extends Migration
             'email_confirm_token' => $this->string(),
             'password_hash' => $this->string()->notNull(),
             'password_reset_token' => $this->string(),
-            'full_name' => $this->string()->notNull(),
+            'full_name_ru' => $this->string()->notNull(),
+            'full_name_en' => $this->string()->notNull(),
             'email' => $this->string()->notNull(),
             'phone' => $this->string()->notNull(),
             'youtube_link' => $this->string(),
@@ -30,11 +31,13 @@ class m190206_130017_user extends Migration
             'facebook_link' => $this->string(),
             'twitter_link' => $this->string(),
             'vk_link' => $this->string(),
-            'biography' => $this->text(),
+            'biography_ru' => $this->text(),
+            'biography_en' => $this->text(),
         ], $tableOptions);
 
         $this->createIndex('idx_user_username', '{{%user}}', 'username');
-        $this->createIndex('idx_user_full_name', '{{%user}}', 'full_name');
+        $this->createIndex('idx_user_full_name_ru', '{{%user}}', 'full_name_ru');
+        $this->createIndex('idx_user_full_name_en', '{{%user}}', 'full_name_en');
     }
 
     public function down()

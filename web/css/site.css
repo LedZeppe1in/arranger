@@ -117,6 +117,12 @@ a.desc:after {
     padding-top: 6px;
 }
 
+/* tabs i biography */
+.tab-content .well {
+    margin-top: 5px;
+    background-color: #ffffff;
+}
+
 @media(max-width:767px) {
     .nav li > form > button.logout {
         display:block;

@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
+use yii\bootstrap\Tabs;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\User */
@@ -22,8 +22,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 ['update-biography'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <div class="well">
-        <?= $model->biography ? $model->biography : Yii::t('app', 'GENERAL_NOTICE_NO_RESULTS_FOUND') ?>
-    </div>
+    <?php echo Tabs::widget([
+        'items' => [
+            [
+                'label' => Yii::t('app', 'USER_MODEL_BIOGRAPHY_RU'),
+                'content' =>  $model->biography_ru ? '<div class="well">' . $model->biography_ru . '</div>' :
+                    '<div class="well">' . Yii::t('app', 'GENERAL_NOTICE_NO_RESULTS_FOUND') . '</div>',
+                'active' => true
+            ],
+            [
+                'label' => Yii::t('app', 'USER_MODEL_BIOGRAPHY_EN'),
+                'content' =>  $model->biography_en ? '<div class="well">' . $model->biography_en . '</div>' :
+                    '<div class="well">' . Yii::t('app', 'GENERAL_NOTICE_NO_RESULTS_FOUND') . '</div>',
+            ]
+        ]
+    ]); ?>
 
 </div>
