@@ -30,10 +30,10 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-    <div class="wrap">
+    <div class="admin-wrap">
         <?php
         NavBar::begin([
-            'brandLabel' => Yii::$app->name,
+            'brandLabel' => Yii::t('app', 'FIRST_NAME') . ' ' . Yii::t('app', 'LAST_NAME'),
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
                 'class' => 'navbar-default navbar-fixed-top',
@@ -82,7 +82,7 @@ AppAsset::register($this);
 
         <div class="container">
             <?= Breadcrumbs::widget([
-                'homeLink' => ['label' => 'Главная', 'url' => ['user/profile']],
+                'homeLink' => ['label' => Yii::t('app', 'NAV_HOME'), 'url' => ['user/profile']],
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
             <?= Alert::widget() ?>
@@ -90,13 +90,12 @@ AppAsset::register($this);
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="admin-footer">
         <div class="container">
             <p class="pull-left">
-                <?= Yii::t('app', 'FOOTER_COPYRIGHT') . ' &copy; ' . date('Y') . ' ' .
-                Yii::$app->name ?> | <?= Yii::t('app', 'FOOTER_POWERED_BY') . ' ' .
-                '<a href="mailto:' . Yii::$app->params['adminEmail'] . '">' .
-                Yii::t('app', 'FOOTER_DEVELOPER') . '</a>' ?>
+                <?= Yii::t('app', 'FOOTER_COPYRIGHT') . ' &copy; ' . date('Y') . ' ' . Yii::t('app', 'FIRST_NAME')
+                    . ' ' . Yii::t('app', 'LAST_NAME') ?> | <?= '<a href="mailto:' . Yii::$app->params['adminEmail']
+                    . '">' . Yii::t('app', 'FOOTER_POWERED_BY') . ' ' . Yii::t('app', 'FOOTER_DEVELOPER') . '</a>' ?>
             </p>
         </div>
     </footer>

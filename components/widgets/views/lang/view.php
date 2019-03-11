@@ -13,7 +13,7 @@ use yii\bootstrap\ButtonDropdown;
             'label' => $current->url == 'ru' ? "<figure class='icon-lang icon-ru'></figure>" :
                 "<figure class='icon-lang icon-en'></figure>",
             'options' => [
-                'class' => 'btn-default',
+                'class' => 'btn-default lang-button',
             ],
             'encodeLabel' => false,
             'dropdown' => [

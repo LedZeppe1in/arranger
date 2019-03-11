@@ -5,6 +5,7 @@
 use yii\helpers\Html;
 
 $this->title = Yii::t('app', 'PROJECTS_PAGE_TITLE');
+
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

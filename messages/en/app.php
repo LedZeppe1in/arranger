@@ -1,18 +1,23 @@
 <?php
 
 return [
+    /* Инициалы автора сайта */
+    'FIRST_NAME' => 'Andrey',
+    'LAST_NAME' => 'Ruznyaev',
+
     /* Пункты главного меню клиентской части сайта */
     'NAV_HOME' => 'Home',
-    'NAV_EVENTS' => 'Events',
-    'NAV_SHEET_MUSIC' => 'Sheet music',
+    'NAV_EVENTS' => 'EVENTS',
+    'NAV_SHEET_MUSIC' => 'SHEET MUSIC',
     'NAV_BIG_BAND' => 'Big Band',
     'NAV_JAZZ_COMBO' => 'Jazz Combo',
     'NAV_POP_MUSIC' => 'Pop Music',
+    'NAV_MUSIC_TRACKS' => 'TRACKS',
     'NAV_JINGLES' => 'Jingles',
     'NAV_STEMS' => 'Stems',
-    'NAV_PROJECTS' => 'Projects',
-    'NAV_PUBLICATIONS' => 'Publications',
-    'NAV_CONTACTS' => 'Contacts',
+    'NAV_PROJECTS' => 'PROJECTS',
+    'NAV_PUBLICATIONS' => 'PUBLICATIONS',
+    'NAV_CONTACTS' => 'CONTACTS',
     'NAV_ADMINISTRATION' => 'Administration',
     'NAV_SIGN_IN' => 'Sign in',
     /* Пункты главного меню административной части сайта */
@@ -69,8 +74,12 @@ return [
     /* Страницы клиентской части сайта */
     /* Страница событий */
     'EVENTS_PAGE_TITLE' => 'Events',
-    /* Страница партитур */
-    'SHEET_MUSIC_PAGE_TITLE' => 'Sheet music',
+    /* Страница партитур "Big Band" */
+    'BIG_BAND_PAGE_TITLE' => 'Big Band',
+    /* Страница партитур "Jazz Combo" */
+    'JAZZ_COMBO_PAGE_TITLE' => 'Jazz Combo',
+    /* Страница партитур "Pop Music" */
+    'POP_MUSIC_PAGE_TITLE' => 'Pop Music',
     /* Страница джинглов */
     'JINGLES_PAGE_TITLE' => 'Jingles',
     /* Страница мультитреков */

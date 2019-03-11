@@ -4,7 +4,7 @@
 
 use yii\helpers\Html;
 
-$this->title = Yii::t('app', 'JINGLES_PAGE_TITLE');
+$this->title = Yii::t('app', 'POP_MUSIC_PAGE_TITLE');
 
 $this->params['breadcrumbs'][] = $this->title;
 ?>

@@ -9,6 +9,7 @@ use yii\captcha\Captcha;
 use yii\bootstrap\ActiveForm;
 
 $this->title = Yii::t('app', 'CONTACT_US_PAGE_TITLE');
+
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -27,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php if (Yii::$app->mailer->useFileTransport): ?>
                 Because the application is in development mode, the email is not sent but saved as
                 a file under <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-                                                                                                    Please configure the <code>useFileTransport</code> property of the <code>mail</code>
+                Please configure the <code>useFileTransport</code> property of the <code>mail</code>
                 application component to be false to enable email sending.
             <?php endif; ?>
         </p>

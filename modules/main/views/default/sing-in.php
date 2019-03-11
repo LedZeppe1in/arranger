@@ -8,6 +8,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->title = Yii::t('app', 'SIGN_IN_PAGE_TITLE');
+
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 

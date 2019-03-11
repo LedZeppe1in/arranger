@@ -2,11 +2,13 @@
 
 namespace app\modules\main\controllers;
 
+
 use Yii;
 use yii\web\Response;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use app\modules\admin\models\User;
 use app\modules\admin\models\LoginForm;
 use app\modules\main\models\ContactForm;
 
@@ -63,7 +65,11 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = User::find()->one();
+
+        return $this->render('index', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -77,13 +83,33 @@ class DefaultController extends Controller
     }
 
     /**
-     * Displays sheet music.
+     * Displays big band.
      *
      * @return string
      */
-    public function actionSheetMusic()
+    public function actionBigBand()
     {
-        return $this->render('sheet-music');
+        return $this->render('big-band');
+    }
+
+    /**
+     * Displays jazz combo.
+     *
+     * @return string
+     */
+    public function actionJazzCombo()
+    {
+        return $this->render('jazz-combo');
+    }
+
+    /**
+     * Displays pop music.
+     *
+     * @return string
+     */
+    public function actionPopMusic()
+    {
+        return $this->render('pop-music');
     }
 
     /**
