@@ -10,7 +10,8 @@ $this->title = Yii::t('app', 'FIRST_NAME') . ' ' . Yii::t('app', 'LAST_NAME');
 ?>
 
 <div class="site-index">
-    <?php echo Carousel::widget ( [
+    <?php echo Carousel::widget([
+        'options' => ['class' => 'carousel slide'],
         'items' => [
             ['content' => Html::img('@web/images/pic1.jpg')],
             ['content' => Html::img('@web/images/pic2.jpg')],
