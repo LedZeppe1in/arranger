@@ -383,6 +383,26 @@ a.desc:after {
     outline: none;
 }
 
+.event-block {
+    width: 360px;
+    margin: 10px;
+    background-color: #e3edee;
+    padding: 10px;
+    float: left;
+    border-radius: 5px;
+}
+
+.event-headline {
+    font-size: 20px;
+    line-height: 40px;
+    color: #337ab7;
+}
+
+.event-linkline {
+    line-height: 30px;
+}
+
+
 /* Обработка стилей под размер экрана */
 /*@media (min-width: 992px) {*/
     /*.col-md-9 .caption-image {*/
