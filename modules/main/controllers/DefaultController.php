@@ -2,12 +2,12 @@
 
 namespace app\modules\main\controllers;
 
-
 use Yii;
 use yii\web\Response;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\web\NotFoundHttpException;
 use app\modules\admin\models\User;
 use app\modules\admin\models\Event;
 use app\modules\admin\models\LoginForm;
@@ -83,6 +83,22 @@ class DefaultController extends Controller
         $model = Event::find()->all();
 
         return $this->render('events', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Displays a single Event model.
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionEventView($id)
+    {
+        $model = Event::findOne($id);
+
+        return $this->render('event-view', [
             'model' => $model,
         ]);
     }

@@ -54,6 +54,7 @@ return [
     'WARNING' => 'Warning!',
     'NOTICE_TITLE' => 'Pay attention to',
     'NOTICE_TEXT' => 'this important information.',
+    'READ_MORE' => 'Read more',
 
     /* Общие сообщения об ошибках */
     'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Page not found.',

@@ -49,6 +49,7 @@ $config = [
             'rules' => [
                 'index' => 'main/default/index',
                 'events' => 'main/default/events',
+                '/event-view/<id:\d+>' => 'main/default/event-view/',
                 'big-band' => 'main/default/big-band',
                 'jazz-combo' => 'main/default/jazz-combo',
                 'pop-music' => 'main/default/pop-music',
