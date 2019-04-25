@@ -75,6 +75,7 @@ return [
     /* Страницы клиентской части сайта */
     /* Страница событий */
     'EVENTS_PAGE_TITLE' => 'События',
+    'EVENT_PAGE_TITLE' => 'Событие',
     /* Страница партитур "Big Band" */
     'BIG_BAND_PAGE_TITLE' => 'Big Band',
     /* Страница партитур "Jazz Combo" */

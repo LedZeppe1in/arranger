@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Event */
 
-$this->title = Yii::t('app', 'EVENTS_ADMIN_PAGE_EVENT') . ' - ' . $model->name;
+$this->title = Yii::t('app', 'EVENT_PAGE_TITLE') . ' - ' . $model->name;
 
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'EVENTS_PAGE_TITLE'), 'url' => ['events']];
 $this->params['breadcrumbs'][] = $this->title;
