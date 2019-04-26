@@ -2,7 +2,6 @@
 
 /* @var $this yii\web\View */
 
-use yii\bootstrap\Button;
 use yii\helpers\Html;
 
 $this->title = Yii::t('app', 'EVENTS_PAGE_TITLE');
@@ -29,11 +28,6 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div><br />
     </div>
-    <?php
-        if ($i == 3) {
-            echo '</div>';
-            $i = 0;
-        }
-        $i++;
-    ?>
+    <?php if ($i == 3): ?></div><?php $i = 0; ?><?php endif; ?>
+    <?php $i++; ?>
 <?php endforeach; ?>
