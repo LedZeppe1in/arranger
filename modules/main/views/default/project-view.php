@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Project */
 
-$this->title = Yii::t('app', 'PROJECTS_PAGE_TITLE') . ' - ' . $model->name;
+$this->title = Yii::t('app', 'PROJECT_PAGE_TITLE') . ' - ' . $model->name;
 
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'PROJECTS_PAGE_TITLE'), 'url' => ['projects']];
 $this->params['breadcrumbs'][] = $this->title;

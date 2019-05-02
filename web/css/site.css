@@ -448,6 +448,33 @@ a.desc:after {
 .project-linkline {
     line-height: 30px;
 }
+
+/* Publication page styles */
+.publication-block {
+    border: 1px solid #e3edee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.publication-block:hover {
+    background-color: #e3edee;
+}
+
+.publication-title {
+    font-size: 24px;
+    line-height: 40px;
+    color: #337ab7;
+}
+
+.publication-field {
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.publication-linkline {
+    line-height: 30px;
+}
+
 /* Обработка стилей под размер экрана */
 /*@media (min-width: 992px) {*/
     /*.col-md-9 .caption-image {*/

@@ -11,6 +11,7 @@ use yii\web\NotFoundHttpException;
 use app\modules\admin\models\User;
 use app\modules\admin\models\Event;
 use app\modules\admin\models\Project;
+use app\modules\admin\models\Publication;
 use app\modules\admin\models\LoginForm;
 use app\modules\main\models\ContactForm;
 
@@ -191,7 +192,27 @@ class DefaultController extends Controller
      */
     public function actionPublications()
     {
-        return $this->render('publications');
+        $model = Publication::find()->all();
+
+        return $this->render('publications', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Displays a single Publication model.
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionPublicationView($id)
+    {
+        $model = Publication::findOne($id);
+
+        return $this->render('publication-view', [
+            'model' => $model,
+        ]);
     }
 
     /**
