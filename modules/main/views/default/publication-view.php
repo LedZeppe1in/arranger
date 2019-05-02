@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->title = Yii::t('app', 'PUBLICATION_PAGE_TITLE') . ' - ' . $model->name;
 
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'PUBLICATIONS_PAGE_TITLE'), 'url' => ['publication']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'PUBLICATIONS_PAGE_TITLE'), 'url' => ['publications']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

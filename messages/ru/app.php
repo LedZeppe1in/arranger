@@ -88,8 +88,10 @@ return [
     'STEMS_PAGE_TITLE' => 'Мультитреки',
     /* Страница проектов */
     'PROJECTS_PAGE_TITLE' => 'Проекты',
+    'PROJECT_PAGE_TITLE' => 'Проект',
     /* Страница публикаций */
     'PUBLICATIONS_PAGE_TITLE' => 'Публикации',
+    'PUBLICATION_PAGE_TITLE' => 'Публикация',
     /* Страница контактов */
     'CONTACT_US_PAGE_TITLE' => 'Обратная связь',
     'CONTACT_US_PAGE_TEXT' => 'Если у вас есть деловое предложение или другие вопросы, пожалуйста,

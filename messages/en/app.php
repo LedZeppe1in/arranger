@@ -88,8 +88,10 @@ return [
     'STEMS_PAGE_TITLE' => 'Stems',
     /* Страница проектов */
     'PROJECTS_PAGE_TITLE' => 'Projects',
+    'PROJECT_PAGE_TITLE' => 'Project',
     /* Страница публикаций */
     'PUBLICATIONS_PAGE_TITLE' => 'Publications',
+    'PUBLICATION_PAGE_TITLE' => 'Publication',
     /* Страница контактов */
     'CONTACT_US_PAGE_TITLE' => 'Contact us',
     'CONTACT_US_PAGE_TEXT' => 'If you have business inquiries or other questions,
