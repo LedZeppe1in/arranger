@@ -15,9 +15,9 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php foreach ($model as $item): ?>
     <?php if ($i == 1): ?><div class="row"><?php endif; ?>
     <div class="col-sm-4">
-        <div class="event-block">
-            <a href="event-view/<?= $item->id ?>" class="event-title"><?= $item->name ?></a>
-            <div class="event-date"><?= Yii::$app->formatter->asDate($item->date, "dd MMMM Y, HH:mm") ?></div>
+        <div class="text-block">
+            <a href="event-view/<?= $item->id ?>" class="text-title"><?= $item->name ?></a>
+            <div class="text-date"><?= Yii::$app->formatter->asDate($item->date, "dd MMMM Y, HH:mm") ?></div>
             <div>
                 <i><?= Yii::t('app', 'EVENT_MODEL_DURATION') . ': ' ?></i>
                 <?= Yii::$app->formatter->asDate($item->duration, "HH:mm") ?>

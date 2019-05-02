@@ -15,26 +15,26 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="event-view">
     <h1><?= $model->name ?></h1>
 
-    <div class="event-field">
+    <div class="text-field">
         <b><?= Yii::$app->formatter->asDate($model->date, "dd MMMM Y, HH:mm") ?></b>
     </div>
 
-    <div class="event-field">
+    <div class="text-field">
         <i><?= Yii::t('app', 'EVENT_MODEL_DURATION') . ': ' ?></i>
         <?= Yii::$app->formatter->asDate($model->duration, "HH:mm") ?>
     </div>
 
-    <div class="event-field">
+    <div class="text-field">
         <i><?= Yii::t('app', 'EVENT_MODEL_LOCATION') . ': ' ?></i>
         <?= $model->location ?>
     </div>
 
-    <div class="event-field">
+    <div class="text-field">
         <i><?= Yii::t('app', 'READ_MORE') . ': ' ?></i>
         <a href="<?= $model->link ?>" ><?= $model->link ?></a>
     </div>
 
-    <div class="event-field">
+    <div class="text-field">
         <i><?= Yii::t('app', 'EVENT_MODEL_DESCRIPTION') . ': ' ?></i>
         <div><?= $model->description ?></div>
     </div>

@@ -15,12 +15,12 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="project-view">
     <h1><?= $model->name ?></h1>
 
-    <div class="project-field">
+    <div class="text-field">
         <i><?= Yii::t('app', 'READ_MORE') . ': ' ?></i>
         <a href="<?= $model->link ?>" ><?= $model->link ?></a>
     </div>
 
-    <div class="project-field">
+    <div class="text-field">
         <i><?= Yii::t('app', 'PROJECT_MODEL_DESCRIPTION') . ': ' ?></i>
         <div><?= $model->description ?></div>
     </div>
