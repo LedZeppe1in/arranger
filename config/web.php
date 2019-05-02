@@ -56,6 +56,7 @@ $config = [
                 'jingles' => 'main/default/jingles',
                 'stems' => 'main/default/stems',
                 'projects' => 'main/default/projects',
+                '/project-view/<id:\d+>' => 'main/default/project-view/',
                 'publications' => 'main/default/publications',
                 'contact' => 'main/default/contact',
                 'sing-in' => 'main/default/sing-in',

@@ -423,6 +423,31 @@ a.desc:after {
     line-height: 30px;
 }
 
+/* Project page styles */
+.project-block {
+    border: 1px solid #e3edee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.project-block:hover {
+    background-color: #e3edee;
+}
+
+.project-title {
+    font-size: 24px;
+    line-height: 40px;
+    color: #337ab7;
+}
+
+.project-field {
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.project-linkline {
+    line-height: 30px;
+}
 /* Обработка стилей под размер экрана */
 /*@media (min-width: 992px) {*/
     /*.col-md-9 .caption-image {*/

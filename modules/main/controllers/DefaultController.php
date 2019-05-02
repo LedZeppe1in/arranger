@@ -10,6 +10,7 @@ use yii\filters\AccessControl;
 use yii\web\NotFoundHttpException;
 use app\modules\admin\models\User;
 use app\modules\admin\models\Event;
+use app\modules\admin\models\Project;
 use app\modules\admin\models\LoginForm;
 use app\modules\main\models\ContactForm;
 
@@ -160,7 +161,27 @@ class DefaultController extends Controller
      */
     public function actionProjects()
     {
-        return $this->render('projects');
+        $model = Project::find()->all();
+
+        return $this->render('projects', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Displays a single Project model.
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionProjectView($id)
+    {
+        $model = Project::findOne($id);
+
+        return $this->render('project-view', [
+            'model' => $model,
+        ]);
     }
 
     /**
