@@ -419,10 +419,6 @@ a.desc:after {
     margin-left: 10px;
 }
 
-.text-linkline {
-    line-height: 30px;
-}
-
 /* Обработка стилей под размер экрана */
 /*@media (min-width: 992px) {*/
     /*.col-md-9 .caption-image {*/
