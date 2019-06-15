@@ -20,6 +20,12 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
+        <?= Html::a('<span class="glyphicon glyphicon-file"></span> ' .
+            Yii::t('app', 'SHEET_MUSIC_ADMIN_PAGE_BUTTON_VIEW_SHEET_MUSIC_PDF'), ['#'], [
+            'class' => 'btn btn-success',
+            'data-toggle'=>'modal',
+            'data-target'=>'#viewSheetMusicPDFModalForm'
+        ]) ?>
         <?= Html::a('<span class="glyphicon glyphicon-pencil"></span> ' . Yii::t('app', 'BUTTON_UPDATE'),
             ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('<span class="glyphicon glyphicon-trash"></span> ' . Yii::t('app', 'BUTTON_DELETE'), ['#'], [
@@ -38,11 +44,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => $model->getTypeName(),
             ],
             'price',
-            [
-                'label' => Yii::t('app', 'SHEET_MUSIC_MODEL_FILE'),
-                'value' => Html::a($model->file, ['/sheet-music/pdf/' . $model->id], ['target' => '_blank']),
-                'format' => 'raw'
-            ],
             [
                 'label' => Yii::t('app', 'SHEET_MUSIC_MODEL_DESCRIPTION'),
                 'value' => $model->description,

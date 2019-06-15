@@ -77,7 +77,8 @@ class SheetMusicController extends Controller
                 if ($model->validate(['sheet_music_file'])) {
                     // Формирование пути к файлу партитуры (без папки с id записи БД)
                     $dir = Yii::getAlias('@webroot') . '/uploads/sheet-music/';
-                    $fileName = $model->sheet_music_file->baseName . '.' . $model->sheet_music_file->extension;
+                    $fileName = str_replace(' ', '-', $model->sheet_music_file->baseName) . '.' .
+                        $model->sheet_music_file->extension;
                     $model->file = $dir . $fileName;
                     // Сохранение данных о новой партитуре в БД
                     if ($model->save()) {

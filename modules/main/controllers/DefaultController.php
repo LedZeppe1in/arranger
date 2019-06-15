@@ -11,6 +11,7 @@ use yii\web\NotFoundHttpException;
 use app\modules\admin\models\User;
 use app\modules\admin\models\Event;
 use app\modules\admin\models\Project;
+use app\modules\admin\models\SheetMusic;
 use app\modules\admin\models\Publication;
 use app\modules\admin\models\LoginForm;
 use app\modules\main\models\ContactForm;
@@ -112,7 +113,28 @@ class DefaultController extends Controller
      */
     public function actionBigBand()
     {
-        return $this->render('big-band');
+        // Поиск всех партитур с типом "big band"
+        $model = SheetMusic::find()->where(array('type' => SheetMusic::TYPE_BIG_BAND))->all();
+
+        return $this->render('big-band', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Displays a single SheetMusic model (big band).
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionBigBandView($id)
+    {
+        $model = SheetMusic::findOne($id);
+
+        return $this->render('big-band-view', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -122,7 +144,28 @@ class DefaultController extends Controller
      */
     public function actionJazzCombo()
     {
-        return $this->render('jazz-combo');
+        // Поиск всех партитур с типом "jazz combo"
+        $model = SheetMusic::find()->where(array('type' => SheetMusic::TYPE_JAZZ_COMBO))->all();
+
+        return $this->render('jazz-combo', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Displays a single SheetMusic model (jazz-combo).
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionJazzComboView($id)
+    {
+        $model = SheetMusic::findOne($id);
+
+        return $this->render('jazz-combo-view', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -132,7 +175,28 @@ class DefaultController extends Controller
      */
     public function actionPopMusic()
     {
-        return $this->render('pop-music');
+        // Поиск всех партитур с типом "pop music"
+        $model = SheetMusic::find()->where(array('type' => SheetMusic::TYPE_POP_MUSIC))->all();
+
+        return $this->render('pop-music', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Displays a single SheetMusic model (pop-music).
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionPopMusicView($id)
+    {
+        $model = SheetMusic::findOne($id);
+
+        return $this->render('pop-music-view', [
+            'model' => $model,
+        ]);
     }
 
     /**

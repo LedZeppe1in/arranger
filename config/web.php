@@ -30,6 +30,9 @@ $config = [
                     ]
                 ]
             ],
+        ],
+        'pdfjs' => [
+            'class' => '\yii2assets\pdfjs\Module',
         ]
     ],
 
@@ -51,8 +54,11 @@ $config = [
                 'events' => 'main/default/events',
                 '/event-view/<id:\d+>' => 'main/default/event-view/',
                 'big-band' => 'main/default/big-band',
+                '/big-band-view/<id:\d+>' => 'main/default/big-band-view/',
                 'jazz-combo' => 'main/default/jazz-combo',
+                '/jazz-combo-view/<id:\d+>' => 'main/default/jazz-combo-view/',
                 'pop-music' => 'main/default/pop-music',
+                '/pop-music-view/<id:\d+>' => 'main/default/pop-music-view/',
                 'jingles' => 'main/default/jingles',
                 'stems' => 'main/default/stems',
                 'projects' => 'main/default/projects',

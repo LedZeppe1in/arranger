@@ -138,10 +138,13 @@ return [
     'SHEET_MUSIC_ADMIN_PAGE_UPDATE_SHEET_MUSIC' => 'Update sheet music',
     'SHEET_MUSIC_ADMIN_PAGE_DELETE_SHEET_MUSIC' => 'Delete sheet music',
     'SHEET_MUSIC_ADMIN_PAGE_MODAL_FORM_TEXT' => 'Are you sure that you want to delete this sheet music?',
+    'SHEET_MUSIC_ADMIN_PAGE_VIEW_SHEET_MUSIC_PDF' => 'View sheet music in PDF format',
     /* Сообщения на страницах администрирования партитур */
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_CREATE_SHEET_MUSIC' => 'You have successfully created a new sheet music.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_UPDATED_SHEET_MUSIC' => 'You have successfully updated sheet music.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_DELETED_SHEET_MUSIC' => 'You have successfully deleted sheet music.',
+    /* Кнопки на страницах администрирования партитур */
+    'SHEET_MUSIC_ADMIN_PAGE_BUTTON_VIEW_SHEET_MUSIC_PDF' => 'View PDF',
     /* Страницы администрирования треков */
     'MUSIC_TRACKS_ADMIN_PAGE_MUSIC_TRACK' => 'Music track',
     'MUSIC_TRACKS_ADMIN_PAGE_MUSIC_TRACKS' => 'Music tracks',

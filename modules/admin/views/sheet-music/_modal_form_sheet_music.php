@@ -2,6 +2,7 @@
 
 /* @var $model app\modules\admin\models\SheetMusic */
 
+use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap\Modal;
 use yii\bootstrap\Button;
@@ -40,5 +41,17 @@ Modal::begin([
     ]); ?>
 
     <?php ActiveForm::end(); ?>
+
+<?php Modal::end(); ?>
+
+<?php Modal::begin([
+    'id' => 'viewSheetMusicPDFModalForm',
+    'header' => '<h3>' . Yii::t('app', 'SHEET_MUSIC_ADMIN_PAGE_VIEW_SHEET_MUSIC_PDF') . '</h3>',
+]); ?>
+
+    <?php echo \yii2assets\pdfjs\PdfJs::widget([
+        'width'=>'100%',
+        'url' => Url::base() . '/uploads/sheet-music/' . $model->id . '/' . basename($model->file),
+    ]); ?>
 
 <?php Modal::end(); ?>

@@ -138,10 +138,13 @@ return [
     'SHEET_MUSIC_ADMIN_PAGE_UPDATE_SHEET_MUSIC' => 'Изменить партитуру',
     'SHEET_MUSIC_ADMIN_PAGE_DELETE_SHEET_MUSIC' => 'Удалить партитуру',
     'SHEET_MUSIC_ADMIN_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данную партитуту?',
+    'SHEET_MUSIC_ADMIN_PAGE_VIEW_SHEET_MUSIC_PDF' => 'Просмотр партитуры в формате PDF',
     /* Сообщения на страницах администрирования партитур */
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_CREATE_SHEET_MUSIC' => 'Вы успешно создали новую партитуру.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_UPDATED_SHEET_MUSIC' => 'Вы успешно обновили данную партитуру.',
     'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_DELETED_SHEET_MUSIC' => 'Вы успешно удалили партитуру.',
+    /* Кнопки на страницах администрирования партитур */
+    'SHEET_MUSIC_ADMIN_PAGE_BUTTON_VIEW_SHEET_MUSIC_PDF' => 'Просмотр PDF',
     /* Страницы администрирования треков */
     'MUSIC_TRACKS_ADMIN_PAGE_MUSIC_TRACK' => 'Трек',
     'MUSIC_TRACKS_ADMIN_PAGE_MUSIC_TRACKS' => 'Треки',
