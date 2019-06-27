@@ -1,6 +1,5 @@
 <?php
 
-use yii\helpers\Url;
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
@@ -33,18 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="text-field">
         <i><?= Yii::t('app', 'SHEET_MUSIC_MODEL_FILE') . ': ' ?></i>
-        <div>
-            <?= \yii2assets\pdfjs\PdfJs::widget([
-                'url'=> Url::base() . '/uploads/sheet-music/' . $model->id . '/' . basename($model->file),
-                'buttons'=>[
-                    'presentationMode' => false,
-                    'openFile' => false,
-                    'print' => false,
-                    'download' => false,
-                    'viewBookmark' => false,
-                    'secondaryToolbarToggle' => false
-                ]
-            ]); ?>
+        <div class="image-block">
+            <?php echo Html::img('@web/image_preview.jpg', ['class' => 'pull-left img-responsive']); ?>
         </div>
     </div>
 </div>

@@ -3,10 +3,12 @@
 namespace app\modules\main\controllers;
 
 use Yii;
+use Imagick;
 use yii\web\Response;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\data\ActiveDataProvider;
 use yii\web\NotFoundHttpException;
 use app\modules\admin\models\User;
 use app\modules\admin\models\Event;
@@ -114,10 +116,15 @@ class DefaultController extends Controller
     public function actionBigBand()
     {
         // Поиск всех партитур с типом "big band"
-        $model = SheetMusic::find()->where(array('type' => SheetMusic::TYPE_BIG_BAND))->all();
+        $dataProvider = new ActiveDataProvider([
+            'query' => SheetMusic::find()->where(array('type' => SheetMusic::TYPE_BIG_BAND)),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
 
         return $this->render('big-band', [
-            'model' => $model,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
@@ -130,7 +137,10 @@ class DefaultController extends Controller
      */
     public function actionBigBandView($id)
     {
+        // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
+        // Генерация изображения партитуры в формате JPG на основе PDF-документа
+        $model->generateSheetMusicJpg();
 
         return $this->render('big-band-view', [
             'model' => $model,
@@ -145,10 +155,15 @@ class DefaultController extends Controller
     public function actionJazzCombo()
     {
         // Поиск всех партитур с типом "jazz combo"
-        $model = SheetMusic::find()->where(array('type' => SheetMusic::TYPE_JAZZ_COMBO))->all();
+        $dataProvider = new ActiveDataProvider([
+            'query' => SheetMusic::find()->where(array('type' => SheetMusic::TYPE_JAZZ_COMBO)),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
 
         return $this->render('jazz-combo', [
-            'model' => $model,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
@@ -161,7 +176,10 @@ class DefaultController extends Controller
      */
     public function actionJazzComboView($id)
     {
+        // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
+        // Генерация изображения партитуры в формате JPG на основе PDF-документа
+        $model->generateSheetMusicJpg();
 
         return $this->render('jazz-combo-view', [
             'model' => $model,
@@ -176,10 +194,15 @@ class DefaultController extends Controller
     public function actionPopMusic()
     {
         // Поиск всех партитур с типом "pop music"
-        $model = SheetMusic::find()->where(array('type' => SheetMusic::TYPE_POP_MUSIC))->all();
+        $dataProvider = new ActiveDataProvider([
+            'query' => SheetMusic::find()->where(array('type' => SheetMusic::TYPE_POP_MUSIC)),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
 
         return $this->render('pop-music', [
-            'model' => $model,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
@@ -192,7 +215,10 @@ class DefaultController extends Controller
      */
     public function actionPopMusicView($id)
     {
+        // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
+        // Генерация изображения партитуры в формате JPG на основе PDF-документа
+        $model->generateSheetMusicJpg();
 
         return $this->render('pop-music-view', [
             'model' => $model,

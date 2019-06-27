@@ -419,6 +419,23 @@ a.desc:after {
     margin-left: 10px;
 }
 
+.image-block {
+    border: 1px solid #e3edee;
+    background-color: #e3edee;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    height: auto;
+    overflow: hidden;
+    width: 50%;
+}
+
+.pagination {
+    padding-left: 15px;
+    clear: both;
+    display: block;
+}
+
 /* Обработка стилей под размер экрана */
 /*@media (min-width: 992px) {*/
     /*.col-md-9 .caption-image {*/
