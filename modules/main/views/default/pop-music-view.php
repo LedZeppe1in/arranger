@@ -25,10 +25,12 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= $model->price ?>
     </div>
 
-    <div class="text-field">
-        <i><?= Yii::t('app', 'SHEET_MUSIC_MODEL_DESCRIPTION') . ': ' ?></i>
-        <div><?= $model->description ?></div>
-    </div>
+    <?php if($model->description): ?>
+        <div class="text-field">
+            <i><?= Yii::t('app', 'SHEET_MUSIC_MODEL_DESCRIPTION') . ': ' ?></i>
+            <div><?= $model->description ?></div>
+        </div>
+    <?php endif ?>
 
     <div class="text-field">
         <i><?= Yii::t('app', 'SHEET_MUSIC_MODEL_FILE') . ': ' ?></i>

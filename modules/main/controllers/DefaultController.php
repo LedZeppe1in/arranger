@@ -3,7 +3,6 @@
 namespace app\modules\main\controllers;
 
 use Yii;
-use Imagick;
 use yii\web\Response;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -14,6 +13,7 @@ use app\modules\admin\models\User;
 use app\modules\admin\models\Event;
 use app\modules\admin\models\Project;
 use app\modules\admin\models\SheetMusic;
+use app\modules\admin\models\MusicTrack;
 use app\modules\admin\models\Publication;
 use app\modules\admin\models\LoginForm;
 use app\modules\main\models\ContactForm;
@@ -232,7 +232,34 @@ class DefaultController extends Controller
      */
     public function actionJingles()
     {
-        return $this->render('jingles');
+        // Поиск всех треков с типом "jingles"
+        $dataProvider = new ActiveDataProvider([
+            'query' => MusicTrack::find()->where(array('type' => MusicTrack::TYPE_JINGLE)),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
+
+        return $this->render('jingles', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Displays a single MusicTrack model (jingles).
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionJingleView($id)
+    {
+        // Поиск трека по id
+        $model = MusicTrack::findOne($id);
+
+        return $this->render('jingle-view', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -242,7 +269,34 @@ class DefaultController extends Controller
      */
     public function actionStems()
     {
-        return $this->render('stems');
+        // Поиск всех треков с типом "stems"
+        $dataProvider = new ActiveDataProvider([
+            'query' => MusicTrack::find()->where(array('type' => MusicTrack::TYPE_STEMS)),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
+
+        return $this->render('stems', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Displays a single MusicTrack model (stems).
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionStemView($id)
+    {
+        // Поиск трека по id
+        $model = MusicTrack::findOne($id);
+
+        return $this->render('stem-view', [
+            'model' => $model,
+        ]);
     }
 
     /**

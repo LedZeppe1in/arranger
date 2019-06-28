@@ -2,8 +2,8 @@
 
 namespace app\modules\admin\models;
 
-use Imagick;
 use Yii;
+use Imagick;
 use yii\helpers\ArrayHelper;
 use yii\behaviors\TimestampBehavior;
 
