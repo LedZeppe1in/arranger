@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <?php echo ListView::widget([
     'dataProvider' => $dataProvider,
     'beforeItem' => function ($model , $key , $index , $widget) {
-        if (($index == 0) || (($index + 1) % 4 == 0))
+        if (($index == 0) || (($index % 3) == 0))
             return '<div class="row">';
         return false;
     },
@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
     },
     'options' => [
         'tag' => 'div',
-        'id' => 'big-band-list',
+        'id' => 'pop_music-list',
     ],
     'itemOptions' => [
         'tag' => 'div',

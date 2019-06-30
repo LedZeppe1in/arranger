@@ -85,10 +85,15 @@ class DefaultController extends Controller
      */
     public function actionEvents()
     {
-        $model = Event::find()->all();
+        $dataProvider = new ActiveDataProvider([
+            'query' => Event::find(),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
 
         return $this->render('events', [
-            'model' => $model,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
@@ -306,10 +311,15 @@ class DefaultController extends Controller
      */
     public function actionProjects()
     {
-        $model = Project::find()->all();
+        $dataProvider = new ActiveDataProvider([
+            'query' => Project::find(),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
 
         return $this->render('projects', [
-            'model' => $model,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
@@ -336,10 +346,15 @@ class DefaultController extends Controller
      */
     public function actionPublications()
     {
-        $model = Publication::find()->all();
+        $dataProvider = new ActiveDataProvider([
+            'query' => Publication::find(),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
 
         return $this->render('publications', [
-            'model' => $model,
+            'dataProvider' => $dataProvider,
         ]);
     }
 
