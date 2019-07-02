@@ -34,4 +34,14 @@ $this->params['breadcrumbs'][] = $this->title;
             <div><?= $model->description ?></div>
         </div>
     <?php endif ?>
+
+    <div class="text-field">
+        <i><?= Yii::t('app', 'MUSIC_TRACK_MODEL_PREVIEW') . ': ' ?></i>
+        <div>
+            <audio controls>
+                <source src="/web/uploads/music-tracks/<?= $model->id ?>/<?= basename($model->preview) ?>"
+                        type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
 </div>
