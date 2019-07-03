@@ -33,9 +33,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php endif ?>
 
     <div class="text-field">
-        <i><?= Yii::t('app', 'SHEET_MUSIC_MODEL_FILE') . ': ' ?></i>
+        <i><?= Yii::t('app', 'SHEET_MUSIC_MODEL_PREVIEW') . ': ' ?></i>
         <div class="image-block">
-            <?php echo Html::img('@web/image_preview.jpg', ['class' => 'pull-left img-responsive']); ?>
+            <?php echo Html::img('@web/uploads/sheet-music/' .$model->id . '/' . basename($model->preview),
+                ['class' => 'pull-left img-responsive']); ?>
         </div>
     </div>
 </div>

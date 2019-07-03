@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use Imagick;
 use Yii;
 use yii\web\Controller;
 use yii\web\UploadedFile;
@@ -80,16 +81,66 @@ class SheetMusicController extends Controller
                     $fileName = str_replace(' ', '-', $model->sheet_music_file->baseName) . '.' .
                         $model->sheet_music_file->extension;
                     $model->file = $dir . $fileName;
+                    //
+                    $model->preview = $dir . $fileName;
                     // Сохранение данных о новой партитуре в БД
                     if ($model->save()) {
                         // Формирование новой директории для файла партитуры
                         $dir .= $model->id . '/';
                         // Создание новой директории для файла партитуры
                         FileHelper::createDirectory($dir);
-                        // Обновление пути к для файлу партитуры в БД
+                        // Обновление пути к файлу партитуры в БД
                         $model->updateAttributes(['file' => $dir . $fileName]);
                         // Сохранение файла партитуры на сервере
                         $model->sheet_music_file->saveAs($dir . $fileName);
+                        // Создание объекта изображения
+                        $imagick = new Imagick();
+                        // Установка разрешения результирующего jpg
+                        $imagick->setResolution(300, 300);
+                        // Определение кол-ва страниц в pdf-документе
+                        $imagick->readImage($model->file);
+                        $pages = $imagick->getIteratorIndex();
+                        // Чтение первой страницы pdf
+                        $imagick->readImage($model->file.'[0]');
+                        // Установка формата jpg
+                        $imagick->setImageFormat('jpg');
+                        // Название файла полученного изображения
+                        $preview_file = $dir . 'preview.jpg';
+                        // Если в pdf-документе всего одна страниц
+                        if ($pages == 0) {
+                            // Получить итератор пикселей
+                            $imageIterator = $imagick->getPixelIterator();
+                            // Вычисление кол-ва рядов (строк) пикселей в изображении
+                            $count = 0;
+                            while ($pixels = $imageIterator->getNextIteratorRow())
+                                $count++;
+                            // Получить итератор пикселей
+                            $imageIterator = $imagick->getPixelIterator();
+                            // Устанавливает итератор пикселей на последний ряд
+                            $imageIterator->setIteratorLastRow();
+                            // Переменная для хранения счетчика количества рядов пикселей
+                            $row_number = 0;
+                            // Обход всех рядов пикселей с последнего ряда
+                            while ($pixels = $imageIterator->getPreviousIteratorRow()) {
+                                // Если текущее кол-во пройденных рядов пикселей меньше половины от общего кол-ва
+                                if ($row_number < round($count / 2) ) {
+                                    // Поход по пикселям в строке (столбцы)
+                                    foreach ($pixels as $column => $pixel) {
+                                        /* @var $pixel \ImagickPixel */
+                                        // Перекрашивание каждого пикселя в белый цвет
+                                        $pixel->setColor('rgba(255, 255, 255, 255)');
+                                    }
+                                    // Синхронизация итератора (это необходимо делать на каждой итерации)
+                                    $imageIterator->syncIterator();
+                                }
+                                $row_number++;
+                            }
+                        }
+                        // Сохранение изображения
+                        file_put_contents($preview_file, $imagick, FILE_USE_INCLUDE_PATH);
+                        // Обновление пути к файлу превью партитуры в БД
+                        $model->updateAttributes(['preview' => $preview_file]);
+                        // Вывод сообщения
                         Yii::$app->getSession()->setFlash('success',
                             Yii::t('app', 'SHEET_MUSIC_ADMIN_PAGE_MESSAGE_CREATE_SHEET_MUSIC'));
 
@@ -124,13 +175,61 @@ class SheetMusicController extends Controller
                     $pos = strrpos($model->file, '/');
                     $dir = substr($model->file, 0, $pos) . '/';
                     // Запоминание нового имя файла партитуры
-                    $fileName = $model->sheet_music_file->baseName . '.' . $model->sheet_music_file->extension;
+                    $fileName = str_replace(' ', '-', $model->sheet_music_file->baseName) . '.' .
+                        $model->sheet_music_file->extension;
                     // Удаление старого файла партитуры
                     unlink($model->file);
                     // Сохранение нового файла партитуры
                     $model->sheet_music_file->saveAs($dir . $fileName);
                     // Сохранение нового пути к файлу партитуры в БД
                     $model->updateAttributes(['file' => $dir . $fileName]);
+                    // Создание объекта изображения
+                    $imagick = new Imagick();
+                    // Установка разрешения результирующего jpg
+                    $imagick->setResolution(300, 300);
+                    // Определение кол-ва страниц в pdf-документе
+                    $imagick->readImage($model->file);
+                    $pages = $imagick->getIteratorIndex();
+                    // Чтение первой страницы pdf
+                    $imagick->readImage($model->file.'[0]');
+                    // Установка формата jpg
+                    $imagick->setImageFormat('jpg');
+                    // Название файла полученного изображения
+                    $preview_file = $dir . 'preview.jpg';
+                    // Если в pdf-документе всего одна страниц
+                    if ($pages == 0) {
+                        // Получить итератор пикселей
+                        $imageIterator = $imagick->getPixelIterator();
+                        // Вычисление кол-ва рядов (строк) пикселей в изображении
+                        $count = 0;
+                        while ($pixels = $imageIterator->getNextIteratorRow())
+                            $count++;
+                        // Получить итератор пикселей
+                        $imageIterator = $imagick->getPixelIterator();
+                        // Устанавливает итератор пикселей на последний ряд
+                        $imageIterator->setIteratorLastRow();
+                        // Переменная для хранения счетчика количества рядов пикселей
+                        $row_number = 0;
+                        // Обход всех рядов пикселей с последнего ряда
+                        while ($pixels = $imageIterator->getPreviousIteratorRow()) {
+                            // Если текущее кол-во пройденных рядов пикселей меньше половины от общего кол-ва
+                            if ($row_number < round($count / 2) ) {
+                                // Поход по пикселям в строке (столбцы)
+                                foreach ($pixels as $column => $pixel) {
+                                    /* @var $pixel \ImagickPixel */
+                                    // Перекрашивание каждого пикселя в белый цвет
+                                    $pixel->setColor('rgba(255, 255, 255, 255)');
+                                }
+                                // Синхронизация итератора (это необходимо делать на каждой итерации)
+                                $imageIterator->syncIterator();
+                            }
+                            $row_number++;
+                        }
+                    }
+                    // Сохранение изображения
+                    file_put_contents($preview_file, $imagick, FILE_USE_INCLUDE_PATH);
+                    // Обновление пути к файлу превью партитуры в БД
+                    $model->updateAttributes(['preview' => $preview_file]);
                 }
             }
             // Вывод сообщения об удачном изменении записи

@@ -5,7 +5,6 @@ namespace app\modules\admin\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
-
 /**
  * SheetMusicSearch represents the model behind the search form of `app\modules\admin\models\SheetMusic`.
  */
@@ -18,7 +17,7 @@ class SheetMusicSearch extends SheetMusic
     {
         return [
             [['id', 'created_at', 'updated_at', 'type'], 'integer'],
-            [['name', 'file', 'description'], 'safe'],
+            [['name', 'preview', 'file', 'description'], 'safe'],
             [['price'], 'number'],
         ];
     }
@@ -72,6 +71,7 @@ class SheetMusicSearch extends SheetMusic
         ]);
 
         $query->andFilterWhere(['ilike', 'name', $this->name])
+            ->andFilterWhere(['ilike', 'preview', $this->preview])
             ->andFilterWhere(['ilike', 'file', $this->file])
             ->andFilterWhere(['ilike', 'description', $this->description]);
 

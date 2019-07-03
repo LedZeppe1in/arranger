@@ -248,6 +248,7 @@ return [
     'SHEET_MUSIC_MODEL_NAME' => 'Name',
     'SHEET_MUSIC_MODEL_TYPE' => 'Type',
     'SHEET_MUSIC_MODEL_PRICE' => 'Price',
+    'SHEET_MUSIC_MODEL_PREVIEW' => 'Preview',
     'SHEET_MUSIC_MODEL_FILE' => 'File',
     'SHEET_MUSIC_MODEL_DESCRIPTION' => 'Description',
     /* Значения полей модели SheetMusic */

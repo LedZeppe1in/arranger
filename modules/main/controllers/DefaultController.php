@@ -144,8 +144,6 @@ class DefaultController extends Controller
     {
         // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
-        // Генерация изображения партитуры в формате JPG на основе PDF-документа
-        $model->generateSheetMusicJpg();
 
         return $this->render('big-band-view', [
             'model' => $model,
@@ -183,8 +181,6 @@ class DefaultController extends Controller
     {
         // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
-        // Генерация изображения партитуры в формате JPG на основе PDF-документа
-        $model->generateSheetMusicJpg();
 
         return $this->render('jazz-combo-view', [
             'model' => $model,
@@ -222,8 +218,6 @@ class DefaultController extends Controller
     {
         // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
-        // Генерация изображения партитуры в формате JPG на основе PDF-документа
-        $model->generateSheetMusicJpg();
 
         return $this->render('pop-music-view', [
             'model' => $model,

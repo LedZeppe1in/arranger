@@ -49,6 +49,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => $model->description,
                 'format' => 'raw'
             ],
+            [
+                'label' => Yii::t('app', 'SHEET_MUSIC_MODEL_PREVIEW'),
+                'value' => Html::img('@web/uploads/sheet-music/' .$model->id . '/' . basename($model->preview),
+                    ['class' => 'image-block']),
+                'format' => 'raw'
+            ],
         ],
     ]) ?>
 

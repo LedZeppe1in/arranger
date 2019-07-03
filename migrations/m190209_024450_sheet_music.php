@@ -20,6 +20,7 @@ class m190209_024450_sheet_music extends Migration
             'name' => $this->string()->notNull(),
             'type' => $this->smallInteger()->notNull()->defaultValue(0),
             'price' => $this->money(12, 2)->notNull(),
+            'preview' => $this->text()->notNull(),
             'file' => $this->text()->notNull(),
             'description' => $this->text(),
         ], $tableOptions);
