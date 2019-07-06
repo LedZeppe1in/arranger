@@ -419,6 +419,10 @@ a.desc:after {
     margin-left: 10px;
 }
 
+.text-contact {
+    line-height: 30px;
+}
+
 .image-block {
     border: 1px solid #e3edee;
     background-color: #e3edee;
@@ -435,6 +439,7 @@ a.desc:after {
     clear: both;
     display: block;
 }
+
 
 /* Обработка стилей под размер экрана */
 /*@media (min-width: 992px) {*/

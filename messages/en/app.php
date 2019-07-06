@@ -93,6 +93,7 @@ return [
     'PUBLICATIONS_PAGE_TITLE' => 'Publications',
     'PUBLICATION_PAGE_TITLE' => 'Publication',
     /* Страница контактов */
+    'CONTACTS_PAGE_TITLE' => 'Contacts',
     'CONTACT_US_PAGE_TITLE' => 'Contact us',
     'CONTACT_US_PAGE_TEXT' => 'If you have business inquiries or other questions,
         please fill out the following form to contact us. Thank you.',

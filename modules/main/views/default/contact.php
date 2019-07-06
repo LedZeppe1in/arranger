@@ -13,6 +13,52 @@ $this->title = Yii::t('app', 'CONTACT_US_PAGE_TITLE');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
+<div>
+    <h1><?= Html::encode(Yii::t('app', 'CONTACTS_PAGE_TITLE')) ?></h1>
+
+    <h3><?= Yii::t('app', 'FIRST_NAME') . ' ' . Yii::t('app', 'LAST_NAME')?></h3>
+
+    <div class="text-contact">
+        <?php
+        $em = explode(", ", $user->email);
+        foreach($em as $em)
+        {
+            echo "<a href=\"mailto:".$em."\" >".$em."</a>"." ";
+        }
+        ?>
+    </div>
+
+    <div class="text-contact">
+        <?= $user->phone ?>
+    </div>
+
+    <div class="text-contact">
+        <b>YouTube:</b>
+        <a href="<?= $user->youtube_link ?>" ><?= $user->youtube_link ?></a>
+    </div>
+
+    <div class="text-contact">
+        <b>Instagram:</b>
+        <a href="<?= $user->instagram_link ?>" ><?= $user->instagram_link ?></a>
+    </div>
+
+    <div class="text-contact">
+        <b>Facebook:</b>
+        <a href="<?= $user->facebook_link ?>" ><?= $user->facebook_link ?></a>
+    </div>
+
+    <div class="text-contact">
+        <b>Twitter:</b>
+        <a href="<?= $user->twitter_link ?>" ><?= $user->twitter_link ?></a>
+    </div>
+
+    <div class="text-contact">
+        <b>VK:</b>
+        <a href="<?= $user->vk_link ?>" ><?= $user->vk_link ?></a>
+    </div>
+
+</div>
+
 <div class="main-default-contact">
     <h1><?= Html::encode($this->title) ?></h1>
 
