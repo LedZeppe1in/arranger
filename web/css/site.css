@@ -421,6 +421,7 @@ a.desc:after {
 
 .text-contact {
     line-height: 30px;
+    padding-top: 3px;
 }
 
 .image-block {

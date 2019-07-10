@@ -18,17 +18,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h3><?= Yii::t('app', 'FIRST_NAME') . ' ' . Yii::t('app', 'LAST_NAME')?></h3>
 
-    <div class="text-contact">
+    <div class="text-contact" style="font-size: 16px;">
         <?php
-        $em = explode(", ", $user->email);
-        foreach($em as $em)
-        {
-            echo "<a href=\"mailto:".$em."\" >".$em."</a>"." ";
-        }
+            $emails = explode(", ", $user->email);
+            foreach ($emails as $email)
+                echo "<a href=\"mailto:" . $email . "\" >" . $email . "</a> ";
         ?>
     </div>
 
-    <div class="text-contact">
+    <div class="text-contact" style="font-size: 16px;">
         <?= $user->phone ?>
     </div>
 
