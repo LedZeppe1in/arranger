@@ -417,6 +417,7 @@ class DefaultController extends Controller
 
             return $this->refresh();
         }
+
         return $this->render('contact', [
             'model' => $model,
             'user' => $user,

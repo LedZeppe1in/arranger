@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\modules\main\models\ContactForm */
+/* @var $user app\modules\admin\models\User */
 
 use yii\helpers\Html;
 use yii\captcha\Captcha;
@@ -31,28 +32,23 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <div class="text-contact">
-        <b>YouTube:</b>
-        <a href="<?= $user->youtube_link ?>" ><?= $user->youtube_link ?></a>
+        <b>YouTube: </b><?= Html::a($user->youtube_link, $user->youtube_link) ?>
     </div>
 
     <div class="text-contact">
-        <b>Instagram:</b>
-        <a href="<?= $user->instagram_link ?>" ><?= $user->instagram_link ?></a>
+        <b>Instagram: </b><?= Html::a($user->instagram_link, $user->instagram_link) ?>
     </div>
 
     <div class="text-contact">
-        <b>Facebook:</b>
-        <a href="<?= $user->facebook_link ?>" ><?= $user->facebook_link ?></a>
+        <b>Facebook: </b><?= Html::a($user->facebook_link, $user->facebook_link) ?>
     </div>
 
     <div class="text-contact">
-        <b>Twitter:</b>
-        <a href="<?= $user->twitter_link ?>" ><?= $user->twitter_link ?></a>
+        <b>Twitter: </b><?= Html::a($user->twitter_link, $user->twitter_link) ?>
     </div>
 
     <div class="text-contact">
-        <b>VK:</b>
-        <a href="<?= $user->vk_link ?>" ><?= $user->vk_link ?></a>
+        <b>VK: </b><?= Html::a($user->vk_link, $user->vk_link) ?>
     </div>
 
 </div>
@@ -65,17 +61,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="alert alert-success">
             <?= Yii::t('app', 'CONTACT_US_PAGE_SUCCESS_MESSAGE') ?>
         </div>
-
-        <p>
-            Note that if you turn on the Yii debugger, you should be able
-            to view the mail message on the mail panel of the debugger.
-            <?php if (Yii::$app->mailer->useFileTransport): ?>
-                Because the application is in development mode, the email is not sent but saved as
-                a file under <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-                Please configure the <code>useFileTransport</code> property of the <code>mail</code>
-                application component to be false to enable email sending.
-            <?php endif; ?>
-        </p>
 
     <?php else: ?>
 
