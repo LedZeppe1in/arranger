@@ -6,28 +6,92 @@ $db = require __DIR__ . '/db.php';
 $config = [
     'id' => 'arranger',
     'name' => 'Arranger',
+    'defaultRoute' => 'main/default/index',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+
+    // all site modules
+    'modules' => [
+        'main' => [
+            'class' => 'app\modules\main\Module',
+        ],
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+            'as access' => [
+                'class' => 'yii\filters\AccessControl',
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ]
+                ]
+            ],
+        ],
+        'pdfjs' => [
+            'class' => '\yii2assets\pdfjs\Module',
+        ]
+    ],
+
     'components' => [
+        'language' => 'ru-RU',
         'request' => [
+            'class' => 'app\components\LangRequest',
             // site root directory
             'baseUrl' => '',
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'pLhHmzI5xBgQund7UfxwX215QMA4gTvY',
         ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'class' => 'app\components\LangUrlManager',
+            'rules' => [
+                'index' => 'main/default/index',
+                'events' => 'main/default/events',
+                '/event-view/<id:\d+>' => 'main/default/event-view/',
+                'big-band' => 'main/default/big-band',
+                '/big-band-view/<id:\d+>' => 'main/default/big-band-view/',
+                'jazz-combo' => 'main/default/jazz-combo',
+                '/jazz-combo-view/<id:\d+>' => 'main/default/jazz-combo-view/',
+                'pop-music' => 'main/default/pop-music',
+                '/pop-music-view/<id:\d+>' => 'main/default/pop-music-view/',
+                'jingles' => 'main/default/jingles',
+                '/jingle-view/<id:\d+>' => 'main/default/jingle-view/',
+                'stems' => 'main/default/stems',
+                '/stem-view/<id:\d+>' => 'main/default/stem-view/',
+                'projects' => 'main/default/projects',
+                '/project-view/<id:\d+>' => 'main/default/project-view/',
+                'publications' => 'main/default/publications',
+                '/publication-view/<id:\d+>' => 'main/default/publication-view/',
+                'contact' => 'main/default/contact',
+                'sing-in' => 'main/default/sing-in',
+                '/user/<_u:(profile|biography|update-profile|update-biography|update-password)>' => 'admin/user/<_u>',
+                '/events/<_ev:(list|create)>' => 'admin/events/<_ev>',
+                '/events/<_ev:(view|update|delete)>/<id:\d+>' => 'admin/events/<_ev>',
+                '/sheet-music/<_sm:(list|create)>' => 'admin/sheet-music/<_sm>',
+                '/sheet-music/<_sm:(view|update|delete|pdf)>/<id:\d+>' => 'admin/sheet-music/<_sm>',
+                '/music-tracks/<_mt:(list|create)>' => 'admin/music-tracks/<_mt>',
+                '/music-tracks/<_mt:(view|update|delete)>/<id:\d+>' => 'admin/music-tracks/<_mt>',
+                '/projects/<_pr:(list|create)>' => 'admin/projects/<_pr>',
+                '/projects/<_pr:(view|update|delete)>/<id:\d+>' => 'admin/projects/<_pr>',
+                '/publications/<_pb:(list|create)>' => 'admin/publications/<_pb>',
+                '/publications/<_pb:(view|update|delete)>/<id:\d+>' => 'admin/publications/<_pb>',
+            ],
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'app\modules\admin\models\User',
             'enableAutoLogin' => true,
+            'loginUrl' => ['main/default/sing-in'],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'main/default/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -46,11 +110,19 @@ $config = [
             ],
         ],
         'db' => $db,
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
+        'i18n' => [
+            'translations' => [
+                'app' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages',
+                    'forceTranslation' => true,
+                    'sourceLanguage' => 'en-US',
+                ],
             ],
+        ],
+        'formatter' => [
+            'datetimeFormat' => 'dd.MM.Y HH:mm',
+            'timeZone' => 'UTC',
         ],
     ],
     'params' => $params,
