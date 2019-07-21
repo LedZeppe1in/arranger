@@ -3,6 +3,8 @@
 namespace app\modules\admin\models;
 
 use Yii;
+use yii\db\ActiveRecord;
+use yii\behaviors\AttributeBehavior;
 use yii\behaviors\TimestampBehavior;
 
 /**
@@ -64,6 +66,16 @@ class Event extends \yii\db\ActiveRecord
     {
         return [
             TimestampBehavior::className(),
+            [
+                'class' => AttributeBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['date', 'date'],
+                    ActiveRecord::EVENT_BEFORE_UPDATE => 'date',
+                ],
+                'value' => function () {
+                    return date('Y-m-d H:i:s', strtotime($this->date));
+                },
+            ],
         ];
     }
 
