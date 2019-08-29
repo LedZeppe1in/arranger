@@ -30,10 +30,12 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
+<!--    --><?php //$this->registerCssFile('/css/bootstrap-3.4.1.css', ['position' => yii\web\View::POS_HEAD]) ?>
+
     <div class="admin-wrap">
         <?php
         NavBar::begin([
-            'brandLabel' => Yii::t('app', 'FIRST_NAME') . ' ' . Yii::t('app', 'LAST_NAME'),
+            'brandLabel' => Yii::t('app', 'FIRST_AND_LAST_NAME'),
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
                 'class' => 'navbar-default navbar-fixed-top',
@@ -93,8 +95,8 @@ AppAsset::register($this);
     <footer class="admin-footer">
         <div class="container">
             <p class="pull-left">
-                <?= Yii::t('app', 'FOOTER_COPYRIGHT') . ' &copy; ' . date('Y') . ' ' . Yii::t('app', 'FIRST_NAME')
-                    . ' ' . Yii::t('app', 'LAST_NAME') ?> | <?= '<a href="mailto:' . Yii::$app->params['adminEmail']
+                <?= Yii::t('app', 'FOOTER_COPYRIGHT') . ' &copy; ' . date('Y') . ' ' .
+                    Yii::t('app', 'FIRST_AND_LAST_NAME') ?> | <?= '<a href="mailto:' . Yii::$app->params['adminEmail']
                     . '">' . Yii::t('app', 'FOOTER_POWERED_BY') . ' ' . Yii::t('app', 'FOOTER_DEVELOPER') . '</a>' ?>
             </p>
         </div>

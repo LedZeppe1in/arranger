@@ -2,12 +2,20 @@
 
 return [
     /* Инициалы автора сайта */
-    'FIRST_NAME' => 'Andrey',
-    'LAST_NAME' => 'Ruznyaev',
+    'FIRST_AND_LAST_NAME' => 'Andrey Ruznyaev',
+
+    /* Название профессии */
+    'PROFESSION' => 'Musician Arranger Multi-Instrumentalist',
+
+    /* Аннотация */
+    'ANNOTATION' => 'With over 10 years of experience as arranger, I suggest you familiarize yourself with my musical creativity.',
+
+    /* Статус-бар */
+    'LOADING' => 'Loading...',
 
     /* Пункты главного меню клиентской части сайта */
     'NAV_HOME' => 'Home',
-    'NAV_EVENTS' => 'EVENTS',
+    'NAV_ABOUT' => 'ABOUT',
     'NAV_SHEET_MUSIC' => 'SHEET MUSIC',
     'NAV_BIG_BAND' => 'Big Band',
     'NAV_JAZZ_COMBO' => 'Jazz Combo',
@@ -15,11 +23,16 @@ return [
     'NAV_MUSIC_TRACKS' => 'TRACKS',
     'NAV_JINGLES' => 'Jingles',
     'NAV_STEMS' => 'Stems',
-    'NAV_PROJECTS' => 'PROJECTS',
-    'NAV_PUBLICATIONS' => 'PUBLICATIONS',
-    'NAV_CONTACTS' => 'CONTACTS',
-    'NAV_ADMINISTRATION' => 'Administration',
+    'NAV_MATERIALS' => 'MATERIALS',
+    'NAV_INTERESTING' => 'INTERESTING',
+    'NAV_EVENTS' => 'Events',
+    'NAV_PROJECTS' => 'Projects',
+    'NAV_PUBLICATIONS' => 'Publications',
+    'NAV_ACCOUNT' => 'ACCOUNT',
     'NAV_SIGN_IN' => 'Sign in',
+    'NAV_ADMINISTRATION' => 'Administration',
+    'NAV_SIGN_OUT' => 'Sign out',
+    'NAV_CONTACTS' => 'CONTACTS',
     /* Пункты главного меню административной части сайта */
     'NAV_ADMIN_ACCOUNT' => 'Account',
     'NAV_ADMIN_SIGNED_IN_AS' => 'Signed in as',
@@ -35,12 +48,68 @@ return [
     /* Пункты правого меню */
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Possible actions',
 
+    /* Блоки презентации проектов справа */
+    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TITLE' => 'Custom Sheet Music',
+    'PROJECT_LIST_JINGLES_AND_STEMS_TITLE' => 'Jingles &amp; Stems',
+    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TEXT' => 'I’m glad to offer you custom sheet music services of any complexity.',
+    'PROJECT_LIST_JINGLES_AND_STEMS_TEXT' => 'Recording any kind of tracks is one of my numerous specializations.',
+
+    /* Блок портфолио */
+    'MY_LATEST_ART' => 'My Latest Art',
+
+    /* Блок бренда */
+    'BRANDING_CUSTOM_SHEET_MUSIC' => 'Sheet Music',
+    'BRANDING_BIG_BAND' => 'Big Band',
+    'BRANDING_JAZZ_COMBO' => 'Jazz Combo',
+    'BRANDING_POP_MUSIC' => 'Pop Music',
+    'BRANDING_SHEET_MUSIC_COUNT' => 'Sheet music',
+    'BRANDING_CUSTOM_TRACKS' => 'Tracks',
+    'BRANDING_JINGLES' => 'Jingles',
+    'BRANDING_STEMS' => 'Stems',
+    'BRANDING_TRACK_COUNT' => 'Tracks',
+    'BRANDING_INTERESTING' => 'Interesting',
+    'BRANDING_EVENTS' => 'Events',
+    'BRANDING_PROJECTS' => 'Projects',
+    'BRANDING_PUBLICATIONS' => 'Publications',
+    'BRANDING_PROJECT_COUNT' => 'Projects',
+    'BRANDING_TITLE' => 'High-quality music art',
+    'BRANDING_TEXT' => 'Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything.',
+
+    /* Блок рекламы */
+    'BLURB_ORIGINAL_ARRANGEMENT' => 'Original Arrangement',
+    'BLURB_ORIGINAL_ARRANGEMENT_TEXT' => 'I make original arrangements in any style.',
+    'BLURB_BEST_EQUIPMENT' => 'Best Equipment',
+    'BLURB_BEST_EQUIPMENT_TEXT' => 'I use the top-notch equipment to forge outstanding masterpieces.',
+    'BLURB_UNIQUE_ART' => 'Unique Art',
+    'BLURB_UNIQUE_ART_TEXT' => 'Every hand-crafted music art I offer you is unique in every way.',
+
+    /* Блок обо мне */
+    'ABOUT_ME' => 'About Me',
+    'ABOUT_YEARS_OF_EXPERIENCE' => 'years of experience',
+    'ABOUT_MUSICIAN' => 'Musician',
+    'ABOUT_ARRANGER' => 'Arranger',
+    'ABOUT_MULTI_INSTRUMENTALIST' => 'Multi-Instrumentalist',
+
+    /* Блок контакта */
+    'TOUCH_WITH_ME' => 'Get in touch with me',
+    'ONE_CONTACT_TEXT' => 'Feel free to contact me to find out more about my prices and services.',
+    'TWO_CONTACT_TEXT' => 'I am always ready to answer your questions.',
+
     /* Нижний колонтитул (подвал) */
-    'FOOTER_COPYRIGHT'=>'Copyright',
+    'FOOTER_LOCATION' => 'Location',
+    'FOOTER_CONTACTS' => 'Contacts',
+    'FOOTER_NEWSLETTER' => 'Newsletter',
+    'FOOTER_EMAIL' => 'E-mail',
+    'FOOTER_COPYRIGHT'=>'All Rights Reserved',
     'FOOTER_POWERED_BY' => 'Powered by',
     'FOOTER_DEVELOPER' => 'NikDim project',
 
     /* Общие кнопки */
+    'BUTTON_READ_MORE' => 'Read More',
+    'BUTTON_VIEW_ALL_WORKS' => 'View All Works',
+    'BUTTON_VIEW' => 'View',
+    'BUTTON_SUBSCRIBE' => 'Subscribe',
+    'BUTTON_SEND_MESSAGE' => 'Send message',
     'BUTTON_ADD' => 'Add',
     'BUTTON_SEND' => 'Send',
     'BUTTON_SAVE' => 'Save',
@@ -185,7 +254,8 @@ return [
     /* Формы */
     /* ContactForm */
     'CONTACT_FORM_NAME' => 'Name',
-    'CONTACT_FORM_EMAIL' => 'Email',
+    'CONTACT_FORM_EMAIL' => 'E-mail',
+    'CONTACT_FORM_PHONE' => 'Phone',
     'CONTACT_FORM_SUBJECT' => 'Subject',
     'CONTACT_FORM_BODY' => 'Body',
     'CONTACT_FORM_VERIFICATION_CODE' => 'Verification Code',
@@ -212,12 +282,12 @@ return [
     'USER_MODEL_USERNAME' => 'Username',
     'USER_MODEL_PASSWORD' => 'Password',
     'USER_MODEL_AUTH_KEY' => 'Auth key',
-    'USER_MODEL_EMAIL_CONFIRM_TOKEN' => 'Email confirm token',
+    'USER_MODEL_EMAIL_CONFIRM_TOKEN' => 'E-mail confirm token',
     'USER_MODEL_PASSWORD_HASH' => 'Password hash',
     'USER_MODEL_PASSWORD_RESET_TOKEN' => 'Password reset token',
     'USER_MODEL_FULL_NAME_RU' => 'Full name in Russian',
     'USER_MODEL_FULL_NAME_EN' => 'Full name in English',
-    'USER_MODEL_EMAIL' => 'Email',
+    'USER_MODEL_EMAIL' => 'E-mail',
     'USER_MODEL_PHONE' => 'Phone',
     'USER_MODEL_YOUTUBE_LINK' => 'YouTube link',
     'USER_MODEL_INSTAGRAM_LINK' => 'Instagram link',

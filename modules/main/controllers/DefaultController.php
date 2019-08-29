@@ -20,7 +20,7 @@ use app\modules\main\models\ContactForm;
 
 class DefaultController extends Controller
 {
-    public $layout = 'main';
+    public $layout = 'site';
 
     /**
      * {@inheritdoc}
@@ -71,10 +71,56 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        $model = User::find()->one();
+        // Подключение макета главной страницы
+        $this->layout = 'main';
+        //
+        $user = User::find()->one();
+        // Поиск последней партитуры с типом "Big band"
+        $big_band = SheetMusic::find()
+            ->where(array('type' => SheetMusic::TYPE_BIG_BAND))
+            ->orderBy(['id' => SORT_DESC])
+            ->one();
+        // Поиск последней партитуры с типом "Jazz combo"
+        $jazz_combo = SheetMusic::find()
+            ->where(array('type' => SheetMusic::TYPE_JAZZ_COMBO))
+            ->orderBy(['id' => SORT_DESC])
+            ->one();
+        // Поиск последней партитуры с типом "Pop music"
+        $pop_music = SheetMusic::find()
+            ->where(array('type' => SheetMusic::TYPE_POP_MUSIC))
+            ->orderBy(['id' => SORT_DESC])
+            ->one();
+        // Поиск последнего трека с типом "Джингл"
+        $jingle = MusicTrack::find()
+            ->where(array('type' => MusicTrack::TYPE_JINGLE))
+            ->orderBy(['id' => SORT_DESC])
+            ->one();
+        // Поиск последнего трека с типом "Мультитрек"
+        $stem = MusicTrack::find()
+            ->where(array('type' => MusicTrack::TYPE_STEMS))->orderBy(['id' => SORT_DESC])
+            ->one();
+        // Поиск последнего проекта
+        $project = Project::find()
+            ->orderBy(['id' => SORT_DESC])
+            ->one();
+        // Подсчет кол-ва партитур
+        $sheet_music_count = SheetMusic::find()->count();
+        // Подсчет кол-ва треков
+        $music_track_count = MusicTrack::find()->count();
+        // Подсчет кол-ва проектов
+        $project_count = MusicTrack::find()->count();
 
         return $this->render('index', [
-            'model' => $model,
+            'user' => $user,
+            'big_band' => $big_band,
+            'jazz_combo' => $jazz_combo,
+            'pop_music' => $pop_music,
+            'jingle' => $jingle,
+            'stem' => $stem,
+            'project' => $project,
+            'sheet_music_count' => $sheet_music_count,
+            'music_track_count' => $music_track_count,
+            'project_count' => $project_count,
         ]);
     }
 

@@ -2,12 +2,20 @@
 
 return [
     /* Инициалы автора сайта */
-    'FIRST_NAME' => 'Андрей',
-    'LAST_NAME' => 'Рузняев',
+    'FIRST_AND_LAST_NAME' => 'Андрей Рузняев',
+
+    /* Название профессии */
+    'PROFESSION' => 'Музыкант Аранжировщик Мультиинструменталист',
+
+    /* Аннотация */
+    'ANNOTATION' => 'Имея более чем 10-летний опыт работы композитором, я предлагаю Вам ознакомиться с моим музыкальным творчеством.',
+
+    /* Статус-бар */
+    'LOADING' => 'Загрузка...',
 
     /* Пункты главного меню клиентской части сайта */
     'NAV_HOME' => 'Главная',
-    'NAV_EVENTS' => 'СОБЫТИЯ',
+    'NAV_ABOUT' => 'ОБО МНЕ',
     'NAV_SHEET_MUSIC' => 'ПАРТИТУРЫ',
     'NAV_BIG_BAND' => 'Big Band',
     'NAV_JAZZ_COMBO' => 'Jazz Combo',
@@ -15,11 +23,16 @@ return [
     'NAV_MUSIC_TRACKS' => 'ТРЕКИ',
     'NAV_JINGLES' => 'Джинглы',
     'NAV_STEMS' => 'Мультитреки',
-    'NAV_PROJECTS' => 'ПРОЕКТЫ',
-    'NAV_PUBLICATIONS' => 'ПУБЛИКАЦИИ',
-    'NAV_CONTACTS' => 'КОНТАКТЫ',
-    'NAV_ADMINISTRATION' => 'Администрирование',
+    'NAV_MATERIALS' => 'МАТЕРИАЛЫ',
+    'NAV_INTERESTING' => 'ИНТЕРЕСНОЕ',
+    'NAV_EVENTS' => 'События',
+    'NAV_PROJECTS' => 'Проекты',
+    'NAV_PUBLICATIONS' => 'Публикации',
+    'NAV_ACCOUNT' => 'АККАУНТ',
     'NAV_SIGN_IN' => 'Вход',
+    'NAV_ADMINISTRATION' => 'Администрирование',
+    'NAV_SIGN_OUT' => 'Выход',
+    'NAV_CONTACTS' => 'КОНТАКТЫ',
     /* Пункты главного меню административной части сайта */
     'NAV_ADMIN_ACCOUNT' => 'Учётная запись',
     'NAV_ADMIN_SIGNED_IN_AS' => 'Вы вошли как',
@@ -35,12 +48,68 @@ return [
     /* Пункты правого меню */
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Возможные действия',
 
+    /* Блоки презентации проектов справа */
+    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TITLE' => 'Партитуры на Заказ',
+    'PROJECT_LIST_JINGLES_AND_STEMS_TITLE' => 'Джинглы &amp; Треки',
+    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TEXT' => 'Я рад предложить Вам музыкальные партитуры любой сложности.',
+    'PROJECT_LIST_JINGLES_AND_STEMS_TEXT' => 'Запись различных видов треков - одна из моих многочисленных специализаций.',
+
+    /* Блок портфолио */
+    'MY_LATEST_ART' => 'Моё Творчество',
+
+    /* Блок бренда */
+    'BRANDING_CUSTOM_SHEET_MUSIC' => 'Партитуры',
+    'BRANDING_BIG_BAND' => 'Big Band',
+    'BRANDING_JAZZ_COMBO' => 'Jazz Combo',
+    'BRANDING_POP_MUSIC' => 'Pop Music',
+    'BRANDING_SHEET_MUSIC_COUNT' => 'Партитур',
+    'BRANDING_CUSTOM_TRACKS' => 'Треки',
+    'BRANDING_JINGLES' => 'Джинглы',
+    'BRANDING_STEMS' => 'Мультитреки',
+    'BRANDING_TRACK_COUNT' => 'Треков',
+    'BRANDING_INTERESTING' => 'Интересное',
+    'BRANDING_EVENTS' => 'События',
+    'BRANDING_PROJECTS' => 'Проекты',
+    'BRANDING_PUBLICATIONS' => 'Публикации',
+    'BRANDING_PROJECT_COUNT' => 'Проектов',
+    'BRANDING_TITLE' => 'Качественная музыка',
+    'BRANDING_TEXT' => 'Музыка воодушевляет весь мир, снабжает душу крыльями, способствует полету воображения, ее можно назвать воплощением всего прекрасного и всего возвышенного.',
+
+    /* Блок рекламы */
+    'BLURB_ORIGINAL_ARRANGEMENT' => 'Оригенальная Аранжировка',
+    'BLURB_ORIGINAL_ARRANGEMENT_TEXT' => 'Я делаю оригинальные аранжировки в любом стиле.',
+    'BLURB_BEST_EQUIPMENT' => 'Лучшее Оборудование',
+    'BLURB_BEST_EQUIPMENT_TEXT' => 'Я использую первоклассное оборудование для создания выдающихся шедевров.',
+    'BLURB_UNIQUE_ART' => 'Уникальный Материал',
+    'BLURB_UNIQUE_ART_TEXT' => 'Каждый музыкальный материал, который я предлагаю, уникальный во всех отношениях.',
+
+    /* Блок обо мне */
+    'ABOUT_ME' => 'Обо Мне',
+    'ABOUT_YEARS_OF_EXPERIENCE' => 'лет опыта',
+    'ABOUT_MUSICIAN' => 'Музыкант',
+    'ABOUT_ARRANGER' => 'Аранжировщик',
+    'ABOUT_MULTI_INSTRUMENTALIST' => 'Мульти-инструменталист',
+
+    /* Блок контакта */
+    'TOUCH_WITH_ME' => 'Связаться со мной',
+    'ONE_CONTACT_TEXT' => 'Не стесняйтесь связаться со мной, чтобы узнать больше о моих ценах и услугах.',
+    'TWO_CONTACT_TEXT' => 'Я всегда готов ответить на Ваши вопросы.',
+
     /* Нижний колонтитул (подвал) */
+    'FOOTER_LOCATION' => 'Адрес',
+    'FOOTER_CONTACTS' => 'Контакты',
+    'FOOTER_NEWSLETTER' => 'Новостная рассылка',
+    'FOOTER_EMAIL' => 'Электронная почта',
     'FOOTER_COPYRIGHT'=>'Все права защищены',
     'FOOTER_POWERED_BY' => 'Разработано',
     'FOOTER_DEVELOPER' => 'Проект НикДим',
 
     /* Общие кнопки */
+    'BUTTON_READ_MORE' => 'Подробнее',
+    'BUTTON_VIEW_ALL_WORKS' => 'Посмотреть все работы',
+    'BUTTON_VIEW' => 'Посмотреть',
+    'BUTTON_SUBSCRIBE' => 'Подписаться',
+    'BUTTON_SEND_MESSAGE' => 'Отправить сообщение',
     'BUTTON_ADD' => 'Добавить',
     'BUTTON_SEND' => 'Отправить',
     'BUTTON_SAVE' => 'Сохранить',
@@ -184,8 +253,9 @@ return [
     'PUBLICATIONS_ADMIN_PAGE_MESSAGE_DELETED_PUBLICATION' => 'Вы успешно удалили публикацию.',
     /* Формы */
     /* ContactForm */
-    'CONTACT_FORM_NAME' => 'ФИО',
+    'CONTACT_FORM_NAME' => 'Имя',
     'CONTACT_FORM_EMAIL' => 'Электронная почта',
+    'CONTACT_FORM_PHONE' => 'Телефон',
     'CONTACT_FORM_SUBJECT' => 'Тема',
     'CONTACT_FORM_BODY' => 'Сообщение',
     'CONTACT_FORM_VERIFICATION_CODE' => 'Проверочный код',

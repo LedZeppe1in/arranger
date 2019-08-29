@@ -20,8 +20,8 @@ use yii\bootstrap\ButtonDropdown;
                 'encodeLabels' => false,
                 'items' => [
                     [
-                        'label' => $lang->url == 'ru' ? "<figure class='icon-lang icon-ru'></figure>" . $lang->name :
-                            "<figure class='icon-lang icon-en'></figure>" . $lang->name,
+                        'label' => $lang->url == 'ru' ? "<figure class='icon-lang icon-ru'></figure>" :
+                            "<figure class='icon-lang icon-en'></figure>",
                         'url' => '/' . $lang->url . Yii::$app->getRequest()->getLangUrl()
                     ],
                 ]
