@@ -4,16 +4,16 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use app\assets\AppAsset;
+use app\assets\ClientAsset;
 use app\modules\admin\models\User;
 
-AppAsset::register($this);
+ClientAsset::register($this);
 ?>
 
 <?php $this->beginPage() ?>
 
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html class="wide wow-animation" lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="Content-Type" content="text/html">
@@ -33,7 +33,7 @@ AppAsset::register($this);
     <?php $this->registerJsFile('/js/script.js', ['position' => yii\web\View::POS_END]) ?>
 
     <!-- Loading Section -->
-    <div class="preloader loaded">
+    <div class="preloader">
         <div class="preloader-body">
             <div class="cssload-container">
                 <div class="cssload-speeding-wheel"></div>

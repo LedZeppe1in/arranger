@@ -29,9 +29,6 @@ AppAsset::register($this);
 
 <body>
 <?php $this->beginBody() ?>
-
-<!--    --><?php //$this->registerCssFile('/css/bootstrap-3.4.1.css', ['position' => yii\web\View::POS_HEAD]) ?>
-
     <div class="admin-wrap">
         <?php
         NavBar::begin([

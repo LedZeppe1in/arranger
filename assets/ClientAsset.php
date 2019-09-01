@@ -15,12 +15,15 @@ use yii\web\AssetBundle;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class AppAsset extends AssetBundle
+class ClientAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/admin-style.css',
+        'css/bootstrap-4.1.3.css',
+        'css/fonts.css',
+        'css/style.css',
+        'css/animate.css',
     ];
     public $js = [
     ];
