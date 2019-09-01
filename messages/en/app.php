@@ -187,10 +187,13 @@ return [
     'PUBLICATION_PAGE_TEXT' => 'Learn more about one of my publication',
     /* Страница контактов */
     'CONTACTS_PAGE_TITLE' => 'Contacts',
-    'CONTACT_US_PAGE_TITLE' => 'Contact us',
-    'CONTACT_US_PAGE_TEXT' => 'If you have business inquiries or other questions,
-        please fill out the following form to contact us. Thank you.',
-    'CONTACT_US_PAGE_SUCCESS_MESSAGE' => 'Thank you for contacting us. We will respond to you as soon as possible.',
+    'CONTACTS_PAGE_TEXT' => 'View my contacts or send me a message',
+    'CONTACTS_PAGE_EMAIL_AND_TELEPHONE' => 'Email & telephone',
+    'CONTACTS_PAGE_ADDRESS' => 'Address',
+    'CONTACTS_PAGE_SOCIALS' => 'Socials',
+    'CONTACTS_PAGE_TOUCH_WITH_ME' => 'Get in touch with me',
+    'CONTACTS_PAGE_NOTICE' => 'If you have business inquiries or other questions, please fill out the following form to contact me. Thank you!',
+    'CONTACTS_PAGE_SUCCESS_MESSAGE' => 'Thank you for contacting us. We will respond to you as soon as possible.',
     /* Страница входа */
     'SIGN_IN_PAGE_TITLE' => 'Sign in',
     'SIGN_IN_PAGE_TEXT' => 'Please fill out the following fields to sign in:',
@@ -279,9 +282,8 @@ return [
     /* ContactForm */
     'CONTACT_FORM_NAME' => 'Name',
     'CONTACT_FORM_EMAIL' => 'E-mail',
-    'CONTACT_FORM_PHONE' => 'Phone',
     'CONTACT_FORM_SUBJECT' => 'Subject',
-    'CONTACT_FORM_BODY' => 'Body',
+    'CONTACT_FORM_MESSAGE' => 'Message',
     'CONTACT_FORM_VERIFICATION_CODE' => 'Verification Code',
     /* LoginForm */
     'LOGIN_FORM_USERNAME' => 'Username',

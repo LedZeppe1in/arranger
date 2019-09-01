@@ -60,6 +60,8 @@ class DefaultController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                'backColor' => 0xF9F9F9,
+                'foreColor' => 0xFE5D39,
             ],
         ];
     }
@@ -110,8 +112,18 @@ class DefaultController extends Controller
         // Подсчет кол-ва проектов
         $project_count = MusicTrack::find()->count();
 
+        // Форма контакта
+        $contact_form = new ContactForm();
+        // Если пользователь заполнил и отправил форму контактов
+        if ($contact_form->load(Yii::$app->request->post()) && $contact_form->contact(Yii::$app->params['adminEmail'])) {
+            Yii::$app->session->setFlash('contactFormSubmitted');
+
+            return $this->refresh();
+        }
+
         return $this->render('index', [
             'user' => $user,
+            'contact_form' => $contact_form,
             'big_band' => $big_band,
             'jazz_combo' => $jazz_combo,
             'pop_music' => $pop_music,

@@ -187,10 +187,13 @@ return [
     'PUBLICATION_PAGE_TEXT' => 'Узнайте больше об одной из моих публикаций',
     /* Страница контактов */
     'CONTACTS_PAGE_TITLE' => 'Контакты',
-    'CONTACT_US_PAGE_TITLE' => 'Обратная связь',
-    'CONTACT_US_PAGE_TEXT' => 'Если у вас есть деловое предложение или другие вопросы, пожалуйста,
-        заполните следующую форму, чтобы связаться с нами. Спасибо.',
-    'CONTACT_US_PAGE_SUCCESS_MESSAGE' => 'Благодарим Вас за обращение к нам. Мы ответим вам как можно скорее.',
+    'CONTACTS_PAGE_TEXT' => 'Посмотрите мои контакты или отправьте мне сообщение',
+    'CONTACTS_PAGE_EMAIL_AND_TELEPHONE' => 'Электронная почта и телефон',
+    'CONTACTS_PAGE_ADDRESS' => 'Адрес',
+    'CONTACTS_PAGE_SOCIALS' => 'Соцсети',
+    'CONTACTS_PAGE_TOUCH_WITH_ME' => 'Связаться со мной',
+    'CONTACTS_PAGE_NOTICE' => 'Если у вас есть деловое предложение или другие вопросы, пожалуйста, заполните следующую форму, чтобы связаться со мной. Спасибо!',
+    'CONTACTS_PAGE_SUCCESS_MESSAGE' => 'Благодарим Вас за обращение к нам. Мы ответим вам как можно скорее.',
     /* Страница входа */
     'SIGN_IN_PAGE_TITLE' => 'Вход',
     'SIGN_IN_PAGE_TEXT' => 'Пожалуйста, заполните следующие поля для входа:',
@@ -279,9 +282,8 @@ return [
     /* ContactForm */
     'CONTACT_FORM_NAME' => 'Имя',
     'CONTACT_FORM_EMAIL' => 'Электронная почта',
-    'CONTACT_FORM_PHONE' => 'Телефон',
     'CONTACT_FORM_SUBJECT' => 'Тема',
-    'CONTACT_FORM_BODY' => 'Сообщение',
+    'CONTACT_FORM_MESSAGE' => 'Сообщение',
     'CONTACT_FORM_VERIFICATION_CODE' => 'Проверочный код',
     /* LoginForm */
     'LOGIN_FORM_USERNAME' => 'Имя пользователя',

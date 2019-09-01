@@ -10,19 +10,27 @@ use yii\helpers\Html;
 $this->title = $name;
 ?>
 
-<div class="site-error">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+<!-- Breadcrumbs Section -->
+<section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(/web/images/breadcrumbs-error.jpg);">
+    <div class="container">
+        <h3 class="breadcrumbs-custom-title"><?= $this->title ?></h3>
     </div>
+</section>
 
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
-
-</div>
+<!-- Blurb minimal -->
+<section class="section section-md bg-default">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-xl-6">
+                <div class="big-title-wrap">
+                    <div class="big-title">404</div>
+                    <h5 class="big-title-text"><?= nl2br(Html::encode($message)) ?></h5>
+                </div>
+                <div class="big-title-wrap">
+                    <p class="big"><?= Yii::t('app', 'ERROR_PAGE_NOTICE') ?></p>
+                    <p class="big"><?= Yii::t('app', 'ERROR_PAGE_TEXT') ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

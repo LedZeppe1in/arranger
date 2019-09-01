@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $user app\modules\admin\models\User */
+/* @var $contact_form app\modules\main\models\ContactForm */
 /* @var $big_band app\modules\admin\models\SheetMusic */
 /* @var $jazz_combo app\modules\admin\models\SheetMusic */
 /* @var $pop_music app\modules\admin\models\SheetMusic */
@@ -13,7 +14,9 @@
 /* @var $project_count app\modules\main\controllers\DefaultController */
 
 use yii\helpers\Html;
+use yii\captcha\Captcha;
 use yii\helpers\StringHelper;
+use yii\bootstrap\ActiveForm;
 
 $this->title = Yii::t('app', 'FIRST_AND_LAST_NAME');
 ?>
@@ -323,62 +326,99 @@ $this->title = Yii::t('app', 'FIRST_AND_LAST_NAME');
         </div>
     </div>
     <div class="container">
-        <h3><?= Yii::t('app', 'TOUCH_WITH_ME') ?></h3>
-        <p class="big">
-            <?= Yii::t('app', 'ONE_CONTACT_TEXT') ?><br class="d-none d-xl-inline">
-            <?= Yii::t('app', 'TWO_CONTACT_TEXT') ?>
-        </p>
-        <!-- RD Mailform-->
-        <form class="rd-form rd-mailform form-boxed" data-form-output="form-output-global" data-form-type="contact"
-              method="post" action="bat/rd-mailform.php" novalidate="novalidate">
-            <div class="row row-50">
-                <div class="col-lg-4">
-                    <div class="form-wrap form-wrap-icon">
-                        <div class="form-icon mdi mdi-account-outline"></div>
-                        <input class="form-input form-control-has-validation" id="contact-name" type="text"
-                               name="name" data-constraints="@Required"><span class="form-validation"></span>
-                        <label class="form-label rd-input-label" for="contact-name">
-                            <?= Yii::t('app', 'CONTACT_FORM_NAME') ?>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="form-wrap form-wrap-icon">
-                        <div class="form-icon mdi mdi-email-outline"></div>
-                        <input class="form-input form-control-has-validation" id="contact-email" type="email"
-                               name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
-                        <label class="form-label rd-input-label" for="contact-email">
-                            <?= Yii::t('app', 'CONTACT_FORM_EMAIL') ?>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="form-wrap form-wrap-icon">
-                        <div class="form-icon mdi mdi-phone"></div>
-                        <input class="form-input form-control-has-validation" id="contact-phone" type="text"
-                               name="phone" data-constraints="@Numeric"><span class="form-validation"></span>
-                        <label class="form-label rd-input-label" for="contact-phone">
-                            <?= Yii::t('app', 'CONTACT_FORM_PHONE') ?>
-                        </label>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="form-wrap form-wrap-icon">
-                        <div class="form-icon mdi mdi-message-outline"></div>
-                        <label class="form-label rd-input-label" for="contact-message">
-                            <?= Yii::t('app', 'CONTACT_FORM_BODY') ?>
-                        </label>
-                        <textarea class="form-input form-control-has-validation form-control-last-child"
-                                  id="contact-message" name="message" data-constraints="@Required"></textarea>
-                        <span class="form-validation"></span>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <button class="button button-default" type="submit">
-                        <?= Yii::t('app', 'BUTTON_SEND_MESSAGE') ?>
-                    </button>
-                </div>
+        <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
+
+            <div class="alert alert-success">
+                <?= Yii::t('app', 'CONTACTS_PAGE_SUCCESS_MESSAGE') ?>
             </div>
-        </form>
+
+        <?php else: ?>
+
+            <h3><?= Yii::t('app', 'TOUCH_WITH_ME') ?></h3>
+            <p class="big">
+                <?= Yii::t('app', 'ONE_CONTACT_TEXT') ?><br class="d-none d-xl-inline">
+                <?= Yii::t('app', 'TWO_CONTACT_TEXT') ?>
+            </p>
+            <!-- Contact form -->
+            <?php $form = ActiveForm::begin([
+                'id' => 'contact-form',
+                'options' => [
+                    'class' => 'rd-form form-boxed',
+                ]
+            ]); ?>
+                <div class="row row-50">
+
+                    <div class="col-lg-4">
+                        <div class="form-wrap form-wrap-icon">
+                            <div class="form-icon mdi mdi-account-outline"></div>
+                            <?= $form->field($contact_form, 'name')
+                                ->textInput(['class' => 'form-input'])->label(false) ?>
+                            <label class="form-label rd-input-label" for="contactform-name">
+                                <?= Yii::t('app', 'CONTACT_FORM_NAME') ?>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="form-wrap form-wrap-icon">
+                            <div class="form-icon mdi mdi-email-outline"></div>
+                            <?= $form->field($contact_form, 'email')
+                                ->textInput(['class' => 'form-input'])->label(false) ?>
+                            <label class="form-label rd-input-label" for="contactform-email">
+                                <?= Yii::t('app', 'CONTACT_FORM_EMAIL') ?>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="form-wrap form-wrap-icon">
+                            <div class="form-icon mdi mdi-information-outline"></div>
+                            <?= $form->field($contact_form, 'subject')
+                                ->textInput(['class' => 'form-input'])->label(false) ?>
+                            <label class="form-label rd-input-label" for="contactform-subject">
+                                <?= Yii::t('app', 'CONTACT_FORM_SUBJECT') ?>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-wrap form-wrap-icon">
+                            <div class="form-icon mdi mdi-message-outline"></div>
+                            <label class="form-label rd-input-label" for="contactform-body">
+                                <?= Yii::t('app', 'CONTACT_FORM_MESSAGE') ?>
+                            </label>
+                            <?= $form->field($contact_form, 'body')
+                                ->textarea(['class' => 'form-input form-control-last-child', 'rows' => 6])
+                                ->label(false) ?>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <?= $form->field($contact_form, 'verifyCode')->widget(Captcha::className(), [
+                            'captchaAction' => '/main/default/captcha',
+                            'template' => '<div class="col-lg-2">{image}</div>
+                                <div class="col-lg-4">
+                                    <div class="form-wrap form-wrap-icon">
+                                        <div class="form-icon mdi mdi-code-string"></div>
+                                        {input}
+                                        <label class="form-label rd-input-label" for="contactform-verifycode">' .
+                                Yii::t('app', 'CONTACT_FORM_VERIFICATION_CODE'). '</label>
+                                    </div>
+                                </div>',
+                            'options' => ['class' => 'form-input'],
+                        ])->label(false) ?>
+                    </div>
+
+                    <div class="col-md-12">
+                        <?= Html::submitButton(Yii::t('app', 'BUTTON_SEND'), [
+                            'class' => 'button button-default',
+                            'name' => 'contact-button'
+                        ]) ?>
+                    </div>
+
+            </div>
+            <?php ActiveForm::end(); ?>
+
+        <?php endif; ?>
     </div>
 </section>

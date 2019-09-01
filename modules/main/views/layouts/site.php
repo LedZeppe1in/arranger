@@ -225,10 +225,10 @@ AppAsset::register($this);
                             <dt><span class="icon icon-xs mdi mdi-email-outline"></span></dt>
                             <dd>
                                 <?php $emails = explode(", ", User::find()->one()->email);
-                                foreach ($emails as $key => $email)
-                                    if ($key == 0)
-                                        echo '<a class="link-default" href="mailto:' . $email . '">' .
-                                            $email . '</a>';
+                                    foreach ($emails as $key => $email)
+                                        if ($key == 0)
+                                            echo '<a class="link-default" href="mailto:' . $email . '">' .
+                                                $email . '</a>';
                                 ?>
                             </dd>
                         </dl>

@@ -40,7 +40,7 @@ class ContactForm extends Model
             'name' => Yii::t('app', 'CONTACT_FORM_NAME'),
             'email' => Yii::t('app', 'CONTACT_FORM_EMAIL'),
             'subject' => Yii::t('app', 'CONTACT_FORM_SUBJECT'),
-            'body' => Yii::t('app', 'CONTACT_FORM_BODY'),
+            'body' => Yii::t('app', 'CONTACT_FORM_MESSAGE'),
             'verifyCode' => Yii::t('app', 'CONTACT_FORM_VERIFICATION_CODE'),
         ];
     }
