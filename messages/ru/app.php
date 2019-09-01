@@ -110,6 +110,7 @@ return [
     'BUTTON_VIEW' => 'Посмотреть',
     'BUTTON_SUBSCRIBE' => 'Подписаться',
     'BUTTON_SEND_MESSAGE' => 'Отправить сообщение',
+    'BUTTON_VIEW_MORE_INFO' => 'Посмотреть больше информации',
     'BUTTON_ADD' => 'Добавить',
     'BUTTON_SEND' => 'Отправить',
     'BUTTON_SAVE' => 'Сохранить',
@@ -125,9 +126,8 @@ return [
     'NOTICE_TEXT' => 'на эту важную информацию.',
     'READ_MORE' => 'Подробнее',
 
-    /* Общие сообщения об ошибках */
-    'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Страница не найдена.',
-    'ERROR_MESSAGE_ACCESS_DENIED' => 'Вам не разрешено производить данное действие.',
+    /* Общий текст */
+    'FROM' => 'От',
 
     /* Общие уведомления на форме с captcha */
     'CAPTCHA_NOTICE_ONE' => 'Пожалуйста, введите буквы, показанные на картинке выше.',
@@ -136,31 +136,55 @@ return [
 
     /* Общие уведомления */
     'GENERAL_NOTICE_NO_RESULTS_FOUND' => 'Ничего не найдено.',
+    'GENERAL_NOTICE_NO_DESCRIPTION' => 'Нет описания',
+
+    /* Общие сообщения об ошибках */
+    'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Страница не найдена.',
+    'ERROR_MESSAGE_ACCESS_DENIED' => 'Вам не разрешено производить данное действие.',
 
     /* Страница ошибки */
-    'ERROR_PAGE_TEXT_ONE' => 'Вышеупомянутая ошибка произошла при обработке веб-сервером вашего запроса.',
-    'ERROR_PAGE_TEXT_TWO' => 'Пожалуйста, свяжитесь с нами, если Вы думаете, что это ошибка сервера. Спасибо.',
+    'ERROR_PAGE_NOTICE' => 'Вышеупомянутая ошибка произошла при обработке веб-сервером вашего запроса.',
+    'ERROR_PAGE_TEXT' => 'Пожалуйста, свяжитесь с нами, если Вы думаете, что это ошибка сервера. Спасибо.',
 
     /* Страницы клиентской части сайта */
-    /* Страница событий */
-    'EVENTS_PAGE_TITLE' => 'События',
-    'EVENT_PAGE_TITLE' => 'Событие',
+    /* Страница партитур */
+    'SHEET_MUSIC_PAGE_TITLE' => 'Партитуры',
+    'SHEET_MUSIC_PAGE_TEXT' => 'Узнайте больше о партитурах, которые я предоставляю',
     /* Страница партитур "Big Band" */
     'BIG_BAND_PAGE_TITLE' => 'Big Band',
+    'BIG_BAND_PAGE_TEXT' => 'Узнайте больше об одной из моих партитур Big Band',
     /* Страница партитур "Jazz Combo" */
     'JAZZ_COMBO_PAGE_TITLE' => 'Jazz Combo',
+    'JAZZ_COMBO_PAGE_TEXT' => 'Узнайте больше об одной из моих партитур Jazz Combo',
     /* Страница партитур "Pop Music" */
     'POP_MUSIC_PAGE_TITLE' => 'Pop Music',
+    'POP_MUSIC_PAGE_TEXT' => 'Узнайте больше об одной из моих партитур Pop Music',
+    /* Страница треков */
+    'MUSIC_TRACKS_PAGE_TITLE' => 'Треки',
+    'MUSIC_TRACKS_PAGE_TEXT' => 'Узнайте больше о треках, которые я предоставляю',
     /* Страница джинглов */
     'JINGLES_PAGE_TITLE' => 'Джинглы',
+    'JINGLE_PAGE_TITLE' => 'Джингл',
+    'JINGLE_PAGE_TEXT' => 'Узнайте больше об одном из моих джинглов',
     /* Страница мультитреков */
     'STEMS_PAGE_TITLE' => 'Мультитреки',
+    'STEM_PAGE_TITLE' => 'Мультитрек',
+    'STEM_PAGE_TEXT' => 'Узнайте больше об одном из моих мультитреков',
+    /* Страница событий */
+    'EVENTS_PAGE_TITLE' => 'События',
+    'EVENTS_PAGE_TEXT' => 'Узнайте больше об интересных событиях',
+    'EVENT_PAGE_TITLE' => 'Событие',
+    'EVENT_PAGE_TEXT' => 'Узнайте больше об одном из событий',
     /* Страница проектов */
     'PROJECTS_PAGE_TITLE' => 'Проекты',
+    'PROJECTS_PAGE_TEXT' => 'Посмотрите на мои последние проекты',
     'PROJECT_PAGE_TITLE' => 'Проект',
+    'PROJECT_PAGE_TEXT' => 'Узнайте больше об одном из моих проектов',
     /* Страница публикаций */
     'PUBLICATIONS_PAGE_TITLE' => 'Публикации',
+    'PUBLICATIONS_PAGE_TEXT' => 'Посмотрите на мои последние публикации',
     'PUBLICATION_PAGE_TITLE' => 'Публикация',
+    'PUBLICATION_PAGE_TEXT' => 'Узнайте больше об одной из моих публикаций',
     /* Страница контактов */
     'CONTACTS_PAGE_TITLE' => 'Контакты',
     'CONTACT_US_PAGE_TITLE' => 'Обратная связь',

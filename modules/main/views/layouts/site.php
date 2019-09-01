@@ -1,0 +1,326 @@
+<?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+use yii\helpers\Html;
+use app\assets\AppAsset;
+use app\modules\admin\models\User;
+
+AppAsset::register($this);
+?>
+
+<?php $this->beginPage() ?>
+
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
+<head>
+    <meta charset="<?= Yii::$app->charset ?>">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <link rel="stylesheet" type="text/css"
+          href="//fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i%7CAbril+Fatface">
+    <?php $this->head() ?>
+</head>
+
+<body>
+<?php $this->beginBody() ?>
+
+    <!-- Подключение js-скриптов -->
+    <?php $this->registerJsFile('/js/core.min.js', ['position' => yii\web\View::POS_END]) ?>
+    <?php $this->registerJsFile('/js/script.js', ['position' => yii\web\View::POS_END]) ?>
+    <?php $this->registerJsFile('/js/wow.min.js', ['position' => yii\web\View::POS_HEAD]) ?>
+
+    <!-- Loading Section -->
+    <div class="preloader loaded">
+        <div class="preloader-body">
+            <div class="cssload-container">
+                <div class="cssload-speeding-wheel"></div>
+            </div>
+            <p><?= Yii::t('app', 'LOADING') ?></p>
+        </div>
+    </div>
+
+    <div class="page animated" style="animation-duration: 500ms;">
+        <!-- Page Header -->
+        <header class="section page-header">
+            <!-- RD Navbar -->
+            <div class="rd-navbar-wrap" style="height: 100px;">
+                <nav class="rd-navbar rd-navbar-wide rd-navbar-original rd-navbar-static" data-layout="rd-navbar-fixed"
+                     data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
+                     data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+                     data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+                     data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px"
+                     data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true"
+                     data-xl-stick-up="true" data-xxl-stick-up="true">
+                    <div class="rd-navbar-main-outer">
+                        <div class="rd-navbar-main">
+                            <!-- RD Navbar Panel -->
+                            <div class="rd-navbar-panel">
+                                <!-- RD Navbar Toggle -->
+                                <button class="rd-navbar-toggle toggle-original"
+                                        data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span>
+                                </button>
+                                <!-- RD Navbar Brand -->
+                                <div class="rd-navbar-brand">
+                                    <!-- Brand -->
+                                    <?= Html::a(
+                                        Html::img('@web/images/logo-default-340x130.png',
+                                            ['class' => 'brand-logo-dark', 'width' => '137', 'height' => '49']) .
+                                        Html::img('@web/images/logo-inverse-246x216.png',
+                                            ['class' => 'brand-logo-light', 'width' => '123', 'height' => '108']),
+                                        ['/main/default/index'], ['class' => 'brand']) ?>
+                                </div>
+                            </div>
+                            <div class="rd-navbar-nav-wrap toggle-original-elements">
+                                <!-- RD Navbar Nav -->
+                                <ul class="rd-navbar-nav">
+                                    <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu">
+                                        <?= Html::a(Yii::t('app', 'NAV_SHEET_MUSIC'), '#',
+                                            ['class' => 'rd-nav-link']) ?>
+                                        <!-- RD Navbar Dropdown -->
+                                        <ul class="rd-menu rd-navbar-dropdown">
+                                            <li class="rd-dropdown-item">
+                                                <?= Html::a(Yii::t('app', 'NAV_BIG_BAND'),
+                                                    ['/main/default/big-band'], ['class' => 'rd-dropdown-link']) ?>
+                                            </li>
+                                            <li class="rd-dropdown-item">
+                                                <?= Html::a(Yii::t('app', 'NAV_JAZZ_COMBO'),
+                                                    ['/main/default/jazz-combo'], ['class' => 'rd-dropdown-link']) ?>
+                                            </li>
+                                            <li class="rd-dropdown-item">
+                                                <?= Html::a(Yii::t('app', 'NAV_POP_MUSIC'),
+                                                    ['/main/default/pop-music'], ['class' => 'rd-dropdown-link']) ?>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu">
+                                        <?= Html::a(Yii::t('app', 'NAV_MUSIC_TRACKS'), '#',
+                                            ['class' => 'rd-nav-link']) ?>
+                                        <!-- RD Navbar Dropdown -->
+                                        <ul class="rd-menu rd-navbar-dropdown">
+                                            <li class="rd-dropdown-item">
+                                                <?= Html::a(Yii::t('app', 'NAV_JINGLES'),
+                                                    ['/main/default/jingles'], ['class' => 'rd-dropdown-link']) ?>
+                                            </li>
+                                            <li class="rd-dropdown-item">
+                                                <?= Html::a(Yii::t('app', 'NAV_STEMS'),
+                                                    ['/main/default/stems'], ['class' => 'rd-dropdown-link']) ?>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="rd-nav-item rd-navbar--has-megamenu rd-navbar-submenu">
+                                        <?= Html::a(Yii::t('app', 'NAV_MATERIALS'), '#',
+                                            ['class' => 'rd-nav-link']) ?>
+                                        <!-- RD Navbar Megamenu -->
+                                        <ul class="rd-menu rd-navbar-megamenu rd-navbar-open-right">
+                                            <li class="rd-megamenu-item">
+                                                <div class="rd-megamenu-title">
+                                                    <?= Yii::t('app', 'NAV_INTERESTING') ?>
+                                                </div>
+                                                <div class="rd-megamenu-block">
+                                                    <ul class="rd-megamenu-list">
+                                                        <li class="rd-megamenu-list-item">
+                                                            <?= Html::a(Yii::t('app', 'NAV_EVENTS'),
+                                                                ['/main/default/events'],
+                                                                ['class' => 'rd-megamenu-list-link']) ?>
+                                                        </li>
+                                                        <li class="rd-megamenu-list-item">
+                                                            <?= Html::a(Yii::t('app', 'NAV_PROJECTS'),
+                                                                ['/main/default/projects'],
+                                                                ['class' => 'rd-megamenu-list-link']) ?>
+                                                        </li>
+                                                        <li class="rd-megamenu-list-item">
+                                                            <?= Html::a(Yii::t('app', 'NAV_PUBLICATIONS'),
+                                                                ['/main/default/publications'],
+                                                                ['class' => 'rd-megamenu-list-link']) ?>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="rd-megamenu-item">
+                                                <div class="rd-megamenu-title">
+                                                    <?= Yii::t('app', 'NAV_ACCOUNT') ?>
+                                                </div>
+                                                <div class="rd-megamenu-block">
+                                                    <ul class="rd-megamenu-list">
+                                                        <?php
+                                                        if (Yii::$app->user->isGuest)
+                                                            echo '<li class="rd-megamenu-list-item">' .
+                                                                Html::a(Yii::t('app', 'NAV_SIGN_IN'),
+                                                                    ['/main/default/sing-in'],
+                                                                    ['class' => 'rd-megamenu-list-link']) .
+                                                                '</li>';
+                                                        else
+                                                            echo '<li class="rd-megamenu-list-item">' .
+                                                                Html::a(Yii::t('app', 'NAV_ADMINISTRATION'),
+                                                                    ['/admin/user/profile'],
+                                                                    ['class' => 'rd-megamenu-list-link']) .
+                                                                '</li><li class="rd-megamenu-list-item">' .
+                                                                Html::beginForm(['/main/default/sing-out'], 'post') .
+                                                                Html::submitButton(Yii::t('app', 'NAV_SIGN_OUT') . ' (' .
+                                                                    Yii::$app->user->identity->username . ')',
+                                                                    ['class' => 'sing-out-button rd-megamenu-list-link']
+                                                                ) . Html::endForm() . '</li>';
+                                                        ?>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="rd-nav-item">
+                                        <?= Html::a(Yii::t('app', 'NAV_CONTACTS'), ['/main/default/contact'],
+                                            ['class' => 'rd-nav-link']) ?>
+                                    </li>
+                                    <li class="rd-nav-item">
+                                        <?= Html::a(Yii::$app->language == 'ru-RU' ?
+                                            "<figure class='icon-lang icon-en'></figure>" :
+                                            "<figure class='icon-lang icon-ru'></figure>",
+                                            Yii::$app->language == 'ru-RU' ? '/en' .
+                                                Yii::$app->getRequest()->getLangUrl() : '/ru' .
+                                                Yii::$app->getRequest()->getLangUrl(),
+                                            ['class' => 'rd-nav-link']) ?>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Content Section -->
+        <?= $content ?>
+
+        <!-- Footer Section -->
+        <div class="pre-footer-classic bg-gray-700 context-dark">
+            <div class="container">
+                <div class="row row-30 justify-content-lg-between">
+                    <div class="col-sm-6 col-lg-3 col-xl-3">
+                        <h5><?= Yii::t('app', 'FOOTER_LOCATION') ?></h5>
+                        <ul class="list list-sm font-family-serif ls-003">
+                            <li>
+                                <p>1418 Riverwood Drive,</p>
+                            </li>
+                            <li>
+                                <p>Suite 3845 Cottonwood,</p>
+                            </li>
+                            <li>
+                                <p>CA 96022</p>
+                            </li>
+                            <li>
+                                <p>Russia</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <h5><?= Yii::t('app', 'FOOTER_CONTACTS') ?></h5>
+                        <dl class="list-terms-custom">
+                            <dt><span class="icon icon-xs mdi mdi-phone"></span></dt>
+                            <dd><a class="link-default" href="tel:#"><?= User::find()->one()->phone ?></a></dd>
+                        </dl>
+                        <dl class="list-terms-custom">
+                            <dt><span class="icon icon-xs mdi mdi-email-outline"></span></dt>
+                            <dd>
+                                <?php $emails = explode(", ", User::find()->one()->email);
+                                foreach ($emails as $key => $email)
+                                    if ($key == 0)
+                                        echo '<a class="link-default" href="mailto:' . $email . '">' .
+                                            $email . '</a>';
+                                ?>
+                            </dd>
+                        </dl>
+                        <ul class="list-inline list-inline-sm">
+                            <li>
+                                <?= Html::a('', User::find()->one()->instagram_link,
+                                    ['class' => 'icon icon-sm icon-gray-filled-white icon-circle mdi mdi-instagram']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a('', User::find()->one()->twitter_link,
+                                    ['class' => 'icon icon-sm icon-gray-filled-white icon-circle mdi mdi-twitter']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a('', User::find()->one()->facebook_link,
+                                    ['class' => 'icon icon-sm icon-gray-filled-white icon-circle mdi mdi-facebook']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a('', User::find()->one()->vk_link,
+                                    ['class' => 'icon icon-sm icon-gray-filled-white icon-circle mdi mdi-vk']) ?>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5><?= Yii::t('app', 'FOOTER_NEWSLETTER') ?></h5>
+                        <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact"
+                              method="post" action="bat/rd-mailform.php" novalidate="novalidate">
+                            <div class="form-wrap form-wrap-icon">
+                                <div class="form-icon mdi mdi-email-outline"></div>
+                                <input class="form-input form-control-has-validation" id="footer-email" type="email"
+                                       name="email" data-constraints="@Email @Required">
+                                <span class="form-validation"></span>
+                                <label class="form-label rd-input-label" for="footer-email">
+                                    <?= Yii::t('app', 'FOOTER_EMAIL') ?>
+                                </label>
+                            </div>
+                            <div class="button-wrap">
+                                <button class="button button-default button-invariable" type="submit">
+                                    <?= Yii::t('app', 'BUTTON_SUBSCRIBE') ?>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="section footer-classic context-dark text-center">
+            <div class="container">
+                <div class="row row-15 justify-content-lg-between">
+                    <div class="col-lg-4 col-xl-4 text-lg-left">
+                        <p class="rights font-weight-regular">
+                            <span>&copy;</span>
+                            <span class="copyright-year"><?= date('Y') ?></span>
+                            <span><?= Yii::t('app', 'FIRST_AND_LAST_NAME') ?>.</span>
+                            <span><?= Yii::t('app', 'FOOTER_COPYRIGHT') ?></span>
+                        </p>
+                    </div>
+                    <div class="col-lg-5 col-xl-5">
+                        <ul class="list-inline list-inline-lg text-uppercase list-footer-menu">
+                            <li>
+                                <?= Html::a(Yii::t('app', 'NAV_ABOUT'),
+                                    ['/index#about-me-section'], ['class' => 'rd-dropdown-link']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(Yii::t('app', 'NAV_EVENTS'),
+                                    ['/main/default/events'], ['class' => 'rd-dropdown-link']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(Yii::t('app', 'NAV_PROJECTS'),
+                                    ['/main/default/projects'], ['class' => 'rd-dropdown-link']) ?>
+                            </li>
+                            <li>
+                                <?= Html::a(Yii::t('app', 'NAV_PUBLICATIONS'),
+                                    ['/main/default/publications'], ['class' => 'rd-dropdown-link']) ?>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 text-lg-right">
+                        <?= '<a class="font-weight-regular" href="mailto:' . Yii::$app->params['adminEmail'] . '">' .
+                        Yii::t('app', 'FOOTER_POWERED_BY') . ' ' . Yii::t('app', 'FOOTER_DEVELOPER') . '</a>' ?>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="snackbars" id="form-output-global"></div>
+
+    <a href="#" id="ui-to-top" class="ui-to-top fa fa-angle-up active"></a>
+
+<?php $this->endBody() ?>
+</body>
+
+</html>
+
+<?php $this->endPage() ?>

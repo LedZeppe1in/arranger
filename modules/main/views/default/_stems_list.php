@@ -1,9 +1,29 @@
-<?php use yii\helpers\StringHelper; ?>
+<?php
 
-<div class="text-block">
-    <a href="stem-view/<?= $model->id ?>" class="text-title"><?= $model->name ?></a>
-    <div>
-        <i><?= Yii::t('app', 'MUSIC_TRACK_MODEL_DURATION') . ': ' . $model->duration ?></i><br />
-        <i><?= Yii::t('app', 'MUSIC_TRACK_MODEL_PRICE') . ': ' . $model->price ?></i>
-    </div>
-</div><br />
+/* @var $this yii\web\View */
+/* @var $model app\modules\admin\models\MusicTrack */
+
+use yii\helpers\Html;
+use yii\helpers\StringHelper;
+?>
+
+<tr>
+    <td><div class="icon icon-md icon-gray-300 linearicons-mic"></div></td>
+    <td><div class="heading-5"><?= Html::a($model->name, ['/stem-view/' . $model->id]) ?></div></td>
+    <td>
+        <div class="big exeption">
+            <?php
+            if ($model->description != '')
+                echo StringHelper::truncate($model->description, 100, '...');
+            else
+                echo Yii::t('app', 'GENERAL_NOTICE_NO_DESCRIPTION');
+            ?>
+        </div>
+    </td>
+    <td>
+        <div class="price-box-minimal">
+            <div class="text"><?= Yii::t('app', 'FROM') ?></div>
+            <div class="heading-5 price">&#8381;<?= $model->price ?></div>
+        </div>
+    </td>
+</tr>

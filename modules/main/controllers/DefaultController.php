@@ -73,7 +73,7 @@ class DefaultController extends Controller
     {
         // Подключение макета главной страницы
         $this->layout = 'main';
-        //
+        // Выборка пользователя сайта
         $user = User::find()->one();
         // Поиск последней партитуры с типом "Big band"
         $big_band = SheetMusic::find()
@@ -121,41 +121,6 @@ class DefaultController extends Controller
             'sheet_music_count' => $sheet_music_count,
             'music_track_count' => $music_track_count,
             'project_count' => $project_count,
-        ]);
-    }
-
-    /**
-     * Displays events.
-     *
-     * @return string
-     */
-    public function actionEvents()
-    {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Event::find(),
-            'pagination' => [
-                'pageSize' => 10,
-            ],
-        ]);
-
-        return $this->render('events', [
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-
-    /**
-     * Displays a single Event model.
-     *
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionEventView($id)
-    {
-        $model = Event::findOne($id);
-
-        return $this->render('event-view', [
-            'model' => $model,
         ]);
     }
 
@@ -345,6 +310,41 @@ class DefaultController extends Controller
     }
 
     /**
+     * Displays events.
+     *
+     * @return string
+     */
+    public function actionEvents()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Event::find(),
+            'pagination' => [
+                'pageSize' => 9,
+            ],
+        ]);
+
+        return $this->render('events', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Displays a single Event model.
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionEventView($id)
+    {
+        $model = Event::findOne($id);
+
+        return $this->render('event-view', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
      * Displays projects.
      *
      * @return string
@@ -354,7 +354,7 @@ class DefaultController extends Controller
         $dataProvider = new ActiveDataProvider([
             'query' => Project::find(),
             'pagination' => [
-                'pageSize' => 10,
+                'pageSize' => 9,
             ],
         ]);
 
@@ -389,7 +389,7 @@ class DefaultController extends Controller
         $dataProvider = new ActiveDataProvider([
             'query' => Publication::find(),
             'pagination' => [
-                'pageSize' => 10,
+                'pageSize' => 9,
             ],
         ]);
 

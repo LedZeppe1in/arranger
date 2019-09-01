@@ -5,7 +5,6 @@
 
 use yii\helpers\Html;
 use app\assets\AppAsset;
-use app\components\widgets\WLang;
 use app\modules\admin\models\User;
 
 AppAsset::register($this);
@@ -57,7 +56,8 @@ AppAsset::register($this);
                          data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true"
                          data-xl-stick-up="true" data-xxl-stick-up="true">
                         <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1 toggle-original"
-                             data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+                             data-rd-navbar-toggle=".rd-navbar-collapse"><span></span>
+                        </div>
                         <div class="rd-navbar-collapse toggle-original-elements">
                             <ul class="list rd-navbar-list">
                                 <li>
@@ -219,7 +219,7 @@ AppAsset::register($this);
             </header>
             <!-- Preview Section-->
             <section class="section context-dark section-jumbotron bg-cover bg-overlay-1"
-                     style="background: url(../images/bg-image.jpg) #151515">
+                     style="background: url(/web/images/bg-image.jpg) #151515">
                 <div class="panel-left">
                     <!--Brand-->
                     <?= Html::a(
@@ -281,7 +281,7 @@ AppAsset::register($this);
                     </div>
                 </div>
                 <ul class="project-list">
-                    <li class="bg-image" style="background-image: url(../images/guitar-sheet-music-670x447.jpg)">
+                    <li class="bg-image" style="background-image: url(/web/images/guitar-sheet-music-670x447.jpg)">
                         <span class="icon icon-md project-list-icon mdi mdi-music-box-outline"></span>
                         <div class="project-list-info">
                             <?= Html::a(Yii::t('app', 'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TITLE'),
@@ -291,7 +291,7 @@ AppAsset::register($this);
                             </p>
                         </div>
                     </li>
-                    <li class="bg-image" style="background-image: url(../images/tracks-3008x2000.jpg)">
+                    <li class="bg-image" style="background-image: url(/web/images/tracks-3008x2000.jpg)">
                         <span class="icon icon-md project-list-icon mdi mdi-play-box-outline"></span>
                         <div class="project-list-info">
                             <?= Html::a(Yii::t('app', 'PROJECT_LIST_JINGLES_AND_STEMS_TITLE'),

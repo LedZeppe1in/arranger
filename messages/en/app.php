@@ -105,11 +105,12 @@ return [
     'FOOTER_DEVELOPER' => 'NikDim project',
 
     /* Общие кнопки */
-    'BUTTON_READ_MORE' => 'Read More',
-    'BUTTON_VIEW_ALL_WORKS' => 'View All Works',
+    'BUTTON_READ_MORE' => 'Read more',
+    'BUTTON_VIEW_ALL_WORKS' => 'View all works',
     'BUTTON_VIEW' => 'View',
     'BUTTON_SUBSCRIBE' => 'Subscribe',
     'BUTTON_SEND_MESSAGE' => 'Send message',
+    'BUTTON_VIEW_MORE_INFO' => 'View more info',
     'BUTTON_ADD' => 'Add',
     'BUTTON_SEND' => 'Send',
     'BUTTON_SAVE' => 'Save',
@@ -125,9 +126,8 @@ return [
     'NOTICE_TEXT' => 'this important information.',
     'READ_MORE' => 'Read more',
 
-    /* Общие сообщения об ошибках */
-    'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Page not found.',
-    'ERROR_MESSAGE_ACCESS_DENIED' => 'You are not allowed to perform this action.',
+    /* Общий текст */
+    'FROM' => 'From',
 
     /* Общие уведомления на форме с captcha */
     'CAPTCHA_NOTICE_ONE' => 'Please enter the letters shown in the picture above.',
@@ -136,31 +136,55 @@ return [
 
     /* Общие уведомления */
     'GENERAL_NOTICE_NO_RESULTS_FOUND' => 'No results found.',
+    'GENERAL_NOTICE_NO_DESCRIPTION' => 'No description',
+
+    /* Общие сообщения об ошибках */
+    'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Page not found.',
+    'ERROR_MESSAGE_ACCESS_DENIED' => 'You are not allowed to perform this action.',
 
     /* Страница ошибки */
-    'ERROR_PAGE_TEXT_ONE' => 'The above error occurred while the Web server was processing your request.',
-    'ERROR_PAGE_TEXT_TWO' => 'Please contact us if you think this is a server error. Thank you.',
+    'ERROR_PAGE_NOTICE' => 'The above error occurred while the Web server was processing your request.',
+    'ERROR_PAGE_TEXT' => 'Please contact us if you think this is a server error. Thank you.',
 
     /* Страницы клиентской части сайта */
-    /* Страница событий */
-    'EVENTS_PAGE_TITLE' => 'Events',
-    'EVENT_PAGE_TITLE' => 'Event',
+    /* Страница партитур */
+    'SHEET_MUSIC_PAGE_TITLE' => 'Sheet Music',
+    'SHEET_MUSIC_PAGE_TEXT' => 'Find out more about the sheet music I provide',
     /* Страница партитур "Big Band" */
     'BIG_BAND_PAGE_TITLE' => 'Big Band',
+    'BIG_BAND_PAGE_TEXT' => 'Learn more about one of my Big Band sheet music',
     /* Страница партитур "Jazz Combo" */
     'JAZZ_COMBO_PAGE_TITLE' => 'Jazz Combo',
+    'JAZZ_COMBO_PAGE_TEXT' => 'Learn more about one of my Jazz Combo sheet music',
     /* Страница партитур "Pop Music" */
     'POP_MUSIC_PAGE_TITLE' => 'Pop Music',
+    'POP_MUSIC_PAGE_TEXT' => 'Learn more about one of my Pop Music sheet music',
+    /* Страница треков */
+    'MUSIC_TRACKS_PAGE_TITLE' => 'Music Tracks',
+    'MUSIC_TRACKS_PAGE_TEXT' => 'Find out more about the music tracks I provide',
     /* Страница джинглов */
     'JINGLES_PAGE_TITLE' => 'Jingles',
+    'JINGLE_PAGE_TITLE' => 'Jingle',
+    'JINGLE_PAGE_TEXT' => 'Learn more about one of my jingles',
     /* Страница мультитреков */
     'STEMS_PAGE_TITLE' => 'Stems',
+    'STEM_PAGE_TITLE' => 'Stem',
+    'STEM_PAGE_TEXT' => 'Learn more about one of my stems',
+    /* Страница событий */
+    'EVENTS_PAGE_TITLE' => 'Events',
+    'EVENTS_PAGE_TEXT' => 'Find out more about interesting events',
+    'EVENT_PAGE_TITLE' => 'Event',
+    'EVENT_PAGE_TEXT' => 'Learn more about one of events',
     /* Страница проектов */
     'PROJECTS_PAGE_TITLE' => 'Projects',
+    'PROJECTS_PAGE_TEXT' => 'Take a look at my latest projects',
     'PROJECT_PAGE_TITLE' => 'Project',
+    'PROJECT_PAGE_TEXT' => 'Learn more about one of my project',
     /* Страница публикаций */
     'PUBLICATIONS_PAGE_TITLE' => 'Publications',
+    'PUBLICATIONS_PAGE_TEXT' => 'Take a look at my latest publications',
     'PUBLICATION_PAGE_TITLE' => 'Publication',
+    'PUBLICATION_PAGE_TEXT' => 'Learn more about one of my publication',
     /* Страница контактов */
     'CONTACTS_PAGE_TITLE' => 'Contacts',
     'CONTACT_US_PAGE_TITLE' => 'Contact us',
