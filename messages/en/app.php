@@ -1,10 +1,7 @@
 <?php
 
 return [
-    /* Инициалы автора сайта */
-    'FIRST_AND_LAST_NAME' => 'Andrey Ruznyaev',
-
-    /* Название профессии */
+    /* Название профессии автора */
     'PROFESSION' => 'Musician Arranger Multi-Instrumentalist',
 
     /* Аннотация */
@@ -313,6 +310,8 @@ return [
     'USER_MODEL_PASSWORD_RESET_TOKEN' => 'Password reset token',
     'USER_MODEL_FULL_NAME_RU' => 'Full name in Russian',
     'USER_MODEL_FULL_NAME_EN' => 'Full name in English',
+    'USER_MODEL_ADDRESS_RU' => 'Address in Russian',
+    'USER_MODEL_ADDRESS_EN' => 'Address in English',
     'USER_MODEL_EMAIL' => 'E-mail',
     'USER_MODEL_PHONE' => 'Phone',
     'USER_MODEL_YOUTUBE_LINK' => 'YouTube link',

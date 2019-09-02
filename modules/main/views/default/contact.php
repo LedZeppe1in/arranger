@@ -49,7 +49,9 @@ $this->title = Yii::t('app', 'CONTACTS_PAGE_TITLE');
                     <div class="box-lined-body">
                         <h6 class="box-lined-title"><?= Yii::t('app', 'CONTACTS_PAGE_ADDRESS') ?></h6>
                         <ul class="box-lined-list text-black">
-                            <li class="big">1418 Riverwood Drive, Suite 3845 Cottonwood, CA 96022 Russia</li>
+                            <li class="big">
+                                <?= Yii::$app->language == 'ru-RU' ? $user->address_ru : $user->address_en ?>
+                            </li>
                         </ul>
                     </div>
                 </div>

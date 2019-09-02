@@ -24,6 +24,8 @@ class m190206_130017_user extends Migration
             'password_reset_token' => $this->string(),
             'full_name_ru' => $this->string()->notNull(),
             'full_name_en' => $this->string()->notNull(),
+            'address_ru' => $this->string()->notNull(),
+            'address_en' => $this->string()->notNull(),
             'email' => $this->string()->notNull(),
             'phone' => $this->string()->notNull(),
             'youtube_link' => $this->string(),

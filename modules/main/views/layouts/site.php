@@ -202,16 +202,8 @@ ClientAsset::register($this);
                         <h5><?= Yii::t('app', 'FOOTER_LOCATION') ?></h5>
                         <ul class="list list-sm font-family-serif ls-003">
                             <li>
-                                <p>1418 Riverwood Drive,</p>
-                            </li>
-                            <li>
-                                <p>Suite 3845 Cottonwood,</p>
-                            </li>
-                            <li>
-                                <p>CA 96022</p>
-                            </li>
-                            <li>
-                                <p>Russia</p>
+                                <p><?= Yii::$app->language == 'ru-RU' ? User::find()->one()->address_ru :
+                                        User::find()->one()->address_en ?></p>
                             </li>
                         </ul>
                     </div>
@@ -281,7 +273,8 @@ ClientAsset::register($this);
                         <p class="rights font-weight-regular">
                             <span>&copy;</span>
                             <span class="copyright-year"><?= date('Y') ?></span>
-                            <span><?= Yii::t('app', 'FIRST_AND_LAST_NAME') ?>.</span>
+                            <span><?= Yii::$app->language == 'ru-RU' ? User::find()->one()->full_name_ru :
+                                    User::find()->one()->full_name_en ?>.</span>
                             <span><?= Yii::t('app', 'FOOTER_COPYRIGHT') ?></span>
                         </p>
                     </div>
