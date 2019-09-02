@@ -18,7 +18,7 @@ use yii\captcha\Captcha;
 use yii\helpers\StringHelper;
 use yii\bootstrap\ActiveForm;
 
-$this->title = Yii::t('app', 'FIRST_AND_LAST_NAME');
+$this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->full_name_en;
 ?>
 
 <!-- Подключение js-скрипта -->
@@ -124,7 +124,8 @@ $this->title = Yii::t('app', 'FIRST_AND_LAST_NAME');
             </div>
         </div>
         <div class="button-wrap-1 text-center">
-            <?= Html::a(Yii::t('app', 'BUTTON_VIEW_ALL_WORKS'), '#', ['class' => 'button button-default']) ?>
+            <?= Html::a(Yii::t('app', 'BUTTON_VIEW_ALL_WORKS'), ['/main/default/big-band'],
+                ['class' => 'button button-default']) ?>
         </div>
     </div>
 </section>
