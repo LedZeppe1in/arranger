@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\components\widgets\WLang;
+use app\modules\admin\models\User;
 
 AppAsset::register($this);
 ?>
@@ -32,7 +33,8 @@ AppAsset::register($this);
     <div class="admin-wrap">
         <?php
         NavBar::begin([
-            'brandLabel' => Yii::t('app', 'FIRST_AND_LAST_NAME'),
+            'brandLabel' => Yii::$app->language == 'ru-RU' ? User::find()->one()->full_name_ru :
+                User::find()->one()->full_name_en,
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
                 'class' => 'navbar-default navbar-fixed-top',
@@ -43,12 +45,12 @@ AppAsset::register($this);
             'options' => ['class' => 'navbar-nav navbar-left'],
             'encodeLabels' => false,
             'items' => [
-                ['label' => '<span class="glyphicon glyphicon-bullhorn"></span> ' .
-                    Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
                 ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
                     Yii::t('app', 'NAV_ADMIN_SHEET_MUSIC'), 'url' => ['/admin/sheet-music/list']],
                 ['label' => '<span class="glyphicon glyphicon-music"></span> ' .
                     Yii::t('app', 'NAV_ADMIN_MUSIC_TRACKS'), 'url' => ['/admin/music-tracks/list']],
+                ['label' => '<span class="glyphicon glyphicon-bullhorn"></span> ' .
+                    Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
                 ['label' => '<span class="glyphicon glyphicon-blackboard"></span> ' .
                     Yii::t('app', 'NAV_ADMIN_PROJECTS'), 'url' => ['/admin/projects/list']],
                 ['label' => '<span class="glyphicon glyphicon-file"></span> ' .

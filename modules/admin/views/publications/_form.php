@@ -21,10 +21,7 @@ use dosamigos\ckeditor\CKEditor;
 
     <?= $form->field($model, 'link')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'text')->widget(CKEditor::className(), [
-        'options' => ['rows' => 10],
-        'preset' => 'basic'
-    ]) ?>
+    <?= $form->field($model, 'text')->textarea(['rows' => 8]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? '<span class="glyphicon glyphicon-floppy-disk"></span> ' .

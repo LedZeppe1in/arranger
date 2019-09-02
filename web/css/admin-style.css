@@ -100,8 +100,12 @@ html, body {
 .icon-en {
     background: url(../images/languages.png) 0 -96px;
 }
+.dropdown-menu {
+    min-width: 65px;
+    margin: 0;
+}
 
-/* Overlay styles */
+    /* Overlay styles */
 .mask-overlay {
     max-height: 140px;
     background: linear-gradient(to bottom left, #e3edee, #ffffff);

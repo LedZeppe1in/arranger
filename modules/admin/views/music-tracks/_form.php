@@ -39,10 +39,7 @@ use app\modules\admin\models\MusicTrack;
 
     <?= $form->field($model, 'music_track_file')->fileInput() ?>
 
-    <?= $form->field($model, 'description')->widget(CKEditor::className(), [
-        'options' => ['rows' => 10],
-        'preset' => 'basic'
-    ]) ?>
+    <?= $form->field($model, 'description')->textarea(['rows' => 8]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? '<span class="glyphicon glyphicon-floppy-disk"></span> ' .

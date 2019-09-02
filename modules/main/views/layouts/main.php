@@ -262,7 +262,8 @@ ClientAsset::register($this);
                                         </div>
                                         <h2 class="jumbotron-custom-title">
                                             <span class="big">
-                                                <?= Yii::t('app', 'FIRST_AND_LAST_NAME') ?>
+                                                <?= Yii::$app->language == 'ru-RU' ? User::find()->one()->full_name_ru :
+                                                    User::find()->one()->full_name_en ?>
                                             </span>
                                         </h2>
                                         <div class="block-4-custom">
@@ -395,7 +396,8 @@ ClientAsset::register($this);
                         <p class="rights font-weight-regular">
                             <span>&copy;</span>
                             <span class="copyright-year"><?= date('Y') ?></span>
-                            <span><?= Yii::t('app', 'FIRST_AND_LAST_NAME') ?>.</span>
+                            <span><?= Yii::$app->language == 'ru-RU' ? User::find()->one()->full_name_ru :
+                                    User::find()->one()->full_name_en ?>.</span>
                             <span><?= Yii::t('app', 'FOOTER_COPYRIGHT') ?></span>
                         </p>
                     </div>
