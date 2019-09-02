@@ -94,9 +94,11 @@ AppAsset::register($this);
     <footer class="admin-footer">
         <div class="container">
             <p class="pull-left">
-                <?= Yii::t('app', 'FOOTER_COPYRIGHT') . ' &copy; ' . date('Y') . ' ' .
-                    Yii::t('app', 'FIRST_AND_LAST_NAME') ?> | <?= '<a href="mailto:' . Yii::$app->params['adminEmail']
-                    . '">' . Yii::t('app', 'FOOTER_POWERED_BY') . ' ' . Yii::t('app', 'FOOTER_DEVELOPER') . '</a>' ?>
+                <?= Yii::$app->language == 'ru-RU' ? Yii::t('app', 'FOOTER_COPYRIGHT') . ' &copy; ' . date('Y') . ' ' .
+                    User::find()->one()->full_name_ru : Yii::t('app', 'FOOTER_COPYRIGHT') . ' &copy; ' . date('Y') .
+                    ' ' . User::find()->one()->full_name_en ?> | <?= '<a href="mailto:' .
+                Yii::$app->params['adminEmail'] . '">' . Yii::t('app', 'FOOTER_POWERED_BY') . ' ' .
+                Yii::t('app', 'FOOTER_DEVELOPER') . '</a>' ?>
             </p>
         </div>
     </footer>

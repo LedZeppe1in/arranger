@@ -110,7 +110,7 @@ class DefaultController extends Controller
         // Подсчет кол-ва треков
         $music_track_count = MusicTrack::find()->count();
         // Подсчет кол-ва проектов
-        $project_count = MusicTrack::find()->count();
+        $project_count = Project::find()->count();
 
         // Форма контакта
         $contact_form = new ContactForm();
