@@ -137,6 +137,25 @@ class DefaultController extends Controller
     }
 
     /**
+     * Displays all sheet music.
+     *
+     * @return string
+     */
+    public function actionSheetMusic()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => SheetMusic::find(),
+            'pagination' => [
+                'pageSize' => 9,
+            ],
+        ]);
+
+        return $this->render('sheet-music', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
      * Displays big band.
      *
      * @return string

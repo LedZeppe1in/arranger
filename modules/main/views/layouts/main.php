@@ -105,7 +105,7 @@ ClientAsset::register($this);
                                     <!-- RD Navbar Nav -->
                                     <ul class="rd-navbar-nav">
                                         <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu">
-                                            <?= Html::a(Yii::t('app', 'NAV_SHEET_MUSIC'), '#',
+                                            <?= Html::a(Yii::t('app', 'NAV_SHEET_MUSIC'), ['/main/default/sheet-music'],
                                                 ['class' => 'rd-nav-link']) ?>
                                             <!-- RD Navbar Dropdown -->
                                             <ul class="rd-menu rd-navbar-dropdown">
@@ -294,7 +294,7 @@ ClientAsset::register($this);
                         <span class="icon icon-md project-list-icon mdi mdi-music-box-outline"></span>
                         <div class="project-list-info">
                             <?= Html::a(Yii::t('app', 'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TITLE'),
-                                ['/main/default/big-band']) ?>
+                                ['/main/default/sheet-music']) ?>
                             <p class="project-list-text">
                                 <?= Yii::t('app', 'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TEXT') ?>
                             </p>

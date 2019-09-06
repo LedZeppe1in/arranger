@@ -78,7 +78,7 @@ ClientAsset::register($this);
                                 <!-- RD Navbar Nav -->
                                 <ul class="rd-navbar-nav">
                                     <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu">
-                                        <?= Html::a(Yii::t('app', 'NAV_SHEET_MUSIC'), '#',
+                                        <?= Html::a(Yii::t('app', 'NAV_SHEET_MUSIC'), ['/main/default/sheet-music'],
                                             ['class' => 'rd-nav-link']) ?>
                                         <!-- RD Navbar Dropdown -->
                                         <ul class="rd-menu rd-navbar-dropdown">

@@ -136,7 +136,7 @@ $this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->ful
             </div>
         </div>
         <div class="button-wrap-1 text-center">
-            <?= Html::a(Yii::t('app', 'BUTTON_VIEW_ALL_WORKS'), ['/main/default/big-band'],
+            <?= Html::a(Yii::t('app', 'BUTTON_VIEW_ALL_WORKS'), ['/main/default/sheet-music'],
                 ['class' => 'button button-default']) ?>
         </div>
     </div>
