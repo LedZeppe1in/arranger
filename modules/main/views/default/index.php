@@ -8,7 +8,7 @@
 /* @var $pop_music app\modules\admin\models\SheetMusic */
 /* @var $jingle app\modules\admin\models\MusicTrack */
 /* @var $stem app\modules\admin\models\MusicTrack */
-/* @var $project app\modules\admin\models\Project */
+/* @var $minus_one app\modules\admin\models\MusicTrack */
 /* @var $sheet_music_count app\modules\main\controllers\DefaultController */
 /* @var $music_track_count app\modules\main\controllers\DefaultController */
 /* @var $service_count app\modules\main\controllers\DefaultController */
@@ -121,14 +121,14 @@ $this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->ful
             <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
                 <div class="project-grid" style="background-image: url(/web/images/project-6.jpeg);">
                     <div class="inner"><?= Html::img('@web/images/bg-pattern-transparent.png') ?>
-                        <?php if ($project): ?>
+                        <?php if ($minus_one): ?>
                             <h5 class="title text-capitalize">
-                                <?= Html::a($project->name, ['/project-view/' . $project->id]) ?>
+                                <?= Html::a($minus_one->name, ['/minus-one-view/' . $minus_one->id]) ?>
                             </h5>
                             <p class="font-weight-regular exeption">
-                                <?= StringHelper::truncate($project->description, 100, '...') ?>
+                                <?= StringHelper::truncate($minus_one->description, 100, '...') ?>
                             </p>
-                            <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/project-view/' . $project->id],
+                            <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/minus-one-view/' . $minus_one->id],
                                 ['class' => 'button button-default']) ?>
                         <?php endif; ?>
                     </div>
@@ -178,7 +178,7 @@ $this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->ful
                             </li>
                             <li>
                                 <?= Html::a(Yii::t('app', 'BRANDING_MINUS_ONE'),
-                                    '#', ['class' => 'link-item']) ?>
+                                    ['/main/default/minus-one'], ['class' => 'link-item']) ?>
                             </li>
                         </ul>
                     </div>

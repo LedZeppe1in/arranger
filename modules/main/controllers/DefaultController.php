@@ -101,9 +101,9 @@ class DefaultController extends Controller
         $stem = MusicTrack::find()
             ->where(array('type' => MusicTrack::TYPE_STEMS))->orderBy(['id' => SORT_DESC])
             ->one();
-        // Поиск последнего проекта
-        $project = Project::find()
-            ->orderBy(['id' => SORT_DESC])
+        // Поиск последнего трека с типом "Минус"
+        $minus_one = MusicTrack::find()
+            ->where(array('type' => MusicTrack::TYPE_MINUS_ONE))->orderBy(['id' => SORT_DESC])
             ->one();
         // Подсчет кол-ва партитур
         $sheet_music_count = SheetMusic::find()->count();
@@ -129,7 +129,7 @@ class DefaultController extends Controller
             'pop_music' => $pop_music,
             'jingle' => $jingle,
             'stem' => $stem,
-            'project' => $project,
+            'minus_one' => $minus_one,
             'sheet_music_count' => $sheet_music_count,
             'music_track_count' => $music_track_count,
             'service_count' => $service_count,
@@ -267,6 +267,25 @@ class DefaultController extends Controller
     }
 
     /**
+     * Displays all audio.
+     *
+     * @return string
+     */
+    public function actionAudio()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => MusicTrack::find(),
+            'pagination' => [
+                'pageSize' => 9,
+            ],
+        ]);
+
+        return $this->render('audio', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
      * Displays jingles.
      *
      * @return string
@@ -336,6 +355,43 @@ class DefaultController extends Controller
         $model = MusicTrack::findOne($id);
 
         return $this->render('stem-view', [
+            'model' => $model,
+        ]);
+    }
+
+    /**
+     * Displays minus one.
+     *
+     * @return string
+     */
+    public function actionMinusOne()
+    {
+        // Поиск всех треков с типом "minus one"
+        $dataProvider = new ActiveDataProvider([
+            'query' => MusicTrack::find()->where(array('type' => MusicTrack::TYPE_MINUS_ONE)),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+        ]);
+
+        return $this->render('minus-one', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Displays a single MusicTrack model (minus one).
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionMinusOneView($id)
+    {
+        // Поиск трека по id
+        $model = MusicTrack::findOne($id);
+
+        return $this->render('minus-one-view', [
             'model' => $model,
         ]);
     }

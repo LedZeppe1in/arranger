@@ -158,8 +158,8 @@ return [
     'POP_MUSIC_PAGE_TITLE' => 'Pop Music',
     'POP_MUSIC_PAGE_TEXT' => 'Learn more about one of my Pop Music sheet music',
     /* Страница треков */
-    'MUSIC_TRACKS_PAGE_TITLE' => 'Music Tracks',
-    'MUSIC_TRACKS_PAGE_TEXT' => 'Find out more about the music tracks I provide',
+    'MUSIC_TRACKS_PAGE_TITLE' => 'Audio',
+    'MUSIC_TRACKS_PAGE_TEXT' => 'Find out more about the audio tracks I provide',
     /* Страница джинглов */
     'JINGLES_PAGE_TITLE' => 'Jingles',
     'JINGLE_PAGE_TITLE' => 'Jingle',
@@ -168,6 +168,10 @@ return [
     'STEMS_PAGE_TITLE' => 'Stems',
     'STEM_PAGE_TITLE' => 'Stem',
     'STEM_PAGE_TEXT' => 'Learn more about one of my stems',
+    /* Страница минусов */
+    'MINUS_ONE_PAGE_TITLE' => 'Minus One',
+    'MINUS_ONE_SINGLE_PAGE_TITLE' => 'Minus One',
+    'MINUS_ONE_PAGE_TEXT' => 'Learn more about one of minus one',
     /* Страница событий */
     'EVENTS_PAGE_TITLE' => 'Events',
     'EVENTS_PAGE_TEXT' => 'Find out more about interesting events',
@@ -368,6 +372,7 @@ return [
     /* Значения полей модели MusicTrack */
     'MUSIC_TRACK_MODEL_TYPE_JINGLE' => 'Jingle',
     'MUSIC_TRACK_MODEL_TYPE_STEMS' => 'Stems',
+    'MUSIC_TRACK_MODEL_TYPE_MINUS_ONE' => 'Minus one',
     /* Сообщения модели MusicTrack */
     'MUSIC_TRACK_MODEL_MESSAGE_PRICE' => 'Incorrect price.',
     /* Project */

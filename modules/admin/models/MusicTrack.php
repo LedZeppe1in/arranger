@@ -22,11 +22,12 @@ use yii\behaviors\TimestampBehavior;
  */
 class MusicTrack extends \yii\db\ActiveRecord
 {
-    const TYPE_JINGLE = 0; // Тип трека "Джингл"
-    const TYPE_STEMS = 1;  // Тип трека "Мультитрек"
+    const TYPE_JINGLE = 0;     // Тип трека "Джингл"
+    const TYPE_STEMS = 1;      // Тип трека "Мультитрек"
+    const TYPE_MINUS_ONE = 2;  // Тип трека "Минус"
 
-    public $preview_file;     // Файл превью трека
-    public $music_track_file; // Файл трека
+    public $preview_file;      // Файл превью трека
+    public $music_track_file;  // Файл трека
 
     /**
      * @return string table name
@@ -91,6 +92,7 @@ class MusicTrack extends \yii\db\ActiveRecord
         return [
             self::TYPE_JINGLE => Yii::t('app', 'MUSIC_TRACK_MODEL_TYPE_JINGLE'),
             self::TYPE_STEMS => Yii::t('app', 'MUSIC_TRACK_MODEL_TYPE_STEMS'),
+            self::TYPE_MINUS_ONE => Yii::t('app', 'MUSIC_TRACK_MODEL_TYPE_MINUS_ONE'),
         ];
     }
 

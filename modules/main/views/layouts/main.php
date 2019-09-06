@@ -124,7 +124,7 @@ ClientAsset::register($this);
                                             </ul>
                                         </li>
                                         <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu">
-                                            <?= Html::a(Yii::t('app', 'NAV_AUDIO'), '#',
+                                            <?= Html::a(Yii::t('app', 'NAV_AUDIO'), ['/main/default/audio'],
                                                 ['class' => 'rd-nav-link']) ?>
                                             <!-- RD Navbar Dropdown -->
                                             <ul class="rd-menu rd-navbar-dropdown">
@@ -138,7 +138,7 @@ ClientAsset::register($this);
                                                 </li>
                                                 <li class="rd-dropdown-item">
                                                     <?= Html::a(Yii::t('app', 'NAV_MINUS_ONE'),
-                                                        '#', ['class' => 'rd-dropdown-link']) ?>
+                                                        ['/main/default/minus-one'], ['class' => 'rd-dropdown-link']) ?>
                                                 </li>
                                             </ul>
                                         </li>
@@ -304,7 +304,7 @@ ClientAsset::register($this);
                         <span class="icon icon-md project-list-icon mdi mdi-play-box-outline"></span>
                         <div class="project-list-info">
                             <?= Html::a(Yii::t('app', 'PROJECT_LIST_CUSTOM_AUDIO_TITLE'),
-                                ['/main/default/jingles']) ?>
+                                ['/main/default/audio']) ?>
                             <p class="project-list-text">
                                 <?= Yii::t('app', 'PROJECT_LIST_CUSTOM_AUDIO_TEXT') ?>
                             </p>

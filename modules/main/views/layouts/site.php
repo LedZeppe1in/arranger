@@ -97,7 +97,7 @@ ClientAsset::register($this);
                                         </ul>
                                     </li>
                                     <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu">
-                                        <?= Html::a(Yii::t('app', 'NAV_AUDIO'), '#',
+                                        <?= Html::a(Yii::t('app', 'NAV_AUDIO'), ['/main/default/audio'],
                                             ['class' => 'rd-nav-link']) ?>
                                         <!-- RD Navbar Dropdown -->
                                         <ul class="rd-menu rd-navbar-dropdown">
@@ -111,7 +111,7 @@ ClientAsset::register($this);
                                             </li>
                                             <li class="rd-dropdown-item">
                                                 <?= Html::a(Yii::t('app', 'NAV_MINUS_ONE'),
-                                                    '#', ['class' => 'rd-dropdown-link']) ?>
+                                                    ['/main/default/minus-one'], ['class' => 'rd-dropdown-link']) ?>
                                             </li>
                                         </ul>
                                     </li>

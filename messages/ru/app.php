@@ -146,8 +146,8 @@ return [
 
     /* Страницы клиентской части сайта */
     /* Страница партитур */
-    'SHEET_MUSIC_PAGE_TITLE' => 'Партитуры',
-    'SHEET_MUSIC_PAGE_TEXT' => 'Узнайте больше о партитурах, которые я предоставляю',
+    'SHEET_MUSIC_PAGE_TITLE' => 'Ноты',
+    'SHEET_MUSIC_PAGE_TEXT' => 'Узнайте больше о нотных партитурах, которые я предоставляю',
     /* Страница партитур "Big Band" */
     'BIG_BAND_PAGE_TITLE' => 'Big Band',
     'BIG_BAND_PAGE_TEXT' => 'Узнайте больше об одной из моих партитур Big Band',
@@ -158,8 +158,8 @@ return [
     'POP_MUSIC_PAGE_TITLE' => 'Pop Music',
     'POP_MUSIC_PAGE_TEXT' => 'Узнайте больше об одной из моих партитур Pop Music',
     /* Страница треков */
-    'MUSIC_TRACKS_PAGE_TITLE' => 'Треки',
-    'MUSIC_TRACKS_PAGE_TEXT' => 'Узнайте больше о треках, которые я предоставляю',
+    'MUSIC_TRACKS_PAGE_TITLE' => 'Аудио',
+    'MUSIC_TRACKS_PAGE_TEXT' => 'Узнайте больше о аудио треках, которые я предоставляю',
     /* Страница джинглов */
     'JINGLES_PAGE_TITLE' => 'Джинглы',
     'JINGLE_PAGE_TITLE' => 'Джингл',
@@ -168,6 +168,10 @@ return [
     'STEMS_PAGE_TITLE' => 'Мультитреки',
     'STEM_PAGE_TITLE' => 'Мультитрек',
     'STEM_PAGE_TEXT' => 'Узнайте больше об одном из моих мультитреков',
+    /* Страница минусов */
+    'MINUS_ONE_PAGE_TITLE' => 'Минуса',
+    'MINUS_ONE_SINGLE_PAGE_TITLE' => 'Минус',
+    'MINUS_ONE_PAGE_TEXT' => 'Узнайте больше об одном из минусов',
     /* Страница событий */
     'EVENTS_PAGE_TITLE' => 'События',
     'EVENTS_PAGE_TEXT' => 'Узнайте больше об интересных событиях',
@@ -368,6 +372,7 @@ return [
     /* Значения полей модели MusicTrack */
     'MUSIC_TRACK_MODEL_TYPE_JINGLE' => 'Джингл',
     'MUSIC_TRACK_MODEL_TYPE_STEMS' => 'Мультитрек',
+    'MUSIC_TRACK_MODEL_TYPE_MINUS_ONE' => 'Минус',
     /* Сообщения модели MusicTrack */
     'MUSIC_TRACK_MODEL_MESSAGE_PRICE' => 'Неправильно указана цена.',
     /* Project */
