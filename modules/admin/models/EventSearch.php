@@ -69,10 +69,10 @@ class EventSearch extends Event
             'duration' => $this->duration,
         ]);
 
-        $query->andFilterWhere(['ilike', 'name', $this->name])
-            ->andFilterWhere(['ilike', 'location', $this->location])
-            ->andFilterWhere(['ilike', 'link', $this->link])
-            ->andFilterWhere(['ilike', 'description', $this->description]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'location', $this->location])
+            ->andFilterWhere(['like', 'link', $this->link])
+            ->andFilterWhere(['like', 'description', $this->description]);
 
         return $dataProvider;
     }
