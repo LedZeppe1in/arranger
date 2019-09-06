@@ -317,7 +317,7 @@ ClientAsset::register($this);
 
     <div class="snackbars" id="form-output-global"></div>
 
-    <a href="#" id="ui-to-top" class="ui-to-top fa fa-angle-up active"></a>
+    <a href="#" id="ui-to-top" class="ui-to-top fa fa-angle-up"></a>
 
 <?php $this->endBody() ?>
 </body>

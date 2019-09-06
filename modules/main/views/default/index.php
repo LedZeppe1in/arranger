@@ -41,84 +41,96 @@ $this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->ful
             <div class="col-sm-6 col-lg-4 wow fadeInRight" style="visibility: hidden; animation-name: none;">
                 <div class="project-grid" style="background-image: url(/web/images/project-1.jpg);">
                     <div class="inner"><?= Html::img('@web/images/bg-pattern-transparent.png') ?>
-                        <h5 class="title text-capitalize">
-                            <?= Html::a($big_band->name, ['/big-band-view/' . $big_band->id]) ?>
-                        </h5>
-                        <p class="font-weight-regular exeption">
-                            <?= StringHelper::truncate($big_band->description, 100, '...') ?>
-                        </p>
-                        <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/big-band-view/' . $big_band->id],
-                            ['class' => 'button button-default']) ?>
+                        <?php if ($big_band): ?>
+                            <h5 class="title text-capitalize">
+                                <?= Html::a($big_band->name, ['/big-band-view/' . $big_band->id]) ?>
+                            </h5>
+                            <p class="font-weight-regular exeption">
+                                <?= StringHelper::truncate($big_band->description, 100, '...') ?>
+                            </p>
+                            <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/big-band-view/' . $big_band->id],
+                                ['class' => 'button button-default']) ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
                 <div class="project-grid" style="background-image: url(/web/images/project-2.jpg);">
                     <div class="inner"><?= Html::img('@web/images/bg-pattern-transparent.png') ?>
-                        <h5 class="title text-capitalize">
-                            <?= Html::a($jazz_combo->name, ['/jazz-combo-view/' . $jazz_combo->id]) ?>
-                        </h5>
-                        <p class="font-weight-regular exeption">
-                            <?= StringHelper::truncate($jazz_combo->description, 100, '...') ?>
-                        </p>
-                        <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/jazz-combo-view/' . $jazz_combo->id],
-                            ['class' => 'button button-default']) ?>
+                        <?php if ($jazz_combo): ?>
+                            <h5 class="title text-capitalize">
+                                <?= Html::a($jazz_combo->name, ['/jazz-combo-view/' . $jazz_combo->id]) ?>
+                            </h5>
+                            <p class="font-weight-regular exeption">
+                                <?= StringHelper::truncate($jazz_combo->description, 100, '...') ?>
+                            </p>
+                            <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/jazz-combo-view/' . $jazz_combo->id],
+                                ['class' => 'button button-default']) ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
                 <div class="project-grid" style="background-image: url(/web/images/project-3.jpg);">
                     <div class="inner"><?= Html::img('@web/images/bg-pattern-transparent.png') ?>
-                        <h5 class="title text-capitalize">
-                            <?= Html::a($pop_music->name, ['/pop-music-view/' . $pop_music->id]) ?>
-                        </h5>
-                        <p class="font-weight-regular exeption">
-                            <?= StringHelper::truncate($pop_music->description, 100, '...') ?>
-                        </p>
-                        <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/pop-music-view/' . $pop_music->id],
-                            ['class' => 'button button-default']) ?>
+                        <?php if ($pop_music): ?>
+                            <h5 class="title text-capitalize">
+                                <?= Html::a($pop_music->name, ['/pop-music-view/' . $pop_music->id]) ?>
+                            </h5>
+                            <p class="font-weight-regular exeption">
+                                <?= StringHelper::truncate($pop_music->description, 100, '...') ?>
+                            </p>
+                            <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/pop-music-view/' . $pop_music->id],
+                                ['class' => 'button button-default']) ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
                 <div class="project-grid" style="background-image: url(/web/images/project-4.jpg);">
                     <div class="inner"><?= Html::img('@web/images/bg-pattern-transparent.png') ?>
-                        <h5 class="title text-capitalize">
-                            <?= Html::a($jingle->name, ['/jingle-view/' . $jingle->id]) ?>
-                        </h5>
-                        <p class="font-weight-regular exeption">
-                            <?= StringHelper::truncate($jingle->description, 100, '...') ?>
-                        </p>
-                        <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/jingle-view/' . $jingle->id],
-                            ['class' => 'button button-default']) ?>
+                        <?php if ($jingle): ?>
+                            <h5 class="title text-capitalize">
+                                <?= Html::a($jingle->name, ['/jingle-view/' . $jingle->id]) ?>
+                            </h5>
+                            <p class="font-weight-regular exeption">
+                                <?= StringHelper::truncate($jingle->description, 100, '...') ?>
+                            </p>
+                            <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/jingle-view/' . $jingle->id],
+                                ['class' => 'button button-default']) ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
                 <div class="project-grid" style="background-image: url(/web/images/project-5.jpeg);">
                     <div class="inner"><?= Html::img('@web/images/bg-pattern-transparent.png') ?>
-                        <h5 class="title text-capitalize">
-                            <?= Html::a($stem->name, ['/stem-view/' . $stem->id]) ?>
-                        </h5>
-                        <p class="font-weight-regular exeption">
-                            <?= StringHelper::truncate($stem->description, 100, '...') ?>
-                        </p>
-                        <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/stem-view/' . $stem->id],
-                            ['class' => 'button button-default']) ?>
+                        <?php if ($stem): ?>
+                            <h5 class="title text-capitalize">
+                                <?= Html::a($stem->name, ['/stem-view/' . $stem->id]) ?>
+                            </h5>
+                            <p class="font-weight-regular exeption">
+                                <?= StringHelper::truncate($stem->description, 100, '...') ?>
+                            </p>
+                            <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/stem-view/' . $stem->id],
+                                ['class' => 'button button-default']) ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 wow fadeInRight" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
                 <div class="project-grid" style="background-image: url(/web/images/project-6.jpeg);">
                     <div class="inner"><?= Html::img('@web/images/bg-pattern-transparent.png') ?>
-                        <h5 class="title text-capitalize">
-                            <?= Html::a($project->name, ['/project-view/' . $project->id]) ?>
-                        </h5>
-                        <p class="font-weight-regular exeption">
-                            <?= StringHelper::truncate($project->description, 100, '...') ?>
-                        </p>
-                        <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/project-view/' . $project->id],
-                            ['class' => 'button button-default']) ?>
+                        <?php if ($project): ?>
+                            <h5 class="title text-capitalize">
+                                <?= Html::a($project->name, ['/project-view/' . $project->id]) ?>
+                            </h5>
+                            <p class="font-weight-regular exeption">
+                                <?= StringHelper::truncate($project->description, 100, '...') ?>
+                            </p>
+                            <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/project-view/' . $project->id],
+                                ['class' => 'button button-default']) ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
