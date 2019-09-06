@@ -124,7 +124,7 @@ ClientAsset::register($this);
                                             </ul>
                                         </li>
                                         <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu">
-                                            <?= Html::a(Yii::t('app', 'NAV_MUSIC_TRACKS'), '#',
+                                            <?= Html::a(Yii::t('app', 'NAV_AUDIO'), '#',
                                                 ['class' => 'rd-nav-link']) ?>
                                             <!-- RD Navbar Dropdown -->
                                             <ul class="rd-menu rd-navbar-dropdown">
@@ -136,7 +136,15 @@ ClientAsset::register($this);
                                                     <?= Html::a(Yii::t('app', 'NAV_STEMS'),
                                                         ['/main/default/stems'], ['class' => 'rd-dropdown-link']) ?>
                                                 </li>
+                                                <li class="rd-dropdown-item">
+                                                    <?= Html::a(Yii::t('app', 'NAV_MINUS_ONE'),
+                                                        '#', ['class' => 'rd-dropdown-link']) ?>
+                                                </li>
                                             </ul>
+                                        </li>
+                                        <li class="rd-nav-item">
+                                            <?= Html::a(Yii::t('app', 'NAV_SERVICES'), '#',
+                                                ['class' => 'rd-nav-link']) ?>
                                         </li>
                                         <li class="rd-nav-item rd-navbar--has-megamenu rd-navbar-submenu">
                                             <?= Html::a(Yii::t('app', 'NAV_MATERIALS'), '#',
@@ -295,10 +303,10 @@ ClientAsset::register($this);
                     <li class="bg-image" style="background-image: url(/web/images/tracks-3008x2000.jpg)">
                         <span class="icon icon-md project-list-icon mdi mdi-play-box-outline"></span>
                         <div class="project-list-info">
-                            <?= Html::a(Yii::t('app', 'PROJECT_LIST_JINGLES_AND_STEMS_TITLE'),
+                            <?= Html::a(Yii::t('app', 'PROJECT_LIST_CUSTOM_AUDIO_TITLE'),
                                 ['/main/default/jingles']) ?>
                             <p class="project-list-text">
-                                <?= Yii::t('app', 'PROJECT_LIST_JINGLES_AND_STEMS_TEXT') ?>
+                                <?= Yii::t('app', 'PROJECT_LIST_CUSTOM_AUDIO_TEXT') ?>
                             </p>
                         </div>
                     </li>

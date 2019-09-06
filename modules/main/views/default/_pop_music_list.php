@@ -22,8 +22,7 @@ use yii\helpers\StringHelper;
     </td>
     <td>
         <div class="price-box-minimal">
-            <div class="text"><?= Yii::t('app', 'FROM') ?></div>
-            <div class="heading-5 price">&#8381;<?= $model->price ?></div>
+            <div class="heading-5 price">&#8381; <?= $model->price ?></div>
         </div>
     </td>
 </tr>

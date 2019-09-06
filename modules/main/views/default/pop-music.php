@@ -24,7 +24,7 @@ $this->title = Yii::t('app', 'SHEET_MUSIC_PAGE_TITLE');
         <h3 class="custom-title"><?= Yii::t('app', 'POP_MUSIC_PAGE_TITLE') ?></h3>
         <?php echo ListView::widget([
             'dataProvider' => $dataProvider,
-            'itemView' => '_big_band_list',
+            'itemView' => '_pop_music_list',
             'layout' => "{summary}\n{items}\n</table>{pager}",
             'options' => [
                 'tag' => 'table',

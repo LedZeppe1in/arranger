@@ -5,7 +5,7 @@ return [
     'PROFESSION' => 'Музыкант Аранжировщик Мультиинструменталист',
 
     /* Аннотация */
-    'ANNOTATION' => 'Имея более чем 10-летний опыт работы композитором, я предлагаю Вам ознакомиться с моим музыкальным творчеством.',
+    'ANNOTATION' => 'Создание аранжировок, транскрипция и оркестровка. Написание партитур любой сложности и профессиональная запись музыкального материала.',
 
     /* Статус-бар */
     'LOADING' => 'Загрузка...',
@@ -13,13 +13,15 @@ return [
     /* Пункты главного меню клиентской части сайта */
     'NAV_HOME' => 'Главная',
     'NAV_ABOUT' => 'ОБО МНЕ',
-    'NAV_SHEET_MUSIC' => 'ПАРТИТУРЫ',
+    'NAV_SHEET_MUSIC' => 'НОТЫ',
     'NAV_BIG_BAND' => 'Big Band',
     'NAV_JAZZ_COMBO' => 'Jazz Combo',
     'NAV_POP_MUSIC' => 'Pop Music',
-    'NAV_MUSIC_TRACKS' => 'ТРЕКИ',
+    'NAV_AUDIO' => 'АУДИО',
     'NAV_JINGLES' => 'Джинглы',
     'NAV_STEMS' => 'Мультитреки',
+    'NAV_MINUS_ONE' => 'Минуса',
+    'NAV_SERVICES' => 'УСЛУГИ',
     'NAV_MATERIALS' => 'МАТЕРИАЛЫ',
     'NAV_INTERESTING' => 'ИНТЕРЕСНОЕ',
     'NAV_EVENTS' => 'События',
@@ -46,31 +48,33 @@ return [
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Возможные действия',
 
     /* Блоки презентации проектов справа */
-    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TITLE' => 'Партитуры на Заказ',
-    'PROJECT_LIST_JINGLES_AND_STEMS_TITLE' => 'Джинглы &amp; Треки',
-    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TEXT' => 'Я рад предложить Вам музыкальные партитуры любой сложности.',
-    'PROJECT_LIST_JINGLES_AND_STEMS_TEXT' => 'Запись различных видов треков - одна из моих многочисленных специализаций.',
+    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TITLE' => 'Ноты',
+    'PROJECT_LIST_CUSTOM_AUDIO_TITLE' => 'Аудио',
+    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TEXT' => 'Партитуры и партии музыкальных произведений для различных составов.',
+    'PROJECT_LIST_CUSTOM_AUDIO_TEXT' => 'Минуса, мультитреки и другие аудиоматериалы для концертных выступлений и студийной работы.',
 
     /* Блок портфолио */
-    'MY_LATEST_ART' => 'Моё Творчество',
+    'WORK_EXAMPLES' => 'Примеры работ',
 
     /* Блок бренда */
-    'BRANDING_CUSTOM_SHEET_MUSIC' => 'Партитуры',
+    'BRANDING_CUSTOM_SHEET_MUSIC' => 'Ноты',
     'BRANDING_BIG_BAND' => 'Big Band',
     'BRANDING_JAZZ_COMBO' => 'Jazz Combo',
     'BRANDING_POP_MUSIC' => 'Pop Music',
-    'BRANDING_SHEET_MUSIC_COUNT' => 'Партитур',
-    'BRANDING_CUSTOM_TRACKS' => 'Треки',
+    'BRANDING_SHEET_MUSIC_COUNT' => 'Нот',
+    'BRANDING_CUSTOM_AUDIO' => 'Аудио',
     'BRANDING_JINGLES' => 'Джинглы',
     'BRANDING_STEMS' => 'Мультитреки',
-    'BRANDING_TRACK_COUNT' => 'Треков',
+    'BRANDING_MINUS_ONE' => 'Минуса',
+    'BRANDING_AUDIO_COUNT' => 'Аудио',
     'BRANDING_INTERESTING' => 'Интересное',
-    'BRANDING_EVENTS' => 'События',
+    'BRANDING_SERVICES' => 'Услуги',
     'BRANDING_PROJECTS' => 'Проекты',
     'BRANDING_PUBLICATIONS' => 'Публикации',
-    'BRANDING_PROJECT_COUNT' => 'Проектов',
+    'BRANDING_SERVICE_COUNT' => 'Услуг',
     'BRANDING_TITLE' => 'Качественная музыка',
-    'BRANDING_TEXT' => 'Музыка воодушевляет весь мир, снабжает душу крыльями, способствует полету воображения, ее можно назвать воплощением всего прекрасного и всего возвышенного.',
+    'BRANDING_TEXT' => 'Слова иногда нуждаются в музыке, но музыка не нуждается ни в чем.',
+    'BRANDING_SIGNATURE' => 'Эдвард Григ',
 
     /* Блок рекламы */
     'BLURB_ORIGINAL_ARRANGEMENT' => 'Оригенальная Аранжировка',
@@ -89,7 +93,7 @@ return [
 
     /* Блок контакта */
     'TOUCH_WITH_ME' => 'Связаться со мной',
-    'ONE_CONTACT_TEXT' => 'Не стесняйтесь связаться со мной, чтобы узнать больше о моих ценах и услугах.',
+    'ONE_CONTACT_TEXT' => 'Не стесняйтесь связаться со мной, чтобы узнать больше о моих услугах, сроках выполнения и стоимости.',
     'TWO_CONTACT_TEXT' => 'Я всегда готов ответить на Ваши вопросы.',
 
     /* Нижний колонтитул (подвал) */
@@ -122,9 +126,6 @@ return [
     'NOTICE_TITLE' => 'Обратите внимание',
     'NOTICE_TEXT' => 'на эту важную информацию.',
     'READ_MORE' => 'Подробнее',
-
-    /* Общий текст */
-    'FROM' => 'От',
 
     /* Общие уведомления на форме с captcha */
     'CAPTCHA_NOTICE_ONE' => 'Пожалуйста, введите буквы, показанные на картинке выше.',

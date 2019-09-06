@@ -11,7 +11,7 @@
 /* @var $project app\modules\admin\models\Project */
 /* @var $sheet_music_count app\modules\main\controllers\DefaultController */
 /* @var $music_track_count app\modules\main\controllers\DefaultController */
-/* @var $project_count app\modules\main\controllers\DefaultController */
+/* @var $service_count app\modules\main\controllers\DefaultController */
 
 use yii\helpers\Html;
 use yii\captcha\Captcha;
@@ -36,7 +36,7 @@ $this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->ful
         </div>
     </div>
     <div class="container container-custom-width">
-        <h3 class="text-center"><?= Yii::t('app', 'MY_LATEST_ART') ?></h3>
+        <h3 class="text-center"><?= Yii::t('app', 'WORK_EXAMPLES') ?></h3>
         <div class="row row-custom-width row-30 row-xxl-100 row-flex">
             <div class="col-sm-6 col-lg-4 wow fadeInRight" style="visibility: hidden; animation-name: none;">
                 <div class="project-grid" style="background-image: url(/web/images/project-1.jpg);">
@@ -154,7 +154,7 @@ $this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->ful
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-4">
-                        <h5><?= Yii::t('app', 'BRANDING_CUSTOM_TRACKS') ?></h5>
+                        <h5><?= Yii::t('app', 'BRANDING_CUSTOM_AUDIO') ?></h5>
                         <ul class="list-xs font-weight-regular">
                             <li>
                                 <?= Html::a(Yii::t('app', 'BRANDING_JINGLES'),
@@ -164,14 +164,18 @@ $this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->ful
                                 <?= Html::a(Yii::t('app', 'BRANDING_STEMS'),
                                     ['/main/default/stems'], ['class' => 'link-item']) ?>
                             </li>
+                            <li>
+                                <?= Html::a(Yii::t('app', 'BRANDING_MINUS_ONE'),
+                                    '#', ['class' => 'link-item']) ?>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <h5><?= Yii::t('app', 'BRANDING_INTERESTING') ?></h5>
                         <ul class="list-xs font-weight-regular">
                             <li>
-                                <?= Html::a(Yii::t('app', 'BRANDING_EVENTS'),
-                                    ['/main/default/events'], ['class' => 'link-item']) ?>
+                                <?= Html::a(Yii::t('app', 'BRANDING_SERVICES'),
+                                    '#', ['class' => 'link-item']) ?>
                             </li>
                             <li>
                                 <?= Html::a(Yii::t('app', 'BRANDING_PROJECTS'),
@@ -196,15 +200,15 @@ $this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->ful
                             <div class="box-counter-main">
                                 <div class="counter animated-first"><?= strval($music_track_count) ?></div>
                             </div>
-                            <div class="box-counter-title"><?= Yii::t('app', 'BRANDING_TRACK_COUNT') ?></div>
+                            <div class="box-counter-title"><?= Yii::t('app', 'BRANDING_AUDIO_COUNT') ?></div>
                         </article>
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <article class="box-counter">
                             <div class="box-counter-main">
-                                <div class="counter animated-first"><?= strval($project_count) ?></div>
+                                <div class="counter animated-first"><?= strval($service_count) ?></div>
                             </div>
-                            <div class="box-counter-title"><?= Yii::t('app', 'BRANDING_PROJECT_COUNT') ?></div>
+                            <div class="box-counter-title"><?= Yii::t('app', 'BRANDING_SERVICE_COUNT') ?></div>
                         </article>
                     </div>
                 </div>
@@ -212,7 +216,10 @@ $this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->ful
             <div class="col-lg-3">
                 <div class="heading-3"><?= Yii::t('app', 'BRANDING_TITLE') ?></div>
                 <div class="big text-white-lighter text-white-darken font-family-serif">
-                    <?= Yii::t('app', 'BRANDING_TEXT') ?>
+                    <i><?= Yii::t('app', 'BRANDING_TEXT') ?></i>
+                    <div class="img-wrap-1">
+                        <?= Html::img('@web/images/e_grieg_signature.png', ['width' => '180', 'height' => '80']) ?>
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ return [
     'PROFESSION' => 'Musician Arranger Multi-Instrumentalist',
 
     /* Аннотация */
-    'ANNOTATION' => 'With over 10 years of experience as arranger, I suggest you familiarize yourself with my musical creativity.',
+    'ANNOTATION' => 'I suggest services for creating arrangements, transcriptions and orchestrations, as well as writing scores of any complexity and professional recording of musical material.',
 
     /* Статус-бар */
     'LOADING' => 'Loading...',
@@ -17,9 +17,11 @@ return [
     'NAV_BIG_BAND' => 'Big Band',
     'NAV_JAZZ_COMBO' => 'Jazz Combo',
     'NAV_POP_MUSIC' => 'Pop Music',
-    'NAV_MUSIC_TRACKS' => 'TRACKS',
+    'NAV_AUDIO' => 'AUDIO',
     'NAV_JINGLES' => 'Jingles',
     'NAV_STEMS' => 'Stems',
+    'NAV_MINUS_ONE' => 'Minus one',
+    'NAV_SERVICES' => 'SERVICES',
     'NAV_MATERIALS' => 'MATERIALS',
     'NAV_INTERESTING' => 'INTERESTING',
     'NAV_EVENTS' => 'Events',
@@ -47,12 +49,12 @@ return [
 
     /* Блоки презентации проектов справа */
     'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TITLE' => 'Custom Sheet Music',
-    'PROJECT_LIST_JINGLES_AND_STEMS_TITLE' => 'Jingles &amp; Stems',
-    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TEXT' => 'I’m glad to offer you custom sheet music services of any complexity.',
-    'PROJECT_LIST_JINGLES_AND_STEMS_TEXT' => 'Recording any kind of tracks is one of my numerous specializations.',
+    'PROJECT_LIST_CUSTOM_AUDIO_TITLE' => 'Custom Audio',
+    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TEXT' => 'Musical scores & parts for various compositions.',
+    'PROJECT_LIST_CUSTOM_AUDIO_TEXT' => 'Minus one, stems and other audio materials for concert performances and studio work.',
 
     /* Блок портфолио */
-    'MY_LATEST_ART' => 'My Latest Art',
+    'WORK_EXAMPLES' => 'Work examples',
 
     /* Блок бренда */
     'BRANDING_CUSTOM_SHEET_MUSIC' => 'Sheet Music',
@@ -60,17 +62,19 @@ return [
     'BRANDING_JAZZ_COMBO' => 'Jazz Combo',
     'BRANDING_POP_MUSIC' => 'Pop Music',
     'BRANDING_SHEET_MUSIC_COUNT' => 'Sheet music',
-    'BRANDING_CUSTOM_TRACKS' => 'Tracks',
+    'BRANDING_CUSTOM_AUDIO' => 'Audio',
     'BRANDING_JINGLES' => 'Jingles',
     'BRANDING_STEMS' => 'Stems',
-    'BRANDING_TRACK_COUNT' => 'Tracks',
+    'BRANDING_MINUS_ONE' => 'Minus one',
+    'BRANDING_AUDIO_COUNT' => 'Audio',
     'BRANDING_INTERESTING' => 'Interesting',
-    'BRANDING_EVENTS' => 'Events',
+    'BRANDING_SERVICES' => 'Services',
     'BRANDING_PROJECTS' => 'Projects',
     'BRANDING_PUBLICATIONS' => 'Publications',
-    'BRANDING_PROJECT_COUNT' => 'Projects',
+    'BRANDING_SERVICE_COUNT' => 'Services',
     'BRANDING_TITLE' => 'High-quality music art',
-    'BRANDING_TEXT' => 'Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything.',
+    'BRANDING_TEXT' => 'Words sometimes need music, but music needs nothing.',
+    'BRANDING_SIGNATURE' => 'Edvard Grieg',
 
     /* Блок рекламы */
     'BLURB_ORIGINAL_ARRANGEMENT' => 'Original Arrangement',
@@ -89,7 +93,7 @@ return [
 
     /* Блок контакта */
     'TOUCH_WITH_ME' => 'Get in touch with me',
-    'ONE_CONTACT_TEXT' => 'Feel free to contact me to find out more about my prices and services.',
+    'ONE_CONTACT_TEXT' => 'Feel free to contact me to find out more about my services, deadlines and cost.',
     'TWO_CONTACT_TEXT' => 'I am always ready to answer your questions.',
 
     /* Нижний колонтитул (подвал) */
@@ -122,9 +126,6 @@ return [
     'NOTICE_TITLE' => 'Pay attention to',
     'NOTICE_TEXT' => 'this important information.',
     'READ_MORE' => 'Read more',
-
-    /* Общий текст */
-    'FROM' => 'From',
 
     /* Общие уведомления на форме с captcha */
     'CAPTCHA_NOTICE_ONE' => 'Please enter the letters shown in the picture above.',

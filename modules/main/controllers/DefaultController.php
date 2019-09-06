@@ -109,8 +109,8 @@ class DefaultController extends Controller
         $sheet_music_count = SheetMusic::find()->count();
         // Подсчет кол-ва треков
         $music_track_count = MusicTrack::find()->count();
-        // Подсчет кол-ва проектов
-        $project_count = Project::find()->count();
+        // Подсчет кол-ва услуг
+        $service_count = 0;
 
         // Форма контакта
         $contact_form = new ContactForm();
@@ -132,7 +132,7 @@ class DefaultController extends Controller
             'project' => $project,
             'sheet_music_count' => $sheet_music_count,
             'music_track_count' => $music_track_count,
-            'project_count' => $project_count,
+            'service_count' => $service_count,
         ]);
     }
 
