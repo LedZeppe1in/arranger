@@ -84,6 +84,8 @@ $config = [
                 '/projects/<_pr:(view|update|delete)>/<id:\d+>' => 'admin/projects/<_pr>',
                 '/publications/<_pb:(list|create)>' => 'admin/publications/<_pb>',
                 '/publications/<_pb:(view|update|delete)>/<id:\d+>' => 'admin/publications/<_pb>',
+                '/services/<_pb:(list|create)>' => 'admin/services/<_pb>',
+                '/services/<_pb:(view|update|delete)>/<id:\d+>' => 'admin/services/<_pb>',
             ],
         ],
         'cache' => [
