@@ -16,7 +16,9 @@ use app\modules\admin\models\SheetMusic;
 use app\modules\admin\models\MusicTrack;
 use app\modules\admin\models\Publication;
 use app\modules\admin\models\LoginForm;
+use app\modules\admin\models\Service;
 use app\modules\main\models\ContactForm;
+
 
 class DefaultController extends Controller
 {
@@ -110,7 +112,7 @@ class DefaultController extends Controller
         // Подсчет кол-ва треков
         $music_track_count = MusicTrack::find()->count();
         // Подсчет кол-ва услуг
-        $service_count = 0;
+        $service_count = Service::find()->count();
 
         // Форма контакта
         $contact_form = new ContactForm();
@@ -554,6 +556,41 @@ class DefaultController extends Controller
         return $this->render('contact', [
             'model' => $model,
             'user' => $user,
+        ]);
+    }
+
+    /**
+     * Displays services.
+     *
+     * @return string
+     */
+    public function actionServices()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Service::find(),
+            'pagination' => [
+                'pageSize' => 9,
+            ],
+        ]);
+
+        return $this->render('services', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Displays a single Services model.
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionServiceView($id)
+    {
+        $model = Service::findOne($id);
+
+        return $this->render('service-view', [
+            'model' => $model,
         ]);
     }
 }

@@ -116,7 +116,7 @@ ClientAsset::register($this);
                                         </ul>
                                     </li>
                                     <li class="rd-nav-item">
-                                        <?= Html::a(Yii::t('app', 'NAV_SERVICES'), '#',
+                                        <?= Html::a(Yii::t('app', 'NAV_SERVICES'), ['/main/default/services'],
                                             ['class' => 'rd-nav-link']) ?>
                                     </li>
                                     <li class="rd-nav-item rd-navbar--has-megamenu rd-navbar-submenu">

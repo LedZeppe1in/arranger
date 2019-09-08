@@ -187,7 +187,7 @@ $this->title = Yii::$app->language == 'ru-RU' ? $user->full_name_ru : $user->ful
                         <ul class="list-xs font-weight-regular">
                             <li>
                                 <?= Html::a(Yii::t('app', 'BRANDING_SERVICES'),
-                                    '#', ['class' => 'link-item']) ?>
+                                    ['/main/default/services'], ['class' => 'link-item']) ?>
                             </li>
                             <li>
                                 <?= Html::a(Yii::t('app', 'BRANDING_PROJECTS'),

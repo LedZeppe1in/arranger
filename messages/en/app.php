@@ -188,6 +188,12 @@ return [
     'PUBLICATIONS_PAGE_TEXT' => 'Take a look at my latest publications',
     'PUBLICATION_PAGE_TITLE' => 'Publication',
     'PUBLICATION_PAGE_TEXT' => 'Learn more about one of my publication',
+    /* Страница услуг */
+    'SERVICES_PAGE_TITLE' => 'Services',
+    'SERVICES_PAGE_TEXT' => 'Take a look at my latest Services',
+    'SERVICE_PAGE_TITLE' => 'Service',
+    'SERVICE_PAGE_TEXT' => 'Learn more about one of my service',
+
     /* Страница контактов */
     'CONTACTS_PAGE_TITLE' => 'Contacts',
     'CONTACTS_PAGE_TEXT' => 'View my contacts or send me a message',
