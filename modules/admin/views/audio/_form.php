@@ -11,7 +11,7 @@ use app\modules\admin\models\MusicTrack;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="music-track-form">
+<div class="audio-form">
 
     <?php $form = ActiveForm::begin([
         'id' => $model->isNewRecord ? 'create-music-track-form' : 'update-music-track-form',

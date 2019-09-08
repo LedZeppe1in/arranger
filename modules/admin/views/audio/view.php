@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?= $this->render('_modal_form_music_track', ['model' => $model]) ?>
 
-<div class="music-track-view">
+<div class="audio-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

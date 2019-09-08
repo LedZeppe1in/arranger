@@ -36,7 +36,7 @@ class ProjectController extends Controller
                 $this->log($new_project->save());
             }
         } else
-            $this->stdout('Default projects created!', Console::FG_GREEN, Console::BOLD);
+            $this->stdout('Default projects are created!', Console::FG_GREEN, Console::BOLD);
     }
 
     /**

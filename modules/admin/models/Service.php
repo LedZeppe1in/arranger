@@ -18,7 +18,7 @@ use yii\behaviors\TimestampBehavior;
 class Service extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * @return string table name
      */
     public static function tableName()
     {
@@ -26,7 +26,7 @@ class Service extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * @return array the validation rules
      */
     public function rules()
     {
@@ -40,7 +40,7 @@ class Service extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * @return array customized attribute labels
      */
     public function attributeLabels()
     {

@@ -1,6 +1,6 @@
 <?php
 
-/* @var $model app\modules\admin\models\Event */
+/* @var $model app\modules\admin\models\Service */
 
 use yii\helpers\Html;
 use yii\bootstrap\Modal;

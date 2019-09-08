@@ -38,10 +38,10 @@ return [
     'NAV_ADMIN_MY_PROFILE' => 'My profile',
     'NAV_ADMIN_MY_BIOGRAPHY' => 'My biography',
     'NAV_ADMIN_SIGN_OUT' => 'Sign out',
-    'NAV_ADMIN_EVENTS' => 'Events',
     'NAV_ADMIN_SHEET_MUSIC' => 'Sheet music',
-    'NAV_ADMIN_MUSIC_TRACKS' => 'Music tracks',
+    'NAV_ADMIN_AUDIO' => 'Audio',
     'NAV_ADMIN_SERVICES' => 'Services',
+    'NAV_ADMIN_EVENTS' => 'Events',
     'NAV_ADMIN_PROJECTS' => 'Projects',
     'NAV_ADMIN_PUBLICATIONS' => 'Publications',
 
@@ -257,7 +257,6 @@ return [
     'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_CREATE_MUSIC_TRACK' => 'You have successfully created a new music track.',
     'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_UPDATED_MUSIC_TRACK' => 'You have successfully updated music track.',
     'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_DELETED_MUSIC_TRACK' => 'You have successfully deleted music track.',
-
     /* Страницы администрирования услуг */
     'SERVICES_ADMIN_PAGE_SERVICE' => 'Service',
     'SERVICES_ADMIN_PAGE_SERVICES' => 'Services',
@@ -270,7 +269,6 @@ return [
     'SERVICES_ADMIN_PAGE_MESSAGE_CREATE_SERVICE' => 'You have successfully created a new service.',
     'SERVICES_ADMIN_PAGE_MESSAGE_UPDATED_SERVICE' => 'You have successfully updated service.',
     'SERVICES_ADMIN_PAGE_MESSAGE_DELETED_SERVICE' => 'You have successfully deleted service.',
-
     /* Страницы администрирования проектов */
     'PROJECTS_ADMIN_PAGE_PROJECT' => 'Project',
     'PROJECTS_ADMIN_PAGE_PROJECTS' => 'Projects',
@@ -390,7 +388,6 @@ return [
     'MUSIC_TRACK_MODEL_TYPE_MINUS_ONE' => 'Minus one',
     /* Сообщения модели MusicTrack */
     'MUSIC_TRACK_MODEL_MESSAGE_PRICE' => 'Incorrect price.',
-
     /* Service */
     'SERVICE_MODEL_ID' => 'ID',
     'SERVICE_MODEL_CREATED_AT' => 'Created at',
@@ -400,7 +397,6 @@ return [
     'SERVICE_MODEL_DESCRIPTION' => 'Description',
     /* Сообщения модели Service */
     'SERVICE_MODEL_MESSAGE_PRICE' => 'Incorrect price.',
-
     /* Project */
     'PROJECT_MODEL_ID'=> 'ID',
     'PROJECT_MODEL_CREATED_AT' => 'Created at',

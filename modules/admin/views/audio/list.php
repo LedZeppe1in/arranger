@@ -13,7 +13,7 @@ $this->title = Yii::t('app', 'MUSIC_TRACKS_ADMIN_PAGE_MUSIC_TRACKS');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="music-track-list">
+<div class="audio-list">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

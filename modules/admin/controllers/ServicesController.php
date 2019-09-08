@@ -3,11 +3,11 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
+use yii\web\Controller;
+use yii\filters\VerbFilter;
+use yii\web\NotFoundHttpException;
 use app\modules\admin\models\Service;
 use app\modules\admin\models\ServiceSearch;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * ServicesController implements the CRUD actions for Service model.

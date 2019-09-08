@@ -14,7 +14,7 @@ use app\modules\admin\models\MusicTrackSearch;
 /**
  * MusicTracksController implements the CRUD actions for MusicTrack model.
  */
-class MusicTracksController extends Controller
+class AudioController extends Controller
 {
     public $layout = 'admin';
 

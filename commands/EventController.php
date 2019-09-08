@@ -41,7 +41,7 @@ class EventController extends Controller
                 $this->log($new_event->save());
             }
         } else
-            $this->stdout('Default events created!', Console::FG_GREEN, Console::BOLD);
+            $this->stdout('Default events are created!', Console::FG_GREEN, Console::BOLD);
     }
 
     /**

@@ -7,7 +7,7 @@ use yii\console\Controller;
 use app\modules\admin\models\Service;
 
 /**
- * ServiceController реализует консольные команды для работы с проектами.
+ * ServiceController реализует консольные команды для работы с услугами.
  */
 class ServiceController extends Controller
 {
@@ -21,22 +21,54 @@ class ServiceController extends Controller
     }
 
     /**
-     * Команда создания проектов по умолчанию.
+     * Команда создания услуг по умолчанию.
      */
     public function actionCreate()
     {
         $model = new Service();
         if($model->find()->count() == 0) {
-            for ($i = 1; $i <= 20; $i++) {
-                // Добавление новой услуги
-                $new_service = new Service();
-                $new_service->name = 'test' . $i;
-                $new_service->price = 0+$i;
-                $new_service->description = 'Test-service test-service test-service' . $i;
-                $this->log($new_service->save());
-            }
+            // Добавление новой услуги
+            $first_service = new Service();
+            $first_service->name = 'Аранжировка, инструментовка и оркестровка';
+            $first_service->price = 100;
+            $this->log($first_service->save());
+            // Добавление новой услуги
+            $second_service = new Service();
+            $second_service->name = 'Написание партитур и создание партий';
+            $second_service->price = 100;
+            $this->log($second_service->save());
+            // Добавление новой услуги
+            $third_service = new Service();
+            $third_service->name = 'Транскрипция музыки и адаптация для различных составов инструментов';
+            $third_service->price = 100;
+            $this->log($third_service->save());
+            // Добавление новой услуги
+            $fourth_service = new Service();
+            $fourth_service->name = 'Создание минусовок, а так же полного музыкального сопровождения, для различных целей';
+            $fourth_service->price = 100;
+            $this->log($fourth_service->save());
+            // Добавление новой услуги
+            $fifth_service = new Service();
+            $fifth_service->name = 'Работа со всеми видами музыкального производства (создание музыки, запись, сведение, мастеринг)';
+            $fifth_service->price = 100;
+            $this->log($fifth_service->save());
+            // Добавление новой услуги
+            $sixth_service = new Service();
+            $sixth_service->name = 'Уроки по созданию музыки и аранжировок';
+            $sixth_service->price = 100;
+            $this->log($sixth_service->save());
+            // Добавление новой услуги
+            $seventh_service = new Service();
+            $seventh_service->name = 'Уроки по джазовой гармонии';
+            $seventh_service->price = 100;
+            $this->log($seventh_service->save());
+            // Добавление новой услуги
+            $eighth_service = new Service();
+            $eighth_service->name = 'Основы игры на гитаре и бас-гитаре';
+            $eighth_service->price = 100;
+            $this->log($eighth_service->save());
         } else
-            $this->stdout('Default projects created!', Console::FG_GREEN, Console::BOLD);
+            $this->stdout('Default services are created!', Console::FG_GREEN, Console::BOLD);
     }
 
     /**
