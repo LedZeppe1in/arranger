@@ -173,6 +173,11 @@ return [
     'MINUS_ONE_PAGE_TITLE' => 'Minus One',
     'MINUS_ONE_SINGLE_PAGE_TITLE' => 'Minus One',
     'MINUS_ONE_PAGE_TEXT' => 'Learn more about one of minus one',
+    /* Страница услуг */
+    'SERVICES_PAGE_TITLE' => 'Services',
+    'SERVICES_PAGE_TEXT' => 'Find out more about the services I provide',
+    'SERVICE_PAGE_TITLE' => 'Service',
+    'SERVICE_PAGE_TEXT' => 'Learn more about one of my service',
     /* Страница событий */
     'EVENTS_PAGE_TITLE' => 'Events',
     'EVENTS_PAGE_TEXT' => 'Find out more about interesting events',
@@ -188,11 +193,6 @@ return [
     'PUBLICATIONS_PAGE_TEXT' => 'Take a look at my latest publications',
     'PUBLICATION_PAGE_TITLE' => 'Publication',
     'PUBLICATION_PAGE_TEXT' => 'Learn more about one of my publication',
-    /* Страница услуг */
-    'SERVICES_PAGE_TITLE' => 'Services',
-    'SERVICES_PAGE_TEXT' => 'Take a look at my latest Services',
-    'SERVICE_PAGE_TITLE' => 'Service',
-    'SERVICE_PAGE_TEXT' => 'Learn more about one of my service',
 
     /* Страница контактов */
     'CONTACTS_PAGE_TITLE' => 'Contacts',
