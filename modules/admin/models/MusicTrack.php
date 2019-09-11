@@ -50,8 +50,10 @@ class MusicTrack extends \yii\db\ActiveRecord
             ['price', 'match', 'pattern'=>'/^[0-9]{1,12}(\.[0-9]{0,2})?$/',
                 'message' => Yii::t('app', 'MUSIC_TRACK_MODEL_MESSAGE_PRICE')],
             [['preview', 'file', 'description'], 'string'],
-            ['preview_file', 'file', 'skipOnEmpty' => !$this->isNewRecord, 'extensions' => 'mp3'],
-            ['music_track_file', 'file', 'skipOnEmpty' => !$this->isNewRecord, 'extensions' => 'wav'],
+            ['preview_file', 'file', 'skipOnEmpty' => !$this->isNewRecord, 'checkExtensionByMimeType' => false,
+                'extensions' => 'mp3'],
+            ['music_track_file', 'file', 'skipOnEmpty' => !$this->isNewRecord, 'checkExtensionByMimeType' => false,
+                'extensions' => 'wav'],
         ];
     }
 
