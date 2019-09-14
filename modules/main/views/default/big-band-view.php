@@ -38,6 +38,10 @@ $this->title = Yii::t('app', 'BIG_BAND_PAGE_TITLE');
                         <div class="heading-6 title text-primary"><?= Yii::t('app', 'SHEET_MUSIC_MODEL_PRICE') ?></div>
                         <p class="font-weight-regular">&#8381;<?= $model->price ?></p>
                     </li>
+                    <li>
+                        <div class="heading-6 title text-primary"><?= Yii::t('app', 'NUMBER_OF_PAGES') ?></div>
+                        <p class="font-weight-regular"><?= $num ?></p>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -189,8 +189,12 @@ class DefaultController extends Controller
         // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
 
+        //Подсчет количества страниц
+        $num = preg_match_all("/\/Page\W/", file_get_contents($model->file), $dummy);
+
         return $this->render('big-band-view', [
             'model' => $model,
+            'num' => $num,
         ]);
     }
 
@@ -226,8 +230,12 @@ class DefaultController extends Controller
         // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
 
+        //Подсчет количества страниц
+        $num = preg_match_all("/\/Page\W/", file_get_contents($model->file), $dummy);
+
         return $this->render('jazz-combo-view', [
             'model' => $model,
+            'num' => $num,
         ]);
     }
 
@@ -263,8 +271,12 @@ class DefaultController extends Controller
         // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
 
+        //Подсчет количества страниц
+        $num = preg_match_all("/\/Page\W/", file_get_contents($model->file), $dummy);
+
         return $this->render('pop-music-view', [
             'model' => $model,
+            'num' => $num,
         ]);
     }
 

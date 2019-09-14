@@ -417,4 +417,6 @@ return [
     'PUBLICATION_MODEL_NAME' => 'Название',
     'PUBLICATION_MODEL_LINK' => 'Ссылка',
     'PUBLICATION_MODEL_TEXT' => 'Текст',
+
+    'NUMBER_OF_PAGES' => 'Количество страниц',
 ];

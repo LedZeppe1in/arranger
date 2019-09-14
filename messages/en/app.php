@@ -417,4 +417,6 @@ return [
     'PUBLICATION_MODEL_NAME' => 'Name',
     'PUBLICATION_MODEL_LINK' => 'Link',
     'PUBLICATION_MODEL_TEXT' => 'Text',
+
+    'NUMBER_OF_PAGES' => 'Number of pages',
 ];
