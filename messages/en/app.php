@@ -149,6 +149,7 @@ return [
     /* Страница партитур */
     'SHEET_MUSIC_PAGE_TITLE' => 'Sheet Music',
     'SHEET_MUSIC_PAGE_TEXT' => 'Find out more about the sheet music I provide',
+    'SHEET_MUSIC_PAGE_PAGE_COUNT' => 'Page count',
     /* Страница партитур "Big Band" */
     'BIG_BAND_PAGE_TITLE' => 'Big Band',
     'BIG_BAND_PAGE_TEXT' => 'Learn more about one of my Big Band sheet music',
@@ -417,6 +418,4 @@ return [
     'PUBLICATION_MODEL_NAME' => 'Name',
     'PUBLICATION_MODEL_LINK' => 'Link',
     'PUBLICATION_MODEL_TEXT' => 'Text',
-
-    'NUMBER_OF_PAGES' => 'Number of pages',
 ];

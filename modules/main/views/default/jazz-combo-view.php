@@ -35,12 +35,14 @@ $this->title = Yii::t('app', 'JAZZ_COMBO_PAGE_TITLE');
                         <p class="font-weight-regular"><?= $model->getTypeName() ?></p>
                     </li>
                     <li>
-                        <div class="heading-6 title text-primary"><?= Yii::t('app', 'SHEET_MUSIC_MODEL_PRICE') ?></div>
-                        <p class="font-weight-regular">&#8381;<?= $model->price ?></p>
+                        <div class="heading-6 title text-primary">
+                            <?= Yii::t('app', 'SHEET_MUSIC_PAGE_PAGE_COUNT') ?>
+                        </div>
+                        <p class="font-weight-regular"><?= $model->getPdfPageCount(); ?></p>
                     </li>
                     <li>
-                        <div class="heading-6 title text-primary"><?= Yii::t('app', 'NUMBER_OF_PAGES') ?></div>
-                        <p class="font-weight-regular"><?= $num ?></p>
+                        <div class="heading-6 title text-primary"><?= Yii::t('app', 'SHEET_MUSIC_MODEL_PRICE') ?></div>
+                        <p class="font-weight-regular">&#8381;<?= $model->price ?></p>
                     </li>
                 </ul>
             </div>

@@ -99,4 +99,17 @@ class SheetMusic extends \yii\db\ActiveRecord
     {
         return ArrayHelper::getValue(self::getTypesArray(), $this->type);
     }
+
+    /**
+     * Получение кол-ва страниц в партитуре.
+     * @return int
+     */
+    public function getPdfPageCount()
+    {
+        $im = new Imagick();
+        $im->pingImage($this->file);
+        $page_count = $im->getNumberImages();
+
+        return $page_count;
+    }
 }

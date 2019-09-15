@@ -149,6 +149,7 @@ return [
     /* Страница партитур */
     'SHEET_MUSIC_PAGE_TITLE' => 'Ноты',
     'SHEET_MUSIC_PAGE_TEXT' => 'Узнайте больше о нотных партитурах, которые я предоставляю',
+    'SHEET_MUSIC_PAGE_PAGE_COUNT' => 'Количество страниц',
     /* Страница партитур "Big Band" */
     'BIG_BAND_PAGE_TITLE' => 'Big Band',
     'BIG_BAND_PAGE_TEXT' => 'Узнайте больше об одной из моих партитур Big Band',
@@ -417,6 +418,4 @@ return [
     'PUBLICATION_MODEL_NAME' => 'Название',
     'PUBLICATION_MODEL_LINK' => 'Ссылка',
     'PUBLICATION_MODEL_TEXT' => 'Текст',
-
-    'NUMBER_OF_PAGES' => 'Количество страниц',
 ];
