@@ -2,16 +2,12 @@
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
     </a>
-    <h1 align="center">Yii 2 Basic Project Template</h1>
+    <h1 align="center">RUZZ MUSICIAN</h1>
     <br>
 </p>
 
-Yii 2 Basic Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-rapidly creating small projects.
-
-The template contains the basic features including user login/logout and a contact page.
-It includes all commonly used configurations that would allow you to focus on adding new
-features to your application.
+Официальный сайт музыканта, аранжировщика, мультиинструменталиста - Андрея Рузняева. 
+В котором предлагается ознакомиться с его творчеством. С возможностью приобретения его работ и заказ его услуг.
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-basic.svg)](https://packagist.org/packages/yiisoft/yii2-app-basic)
 [![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-basic.svg)](https://packagist.org/packages/yiisoft/yii2-app-basic)
@@ -115,10 +111,17 @@ Edit the file `config/db.php` with real data, for example:
 ```php
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '1234',
-    'charset' => 'utf8',
+        'dsn' => 'pgsql:host=localhost;port=5432;dbname=arrangerdb;',
+        'username' => 'postgres',
+        'password' => 'admin',
+        'charset' => 'utf8',
+        'tablePrefix' => 'arranger_',
+        'schemaMap' => [
+            'pgsql'=> [
+                'class'=>'yii\db\pgsql\Schema',
+                'defaultSchema' => 'public'
+            ]
+        ],
 ];
 ```
 
