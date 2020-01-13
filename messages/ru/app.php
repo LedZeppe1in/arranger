@@ -418,4 +418,30 @@ return [
     'PUBLICATION_MODEL_NAME' => 'Название',
     'PUBLICATION_MODEL_LINK' => 'Ссылка',
     'PUBLICATION_MODEL_TEXT' => 'Текст',
+    /* Review */
+    'REVIEW_MODEL_ID'=> 'ID',
+    'REVIEW_MODEL_CREATED_AT' => 'Создан',
+    'REVIEW_MODEL_UPDATED_AT' => 'Обновлен',
+    'REVIEW_MODEL_NAME' => 'Имя',
+    'REVIEW_MODEL_CITY' => 'Город',
+    'REVIEW_MODEL_OCCUPATION' => 'Род занятий',
+    'REVIEW_MODEL_TEXT' => 'Текст',
+    /* MusicTrackReview */
+    'MUSIC_TRACK_REVIEW_MODEL_ID' => 'ID',
+    'MUSIC_TRACK_REVIEW_MODEL_CREATED_AT' => 'Создан',
+    'MUSIC_TRACK_REVIEW_MODEL_UPDATED_AT' => 'Обновлен',
+    'MUSIC_TRACK_REVIEW_MODEL_MUSIC_TRACK' => 'Аудио',
+    'MUSIC_TRACK_REVIEW_MODEL_REVIEW' => 'Отзыв',
+    /* SheetMusicReview */
+    'SHEET_MUSIC_REVIEW_MODEL_ID' => 'ID',
+    'SHEET_MUSIC_REVIEW_MODEL_CREATED_AT' => 'Создан',
+    'SHEET_MUSIC_REVIEW_MODEL_UPDATED_AT' => 'Обновлен',
+    'SHEET_MUSIC_REVIEW_MODEL_SHEET_MUSIC' => 'Ноты',
+    'SHEET_MUSIC_REVIEW_MODEL_REVIEW' => 'Отзыв',
+    /* ServiceReview */
+    'SERVICE_REVIEW_MODEL_ID' => 'ID',
+    'SERVICE_REVIEW_MODEL_CREATED_AT' => 'Создан',
+    'SERVICE_REVIEW_MODEL_UPDATED_AT' => 'Обновлен',
+    'SERVICE_REVIEW_MODEL_SHEET_MUSIC' => 'Услуга',
+    'SERVICE_REVIEW_MODEL_REVIEW' => 'Отзыв',
 ];

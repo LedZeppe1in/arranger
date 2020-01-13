@@ -418,4 +418,30 @@ return [
     'PUBLICATION_MODEL_NAME' => 'Name',
     'PUBLICATION_MODEL_LINK' => 'Link',
     'PUBLICATION_MODEL_TEXT' => 'Text',
+    /* Review */
+    'REVIEW_MODEL_ID'=> 'ID',
+    'REVIEW_MODEL_CREATED_AT' => 'Created at',
+    'REVIEW_MODEL_UPDATED_AT' => 'Updated at',
+    'REVIEW_MODEL_NAME' => 'Name',
+    'REVIEW_MODEL_CITY' => 'City',
+    'REVIEW_MODEL_OCCUPATION' => 'Occupation',
+    'REVIEW_MODEL_TEXT' => 'Text',
+    /* MusicTrackReview */
+    'MUSIC_TRACK_REVIEW_MODEL_ID' => 'ID',
+    'MUSIC_TRACK_REVIEW_MODEL_CREATED_AT' => 'Created at',
+    'MUSIC_TRACK_REVIEW_MODEL_UPDATED_AT' => 'Updated at',
+    'MUSIC_TRACK_REVIEW_MODEL_MUSIC_TRACK' => 'Music track',
+    'MUSIC_TRACK_REVIEW_MODEL_REVIEW' => 'Review',
+    /* SheetMusicReview */
+    'SHEET_MUSIC_REVIEW_MODEL_ID' => 'ID',
+    'SHEET_MUSIC_REVIEW_MODEL_CREATED_AT' => 'Created at',
+    'SHEET_MUSIC_REVIEW_MODEL_UPDATED_AT' => 'Updated at',
+    'SHEET_MUSIC_REVIEW_MODEL_SHEET_MUSIC' => 'Sheet music',
+    'SHEET_MUSIC_REVIEW_MODEL_REVIEW' => 'Review',
+    /* ServiceReview */
+    'SERVICE_REVIEW_MODEL_ID' => 'ID',
+    'SERVICE_REVIEW_MODEL_CREATED_AT' => 'Created at',
+    'SERVICE_REVIEW_MODEL_UPDATED_AT' => 'Updated at',
+    'SERVICE_REVIEW_MODEL_SHEET_MUSIC' => 'Service',
+    'SERVICE_REVIEW_MODEL_REVIEW' => 'Review',
 ];
