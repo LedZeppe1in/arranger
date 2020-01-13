@@ -1,7 +1,8 @@
 <p><h1 align="center">Веб-сайт музыканта и аранжировщика - Андрея Рузняева</h1></p>
 
 Исходные файлы Yii2-проекта официального веб-сайта музыканта, аранжировщика и мультиинструменталиста - Андрея Рузняева.
-Yii2-framework:
+
+Версия Yii2-фреймворка:
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-basic.svg)](https://packagist.org/packages/yiisoft/yii2-app-basic)
 [![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-basic.svg)](https://packagist.org/packages/yiisoft/yii2-app-basic)
@@ -15,7 +16,9 @@ Yii2-framework:
       config/             содержит общую конфигурацию приложения
       messages/           содержит файлы переводов текстов для интернационализации сайта 
       migrations/         содержит все миграции БД
-      modules/            содержит модули сайта (admin и main)
+      modules/            содержит два основных модули сайта
+      modules/admin/      содержит модуль администрирования сайта
+      modules/main/       содержит модуль клиентской части сайта
       web/                содержит все веб-ресурсы сайта (стили, скрипты и т.д.)
 
 
