@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\SheetMusic */
+/* @var $reviews app\modules\admin\models\Review */
 
 use yii\helpers\Html;
 
@@ -62,5 +63,27 @@ $this->title = Yii::t('app', 'BIG_BAND_PAGE_TITLE');
         </ul>
     </div>
 </section>
+
+<!-- Big Band Review Section -->
+<?php if ($reviews): ?>
+    <section class="section section-lg bg-default">
+        <?php foreach ($reviews as $review): ?>
+            <div class="container aside-wrap">
+                <article class="quote-simple text-black">
+                    <div class="time"><?= Yii::$app->formatter->asDate($review->created_at); ?></div>
+                    <div class="quote-simple-body">
+                        <q><?= $review->text ?></q>
+                    </div>
+                    <div class="quote-simple-footer">
+                        <cite class="heading-5 quote-simple-cite"><?= $review->name ?></cite>
+                        <?php if ($review->occupation != ''): ?>
+                            <span class="quote-simple-description"><?= $review->occupation ?></span>
+                        <?php endif; ?>
+                    </div>
+                </article>
+            </div>
+        <?php endforeach; ?>
+    </section>
+<?php endif; ?>
 
 <section class="section section-sm bg-default"></section>

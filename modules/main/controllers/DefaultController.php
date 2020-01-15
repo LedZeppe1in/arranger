@@ -18,7 +18,10 @@ use app\modules\admin\models\Publication;
 use app\modules\admin\models\LoginForm;
 use app\modules\admin\models\Service;
 use app\modules\main\models\ContactForm;
-
+use app\modules\admin\models\Review;
+use app\modules\admin\models\ServiceReview;
+use app\modules\admin\models\SheetMusicReview;
+use app\modules\admin\models\MusicTrackReview;
 
 class DefaultController extends Controller
 {
@@ -188,9 +191,12 @@ class DefaultController extends Controller
     {
         // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
+        // Поиск всех отзывов, сделанных для данной ноты (партитуры)
+        $reviews = $model->reviews;
 
         return $this->render('big-band-view', [
             'model' => $model,
+            'reviews' => $reviews
         ]);
     }
 
@@ -225,9 +231,12 @@ class DefaultController extends Controller
     {
         // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
+        // Поиск всех отзывов, сделанных для данной ноты (партитуры)
+        $reviews = $model->reviews;
 
         return $this->render('jazz-combo-view', [
             'model' => $model,
+            'reviews' => $reviews
         ]);
     }
 
@@ -262,9 +271,12 @@ class DefaultController extends Controller
     {
         // Поиск партитуры по id
         $model = SheetMusic::findOne($id);
+        // Поиск всех отзывов, сделанных для данной ноты (партитуры)
+        $reviews = $model->reviews;
 
         return $this->render('pop-music-view', [
             'model' => $model,
+            'reviews' => $reviews
         ]);
     }
 
@@ -318,9 +330,12 @@ class DefaultController extends Controller
     {
         // Поиск трека по id
         $model = MusicTrack::findOne($id);
+        // Поиск всех отзывов, сделанных для данного аудио (трека)
+        $reviews = $model->reviews;
 
         return $this->render('jingle-view', [
             'model' => $model,
+            'reviews' => $reviews
         ]);
     }
 
@@ -355,9 +370,12 @@ class DefaultController extends Controller
     {
         // Поиск трека по id
         $model = MusicTrack::findOne($id);
+        // Поиск всех отзывов, сделанных для данного аудио (трека)
+        $reviews = $model->reviews;
 
         return $this->render('stem-view', [
             'model' => $model,
+            'reviews' => $reviews
         ]);
     }
 
@@ -392,9 +410,51 @@ class DefaultController extends Controller
     {
         // Поиск трека по id
         $model = MusicTrack::findOne($id);
+        // Поиск всех отзывов, сделанных для данного аудио (трека)
+        $reviews = $model->reviews;
 
         return $this->render('minus-one-view', [
             'model' => $model,
+            'reviews' => $reviews
+        ]);
+    }
+
+    /**
+     * Displays services.
+     *
+     * @return string
+     */
+    public function actionServices()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Service::find(),
+            'pagination' => [
+                'pageSize' => 9,
+            ],
+        ]);
+
+        return $this->render('services', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Displays a single Services model.
+     *
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionServiceView($id)
+    {
+        // Поиск услуги по id
+        $model = Service::findOne($id);
+        // Поиск всех отзывов, сделанных для данной услуги
+        $reviews = $model->reviews;
+
+        return $this->render('service-view', [
+            'model' => $model,
+            'reviews' => $reviews
         ]);
     }
 
@@ -556,41 +616,6 @@ class DefaultController extends Controller
         return $this->render('contact', [
             'model' => $model,
             'user' => $user,
-        ]);
-    }
-
-    /**
-     * Displays services.
-     *
-     * @return string
-     */
-    public function actionServices()
-    {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Service::find(),
-            'pagination' => [
-                'pageSize' => 9,
-            ],
-        ]);
-
-        return $this->render('services', [
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-
-    /**
-     * Displays a single Services model.
-     *
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionServiceView($id)
-    {
-        $model = Service::findOne($id);
-
-        return $this->render('service-view', [
-            'model' => $model,
         ]);
     }
 }

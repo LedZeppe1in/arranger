@@ -15,6 +15,13 @@ use yii\behaviors\TimestampBehavior;
  * @property string $city
  * @property string $occupation
  * @property string $text
+ *
+ * @property SheetMusicReview[] $SheetMusicReviews
+ * @property SheetMusic[] $SheetMusics
+ * @property MusicTrackReview[] $MusicTrackReviews
+ * @property MusicTrack[] $MusicTracks
+ * @property ServiceReview[] $ServiceReviews
+ * @property Service[] $Services
  */
 class Review extends \yii\db\ActiveRecord
 {
@@ -59,5 +66,53 @@ class Review extends \yii\db\ActiveRecord
         return [
             TimestampBehavior::className(),
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSheetMusicReviews()
+    {
+        return $this->hasMany(SheetMusicReview::className(), ['review' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSheetMusics()
+    {
+        return $this->hasMany(SheetMusic::className(), ['id' => 'sheet_music'])->via('sheetMusicReviews');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getMusicTrackReviews()
+    {
+        return $this->hasMany(MusicTrackReview::className(), ['review' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getMusicTracks()
+    {
+        return $this->hasMany(MusicTrack::className(), ['id' => 'music_track'])->via('musicTrackReviews');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getServiceReviews()
+    {
+        return $this->hasMany(ServiceReview::className(), ['review' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getServices()
+    {
+        return $this->hasMany(Service::className(), ['id' => 'service'])->via('serviceReviews');
     }
 }

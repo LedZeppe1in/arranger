@@ -19,6 +19,9 @@ use yii\behaviors\TimestampBehavior;
  * @property string $preview
  * @property string $file
  * @property string $description
+ *
+ * @property SheetMusicReview[] $SheetMusicReviews
+ * @property Review[] $Reviews
  */
 class SheetMusic extends \yii\db\ActiveRecord
 {
@@ -76,6 +79,22 @@ class SheetMusic extends \yii\db\ActiveRecord
         return [
             TimestampBehavior::className(),
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSheetMusicReviews()
+    {
+        return $this->hasMany(SheetMusicReview::className(), ['sheet_music' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getReviews()
+    {
+        return $this->hasMany(Review::className(), ['id' => 'review'])->via('sheetMusicReviews');
     }
 
     /**

@@ -14,6 +14,9 @@ use yii\behaviors\TimestampBehavior;
  * @property string $name
  * @property string $price
  * @property string $description
+ *
+ * @property ServiceReview[] $ServiceReviews
+ * @property Review[] $Reviews
  */
 class Service extends \yii\db\ActiveRecord
 {
@@ -59,5 +62,21 @@ class Service extends \yii\db\ActiveRecord
         return [
             TimestampBehavior::className(),
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getServiceReviews()
+    {
+        return $this->hasMany(ServiceReview::className(), ['service' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getReviews()
+    {
+        return $this->hasMany(Review::className(), ['id' => 'review'])->via('serviceReviews');
     }
 }
