@@ -193,10 +193,23 @@ class DefaultController extends Controller
         $model = SheetMusic::findOne($id);
         // Поиск всех отзывов, сделанных для данной ноты (партитуры)
         $reviews = $model->reviews;
+        // Модель отзыва
+        $new_review = new Review();
+        // Если пользователь заполнил и отправил форму отзыва
+        if ($new_review->load(Yii::$app->request->post()) && $new_review->save()) {
+            // Создание модели для связи нот с отзывом
+            $sheet_music_review = new SheetMusicReview();
+            $sheet_music_review->sheet_music = $id;
+            $sheet_music_review->review = $new_review->id;
+            $sheet_music_review->save();
+
+            return $this->refresh();
+        }
 
         return $this->render('big-band-view', [
             'model' => $model,
-            'reviews' => $reviews
+            'reviews' => $reviews,
+            'new_review' => $new_review
         ]);
     }
 
@@ -233,10 +246,23 @@ class DefaultController extends Controller
         $model = SheetMusic::findOne($id);
         // Поиск всех отзывов, сделанных для данной ноты (партитуры)
         $reviews = $model->reviews;
+        // Модель отзыва
+        $new_review = new Review();
+        // Если пользователь заполнил и отправил форму отзыва
+        if ($new_review->load(Yii::$app->request->post()) && $new_review->save()) {
+            // Создание модели для связи нот с отзывом
+            $sheet_music_review = new SheetMusicReview();
+            $sheet_music_review->sheet_music = $id;
+            $sheet_music_review->review = $new_review->id;
+            $sheet_music_review->save();
+
+            return $this->refresh();
+        }
 
         return $this->render('jazz-combo-view', [
             'model' => $model,
-            'reviews' => $reviews
+            'reviews' => $reviews,
+            'new_review' => $new_review
         ]);
     }
 
@@ -273,10 +299,23 @@ class DefaultController extends Controller
         $model = SheetMusic::findOne($id);
         // Поиск всех отзывов, сделанных для данной ноты (партитуры)
         $reviews = $model->reviews;
+        // Модель отзыва
+        $new_review = new Review();
+        // Если пользователь заполнил и отправил форму отзыва
+        if ($new_review->load(Yii::$app->request->post()) && $new_review->save()) {
+            // Создание модели для связи нот с отзывом
+            $sheet_music_review = new SheetMusicReview();
+            $sheet_music_review->sheet_music = $id;
+            $sheet_music_review->review = $new_review->id;
+            $sheet_music_review->save();
+
+            return $this->refresh();
+        }
 
         return $this->render('pop-music-view', [
             'model' => $model,
-            'reviews' => $reviews
+            'reviews' => $reviews,
+            'new_review' => $new_review
         ]);
     }
 
@@ -332,10 +371,23 @@ class DefaultController extends Controller
         $model = MusicTrack::findOne($id);
         // Поиск всех отзывов, сделанных для данного аудио (трека)
         $reviews = $model->reviews;
+        // Модель отзыва
+        $new_review = new Review();
+        // Если пользователь заполнил и отправил форму отзыва
+        if ($new_review->load(Yii::$app->request->post()) && $new_review->save()) {
+            // Создание модели для связи аудио с отзывом
+            $music_track_review = new MusicTrackReview();
+            $music_track_review->music_track = $id;
+            $music_track_review->review = $new_review->id;
+            $music_track_review->save();
+
+            return $this->refresh();
+        }
 
         return $this->render('jingle-view', [
             'model' => $model,
-            'reviews' => $reviews
+            'reviews' => $reviews,
+            'new_review' => $new_review
         ]);
     }
 
@@ -372,10 +424,23 @@ class DefaultController extends Controller
         $model = MusicTrack::findOne($id);
         // Поиск всех отзывов, сделанных для данного аудио (трека)
         $reviews = $model->reviews;
+        // Модель отзыва
+        $new_review = new Review();
+        // Если пользователь заполнил и отправил форму отзыва
+        if ($new_review->load(Yii::$app->request->post()) && $new_review->save()) {
+            // Создание модели для связи аудио с отзывом
+            $music_track_review = new MusicTrackReview();
+            $music_track_review->music_track = $id;
+            $music_track_review->review = $new_review->id;
+            $music_track_review->save();
+
+            return $this->refresh();
+        }
 
         return $this->render('stem-view', [
             'model' => $model,
-            'reviews' => $reviews
+            'reviews' => $reviews,
+            'new_review' => $new_review
         ]);
     }
 
@@ -412,10 +477,23 @@ class DefaultController extends Controller
         $model = MusicTrack::findOne($id);
         // Поиск всех отзывов, сделанных для данного аудио (трека)
         $reviews = $model->reviews;
+        // Модель отзыва
+        $new_review = new Review();
+        // Если пользователь заполнил и отправил форму отзыва
+        if ($new_review->load(Yii::$app->request->post()) && $new_review->save()) {
+            // Создание модели для связи аудио с отзывом
+            $music_track_review = new MusicTrackReview();
+            $music_track_review->music_track = $id;
+            $music_track_review->review = $new_review->id;
+            $music_track_review->save();
+
+            return $this->refresh();
+        }
 
         return $this->render('minus-one-view', [
             'model' => $model,
-            'reviews' => $reviews
+            'reviews' => $reviews,
+            'new_review' => $new_review
         ]);
     }
 
@@ -451,10 +529,23 @@ class DefaultController extends Controller
         $model = Service::findOne($id);
         // Поиск всех отзывов, сделанных для данной услуги
         $reviews = $model->reviews;
+        // Модель отзыва
+        $new_review = new Review();
+        // Если пользователь заполнил и отправил форму отзыва
+        if ($new_review->load(Yii::$app->request->post()) && $new_review->save()) {
+            // Создание модели для связи услуги с отзывом
+            $service_review = new ServiceReview();
+            $service_review->service = $id;
+            $service_review->review = $new_review->id;
+            $service_review->save();
+
+            return $this->refresh();
+        }
 
         return $this->render('service-view', [
             'model' => $model,
-            'reviews' => $reviews
+            'reviews' => $reviews,
+            'new_review' => $new_review
         ]);
     }
 

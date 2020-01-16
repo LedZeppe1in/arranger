@@ -113,6 +113,7 @@ return [
     'BUTTON_SUBSCRIBE' => 'Подписаться',
     'BUTTON_SEND_MESSAGE' => 'Отправить сообщение',
     'BUTTON_VIEW_MORE_INFO' => 'Посмотреть больше информации',
+    'BUTTON_SEND_REVIEW' => 'Оставить отзыв',
     'BUTTON_ADD' => 'Добавить',
     'BUTTON_SEND' => 'Отправить',
     'BUTTON_SAVE' => 'Сохранить',
@@ -127,6 +128,10 @@ return [
     'NOTICE_TITLE' => 'Обратите внимание',
     'NOTICE_TEXT' => 'на эту важную информацию.',
     'READ_MORE' => 'Подробнее',
+    'REVIEWS' => 'Отзывы',
+
+    /* Общие сообщения на страницах клиентской части сайта */
+    'REVIEWS_MESSAGE_CREATION_REVIEW' => 'Вы успешно добавили новый отзыв.',
 
     /* Общие уведомления на форме с captcha */
     'CAPTCHA_NOTICE_ONE' => 'Пожалуйста, введите буквы, показанные на картинке выше.',
@@ -418,6 +423,7 @@ return [
     'PUBLICATION_MODEL_NAME' => 'Название',
     'PUBLICATION_MODEL_LINK' => 'Ссылка',
     'PUBLICATION_MODEL_TEXT' => 'Текст',
+    'REVIEW_MODEL_VERIFICATION_CODE' => 'Проверочный код',
     /* Review */
     'REVIEW_MODEL_ID'=> 'ID',
     'REVIEW_MODEL_CREATED_AT' => 'Создан',

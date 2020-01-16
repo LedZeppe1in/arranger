@@ -25,6 +25,8 @@ use yii\behaviors\TimestampBehavior;
  */
 class Review extends \yii\db\ActiveRecord
 {
+    public $verifyCode; // Код проверки
+
     /**
      * @return string table name
      */
@@ -42,6 +44,8 @@ class Review extends \yii\db\ActiveRecord
             [['name', 'text'], 'required'],
             [['name', 'city', 'occupation'], 'string', 'max' => 255],
             [['text'], 'string'],
+            // verifyCode needs to be entered correctly
+            ['verifyCode', 'captcha', 'captchaAction' => '/main/default/captcha'],
         ];
     }
 
@@ -58,6 +62,7 @@ class Review extends \yii\db\ActiveRecord
             'city' => Yii::t('app', 'REVIEW_MODEL_CITY'),
             'occupation' => Yii::t('app', 'REVIEW_MODEL_OCCUPATION'),
             'text' => Yii::t('app', 'REVIEW_MODEL_TEXT'),
+            'verifyCode' => Yii::t('app', 'REVIEW_MODEL_VERIFICATION_CODE'),
         ];
     }
 

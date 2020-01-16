@@ -113,6 +113,7 @@ return [
     'BUTTON_SUBSCRIBE' => 'Subscribe',
     'BUTTON_SEND_MESSAGE' => 'Send message',
     'BUTTON_VIEW_MORE_INFO' => 'View more info',
+    'BUTTON_SEND_REVIEW' => 'Send review',
     'BUTTON_ADD' => 'Add',
     'BUTTON_SEND' => 'Send',
     'BUTTON_SAVE' => 'Save',
@@ -127,6 +128,10 @@ return [
     'NOTICE_TITLE' => 'Pay attention to',
     'NOTICE_TEXT' => 'this important information.',
     'READ_MORE' => 'Read more',
+    'REVIEWS' => 'Reviews',
+
+    /* Общие сообщения на страницах клиентской части сайта */
+    'REVIEWS_MESSAGE_CREATION_REVIEW' => 'You have successfully created a new review.',
 
     /* Общие уведомления на форме с captcha */
     'CAPTCHA_NOTICE_ONE' => 'Please enter the letters shown in the picture above.',
@@ -426,6 +431,7 @@ return [
     'REVIEW_MODEL_CITY' => 'City',
     'REVIEW_MODEL_OCCUPATION' => 'Occupation',
     'REVIEW_MODEL_TEXT' => 'Text',
+    'REVIEW_MODEL_VERIFICATION_CODE' => 'Verification Code',
     /* MusicTrackReview */
     'MUSIC_TRACK_REVIEW_MODEL_ID' => 'ID',
     'MUSIC_TRACK_REVIEW_MODEL_CREATED_AT' => 'Created at',
