@@ -550,6 +550,37 @@ class DefaultController extends Controller
     }
 
     /**
+     * Delete review.
+     *
+     * @return bool|\yii\console\Response|Response
+     * @throws \Throwable
+     * @throws \yii\db\StaleObjectException
+     */
+    public function actionReviewDelete()
+    {
+        // Ajax-запрос
+        if (Yii::$app->request->isAjax) {
+            // Определение массива возвращаемых данных
+            $data = array();
+            // Установка формата JSON для возвращаемых данных
+            $response = Yii::$app->response;
+            $response->format = Response::FORMAT_JSON;
+            // Поиск отызва по id
+            $review = Review::findOne(Yii::$app->request->post('Review')['id']);
+            // Удаление отзыва из БД
+            $review->delete();
+            // Формирование данных об id удаленного отзыва
+            $data['review_id'] = Yii::$app->request->post('Review')['id'];
+            // Возвращение данных
+            $response->data = $data;
+
+            return $response;
+        }
+
+        return false;
+    }
+
+    /**
      * Displays events.
      *
      * @return string

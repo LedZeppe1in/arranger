@@ -73,6 +73,7 @@ $config = [
                 '/project-view/<id:\d+>' => 'main/default/project-view/',
                 'publications' => 'main/default/publications',
                 '/publication-view/<id:\d+>' => 'main/default/publication-view/',
+                'review-delete' => 'main/default/review-delete',
                 'contact' => 'main/default/contact',
                 'sing-in' => 'main/default/sing-in',
                 '/user/<_u:(profile|biography|update-profile|update-biography|update-password)>' => 'admin/user/<_u>',
