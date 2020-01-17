@@ -1,46 +1,119 @@
 <?php
 
 return [
-    /* Инициалы автора сайта */
-    'FIRST_NAME' => 'Андрей',
-    'LAST_NAME' => 'Рузняев',
+    /* Название профессии автора */
+    'PROFESSION' => 'Музыкант Аранжировщик Мультиинструменталист',
+
+    /* Аннотация */
+    'ANNOTATION' => 'Создание аранжировок, транскрипция и оркестровка. Написание партитур любой сложности и профессиональная запись музыкального материала.',
+
+    /* Статус-бар */
+    'LOADING' => 'Загрузка...',
 
     /* Пункты главного меню клиентской части сайта */
     'NAV_HOME' => 'Главная',
-    'NAV_EVENTS' => 'СОБЫТИЯ',
-    'NAV_SHEET_MUSIC' => 'ПАРТИТУРЫ',
+    'NAV_ABOUT' => 'ОБО МНЕ',
+    'NAV_SHEET_MUSIC' => 'НОТЫ',
     'NAV_BIG_BAND' => 'Big Band',
     'NAV_JAZZ_COMBO' => 'Jazz Combo',
     'NAV_POP_MUSIC' => 'Pop Music',
-    'NAV_MUSIC_TRACKS' => 'ТРЕКИ',
+    'NAV_AUDIO' => 'АУДИО',
     'NAV_JINGLES' => 'Джинглы',
     'NAV_STEMS' => 'Мультитреки',
-    'NAV_PROJECTS' => 'ПРОЕКТЫ',
-    'NAV_PUBLICATIONS' => 'ПУБЛИКАЦИИ',
-    'NAV_CONTACTS' => 'КОНТАКТЫ',
-    'NAV_ADMINISTRATION' => 'Администрирование',
+    'NAV_MINUS_ONE' => 'Минуса',
+    'NAV_SERVICES' => 'УСЛУГИ',
+    'NAV_MATERIALS' => 'МАТЕРИАЛЫ',
+    'NAV_INTERESTING' => 'ИНТЕРЕСНОЕ',
+    'NAV_EVENTS' => 'События',
+    'NAV_PROJECTS' => 'Проекты',
+    'NAV_PUBLICATIONS' => 'Публикации',
+    'NAV_ACCOUNT' => 'АККАУНТ',
     'NAV_SIGN_IN' => 'Вход',
+    'NAV_ADMINISTRATION' => 'Администрирование',
+    'NAV_SIGN_OUT' => 'Выход',
+    'NAV_CONTACTS' => 'КОНТАКТЫ',
     /* Пункты главного меню административной части сайта */
     'NAV_ADMIN_ACCOUNT' => 'Учётная запись',
     'NAV_ADMIN_SIGNED_IN_AS' => 'Вы вошли как',
     'NAV_ADMIN_MY_PROFILE' => 'Мой профиль',
     'NAV_ADMIN_MY_BIOGRAPHY' => 'Моя биография',
     'NAV_ADMIN_SIGN_OUT' => 'Выход',
+    'NAV_ADMIN_SHEET_MUSIC' => 'Ноты',
+    'NAV_ADMIN_AUDIO' => 'Аудио',
+    'NAV_ADMIN_SERVICES' => 'Услуги',
     'NAV_ADMIN_EVENTS' => 'События',
-    'NAV_ADMIN_SHEET_MUSIC' => 'Партитуры',
-    'NAV_ADMIN_MUSIC_TRACKS' => 'Треки',
     'NAV_ADMIN_PROJECTS' => 'Проекты',
     'NAV_ADMIN_PUBLICATIONS' => 'Публикации',
 
     /* Пункты правого меню */
     'SIDE_NAV_POSSIBLE_ACTIONS' => 'Возможные действия',
 
+    /* Блоки презентации проектов справа */
+    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TITLE' => 'Ноты',
+    'PROJECT_LIST_CUSTOM_AUDIO_TITLE' => 'Аудио',
+    'PROJECT_LIST_CUSTOM_SHEET_MUSIC_TEXT' => 'Партитуры и партии музыкальных произведений для различных составов.',
+    'PROJECT_LIST_CUSTOM_AUDIO_TEXT' => 'Минуса, мультитреки и другие аудиоматериалы для концертных выступлений и студийной работы.',
+
+    /* Блок портфолио */
+    'WORK_EXAMPLES' => 'Примеры работ',
+
+    /* Блок бренда */
+    'BRANDING_CUSTOM_SHEET_MUSIC' => 'Ноты',
+    'BRANDING_BIG_BAND' => 'Big Band',
+    'BRANDING_JAZZ_COMBO' => 'Jazz Combo',
+    'BRANDING_POP_MUSIC' => 'Pop Music',
+    'BRANDING_SHEET_MUSIC_COUNT' => 'Нот',
+    'BRANDING_CUSTOM_AUDIO' => 'Аудио',
+    'BRANDING_JINGLES' => 'Джинглы',
+    'BRANDING_STEMS' => 'Мультитреки',
+    'BRANDING_MINUS_ONE' => 'Минуса',
+    'BRANDING_AUDIO_COUNT' => 'Аудио',
+    'BRANDING_INTERESTING' => 'Интересное',
+    'BRANDING_SERVICES' => 'Услуги',
+    'BRANDING_PROJECTS' => 'Проекты',
+    'BRANDING_PUBLICATIONS' => 'Публикации',
+    'BRANDING_SERVICE_COUNT' => 'Услуг',
+    'BRANDING_TITLE' => 'Качественная музыка',
+    'BRANDING_TEXT' => 'Слова иногда нуждаются в музыке, но музыка не нуждается ни в чем.',
+    'BRANDING_SIGNATURE' => 'Эдвард Григ',
+
+    /* Блок рекламы */
+    'BLURB_ORIGINAL_ARRANGEMENT' => 'Оригенальная Аранжировка',
+    'BLURB_ORIGINAL_ARRANGEMENT_TEXT' => 'Я делаю оригинальные аранжировки в любом стиле.',
+    'BLURB_BEST_EQUIPMENT' => 'Лучшее Оборудование',
+    'BLURB_BEST_EQUIPMENT_TEXT' => 'Я использую первоклассное оборудование для создания выдающихся шедевров.',
+    'BLURB_UNIQUE_ART' => 'Уникальный Материал',
+    'BLURB_UNIQUE_ART_TEXT' => 'Каждый музыкальный материал, который я предлагаю, уникальный во всех отношениях.',
+
+    /* Блок обо мне */
+    'ABOUT_ME' => 'Обо Мне',
+    'ABOUT_YEARS_OF_EXPERIENCE' => 'лет опыта',
+    'ABOUT_MUSICIAN' => 'Музыкант',
+    'ABOUT_ARRANGER' => 'Аранжировщик',
+    'ABOUT_MULTI_INSTRUMENTALIST' => 'Мульти-инструменталист',
+
+    /* Блок контакта */
+    'TOUCH_WITH_ME' => 'Связаться со мной',
+    'ONE_CONTACT_TEXT' => 'Не стесняйтесь связаться со мной, чтобы узнать больше о моих услугах, сроках выполнения и стоимости.',
+    'TWO_CONTACT_TEXT' => 'Я всегда готов ответить на Ваши вопросы.',
+
     /* Нижний колонтитул (подвал) */
+    'FOOTER_LOCATION' => 'Адрес',
+    'FOOTER_CONTACTS' => 'Контакты',
+    'FOOTER_NEWSLETTER' => 'Новостная рассылка',
+    'FOOTER_EMAIL' => 'Электронная почта',
     'FOOTER_COPYRIGHT'=>'Все права защищены',
     'FOOTER_POWERED_BY' => 'Разработано',
     'FOOTER_DEVELOPER' => 'Проект НикДим',
 
     /* Общие кнопки */
+    'BUTTON_READ_MORE' => 'Подробнее',
+    'BUTTON_VIEW_ALL_WORKS' => 'Посмотреть все работы',
+    'BUTTON_VIEW' => 'Посмотреть',
+    'BUTTON_SUBSCRIBE' => 'Подписаться',
+    'BUTTON_SEND_MESSAGE' => 'Отправить сообщение',
+    'BUTTON_VIEW_MORE_INFO' => 'Посмотреть больше информации',
+    'BUTTON_SEND_REVIEW' => 'Оставить отзыв',
     'BUTTON_ADD' => 'Добавить',
     'BUTTON_SEND' => 'Отправить',
     'BUTTON_SAVE' => 'Сохранить',
@@ -55,10 +128,10 @@ return [
     'NOTICE_TITLE' => 'Обратите внимание',
     'NOTICE_TEXT' => 'на эту важную информацию.',
     'READ_MORE' => 'Подробнее',
+    'REVIEWS' => 'Отзывы',
 
-    /* Общие сообщения об ошибках */
-    'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Страница не найдена.',
-    'ERROR_MESSAGE_ACCESS_DENIED' => 'Вам не разрешено производить данное действие.',
+    /* Общие сообщения на страницах клиентской части сайта */
+    'REVIEWS_MESSAGE_CREATION_REVIEW' => 'Вы успешно добавили новый отзыв.',
 
     /* Общие уведомления на форме с captcha */
     'CAPTCHA_NOTICE_ONE' => 'Пожалуйста, введите буквы, показанные на картинке выше.',
@@ -67,37 +140,75 @@ return [
 
     /* Общие уведомления */
     'GENERAL_NOTICE_NO_RESULTS_FOUND' => 'Ничего не найдено.',
+    'GENERAL_NOTICE_NO_DESCRIPTION' => 'Нет описания',
+
+    /* Общие сообщения об ошибках */
+    'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Страница не найдена.',
+    'ERROR_MESSAGE_ACCESS_DENIED' => 'Вам не разрешено производить данное действие.',
 
     /* Страница ошибки */
-    'ERROR_PAGE_TEXT_ONE' => 'Вышеупомянутая ошибка произошла при обработке веб-сервером вашего запроса.',
-    'ERROR_PAGE_TEXT_TWO' => 'Пожалуйста, свяжитесь с нами, если Вы думаете, что это ошибка сервера. Спасибо.',
+    'ERROR_PAGE_NOTICE' => 'Вышеупомянутая ошибка произошла при обработке веб-сервером вашего запроса.',
+    'ERROR_PAGE_TEXT' => 'Пожалуйста, свяжитесь с нами, если Вы думаете, что это ошибка сервера. Спасибо.',
 
     /* Страницы клиентской части сайта */
-    /* Страница событий */
-    'EVENTS_PAGE_TITLE' => 'События',
-    'EVENT_PAGE_TITLE' => 'Событие',
+    /* Страница партитур */
+    'SHEET_MUSIC_PAGE_TITLE' => 'Ноты',
+    'SHEET_MUSIC_PAGE_TEXT' => 'Узнайте больше о нотных партитурах, которые я предоставляю',
+    'SHEET_MUSIC_PAGE_PAGE_COUNT' => 'Количество страниц',
     /* Страница партитур "Big Band" */
     'BIG_BAND_PAGE_TITLE' => 'Big Band',
+    'BIG_BAND_PAGE_TEXT' => 'Узнайте больше об одной из моих партитур Big Band',
     /* Страница партитур "Jazz Combo" */
     'JAZZ_COMBO_PAGE_TITLE' => 'Jazz Combo',
+    'JAZZ_COMBO_PAGE_TEXT' => 'Узнайте больше об одной из моих партитур Jazz Combo',
     /* Страница партитур "Pop Music" */
     'POP_MUSIC_PAGE_TITLE' => 'Pop Music',
+    'POP_MUSIC_PAGE_TEXT' => 'Узнайте больше об одной из моих партитур Pop Music',
+    /* Страница треков */
+    'MUSIC_TRACKS_PAGE_TITLE' => 'Аудио',
+    'MUSIC_TRACKS_PAGE_TEXT' => 'Узнайте больше о аудио треках, которые я предоставляю',
     /* Страница джинглов */
     'JINGLES_PAGE_TITLE' => 'Джинглы',
+    'JINGLE_PAGE_TITLE' => 'Джингл',
+    'JINGLE_PAGE_TEXT' => 'Узнайте больше об одном из моих джинглов',
     /* Страница мультитреков */
     'STEMS_PAGE_TITLE' => 'Мультитреки',
+    'STEM_PAGE_TITLE' => 'Мультитрек',
+    'STEM_PAGE_TEXT' => 'Узнайте больше об одном из моих мультитреков',
+    /* Страница минусов */
+    'MINUS_ONE_PAGE_TITLE' => 'Минуса',
+    'MINUS_ONE_SINGLE_PAGE_TITLE' => 'Минус',
+    'MINUS_ONE_PAGE_TEXT' => 'Узнайте больше об одном из минусов',
+    /* Страница услуг */
+    'SERVICES_PAGE_TITLE' => 'Услуги',
+    'SERVICES_PAGE_TEXT' => 'Узнайте больше об услугах, которые я предоставляю',
+    'SERVICE_PAGE_TITLE' => 'Услуга',
+    'SERVICE_PAGE_TEXT' => 'Узнайте больше об одной из моих услуг',
+    /* Страница событий */
+    'EVENTS_PAGE_TITLE' => 'События',
+    'EVENTS_PAGE_TEXT' => 'Узнайте больше об интересных событиях',
+    'EVENT_PAGE_TITLE' => 'Событие',
+    'EVENT_PAGE_TEXT' => 'Узнайте больше об одном из событий',
     /* Страница проектов */
     'PROJECTS_PAGE_TITLE' => 'Проекты',
+    'PROJECTS_PAGE_TEXT' => 'Посмотрите на мои последние проекты',
     'PROJECT_PAGE_TITLE' => 'Проект',
+    'PROJECT_PAGE_TEXT' => 'Узнайте больше об одном из моих проектов',
     /* Страница публикаций */
     'PUBLICATIONS_PAGE_TITLE' => 'Публикации',
+    'PUBLICATIONS_PAGE_TEXT' => 'Посмотрите на мои последние публикации',
     'PUBLICATION_PAGE_TITLE' => 'Публикация',
+    'PUBLICATION_PAGE_TEXT' => 'Узнайте больше об одной из моих публикаций',
+
     /* Страница контактов */
     'CONTACTS_PAGE_TITLE' => 'Контакты',
-    'CONTACT_US_PAGE_TITLE' => 'Обратная связь',
-    'CONTACT_US_PAGE_TEXT' => 'Если у вас есть деловое предложение или другие вопросы, пожалуйста,
-        заполните следующую форму, чтобы связаться с нами. Спасибо.',
-    'CONTACT_US_PAGE_SUCCESS_MESSAGE' => 'Благодарим Вас за обращение к нам. Мы ответим вам как можно скорее.',
+    'CONTACTS_PAGE_TEXT' => 'Посмотрите мои контакты или отправьте мне сообщение',
+    'CONTACTS_PAGE_EMAIL_AND_TELEPHONE' => 'Электронная почта и телефон',
+    'CONTACTS_PAGE_ADDRESS' => 'Адрес',
+    'CONTACTS_PAGE_SOCIALS' => 'Соцсети',
+    'CONTACTS_PAGE_TOUCH_WITH_ME' => 'Связаться со мной',
+    'CONTACTS_PAGE_NOTICE' => 'Если у вас есть деловое предложение или другие вопросы, пожалуйста, заполните следующую форму, чтобы связаться со мной. Спасибо!',
+    'CONTACTS_PAGE_SUCCESS_MESSAGE' => 'Благодарим Вас за обращение к нам. Мы ответим вам как можно скорее.',
     /* Страница входа */
     'SIGN_IN_PAGE_TITLE' => 'Вход',
     'SIGN_IN_PAGE_TEXT' => 'Пожалуйста, заполните следующие поля для входа:',
@@ -158,6 +269,18 @@ return [
     'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_CREATE_MUSIC_TRACK' => 'Вы успешно создали новый трек.',
     'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_UPDATED_MUSIC_TRACK' => 'Вы успешно обновили данный трек.',
     'MUSIC_TRACKS_ADMIN_PAGE_MESSAGE_DELETED_MUSIC_TRACK' => 'Вы успешно удалили трек.',
+    /* Страницы администрирования услуг */
+    'SERVICES_ADMIN_PAGE_SERVICE' => 'Услуга',
+    'SERVICES_ADMIN_PAGE_SERVICES' => 'Услуги',
+    'SERVICES_ADMIN_PAGE_CREATE_SERVICE' => 'Создать услугу',
+    'SERVICES_ADMIN_PAGE_VIEW_SERVICE' => 'Просмотр услуги',
+    'SERVICES_ADMIN_PAGE_UPDATE_SERVICE' => 'Изменить услугу',
+    'SERVICES_ADMIN_PAGE_DELETE_SERVICE' => 'Удалить услугу',
+    'SERVICES_ADMIN_PAGE_MODAL_FORM_TEXT' => 'Вы уверены, что хотите удалить данную услугу?',
+    /* Сообщения на страницах администрирования услуг */
+    'SERVICES_ADMIN_PAGE_MESSAGE_CREATE_SERVICE' => 'Вы успешно создали новую услугу.',
+    'SERVICES_ADMIN_PAGE_MESSAGE_UPDATED_SERVICE' => 'Вы успешно обновили данную услугу.',
+    'SERVICES_ADMIN_PAGE_MESSAGE_DELETED_SERVICE' => 'Вы успешно удалили услугу.',
     /* Страницы администрирования проектов */
     'PROJECTS_ADMIN_PAGE_PROJECT' => 'Проект',
     'PROJECTS_ADMIN_PAGE_PROJECTS' => 'Проекты',
@@ -184,10 +307,10 @@ return [
     'PUBLICATIONS_ADMIN_PAGE_MESSAGE_DELETED_PUBLICATION' => 'Вы успешно удалили публикацию.',
     /* Формы */
     /* ContactForm */
-    'CONTACT_FORM_NAME' => 'ФИО',
+    'CONTACT_FORM_NAME' => 'Имя',
     'CONTACT_FORM_EMAIL' => 'Электронная почта',
     'CONTACT_FORM_SUBJECT' => 'Тема',
-    'CONTACT_FORM_BODY' => 'Сообщение',
+    'CONTACT_FORM_MESSAGE' => 'Сообщение',
     'CONTACT_FORM_VERIFICATION_CODE' => 'Проверочный код',
     /* LoginForm */
     'LOGIN_FORM_USERNAME' => 'Имя пользователя',
@@ -217,6 +340,8 @@ return [
     'USER_MODEL_PASSWORD_RESET_TOKEN' => 'Метка сброса пароля',
     'USER_MODEL_FULL_NAME_RU' => 'Фамилия Имя Отчество (на русском)',
     'USER_MODEL_FULL_NAME_EN' => 'Фамилия Имя Отчество (на английском)',
+    'USER_MODEL_ADDRESS_RU' => 'Адрес (на русском)',
+    'USER_MODEL_ADDRESS_EN' => 'Адрес (на английском)',
     'USER_MODEL_EMAIL' => 'Электронная почта',
     'USER_MODEL_PHONE' => 'Телефон',
     'USER_MODEL_YOUTUBE_LINK' => 'Ссылка на YouTube',
@@ -272,8 +397,18 @@ return [
     /* Значения полей модели MusicTrack */
     'MUSIC_TRACK_MODEL_TYPE_JINGLE' => 'Джингл',
     'MUSIC_TRACK_MODEL_TYPE_STEMS' => 'Мультитрек',
+    'MUSIC_TRACK_MODEL_TYPE_MINUS_ONE' => 'Минус',
     /* Сообщения модели MusicTrack */
     'MUSIC_TRACK_MODEL_MESSAGE_PRICE' => 'Неправильно указана цена.',
+    /* Service */
+    'SERVICE_MODEL_ID' => 'ID',
+    'SERVICE_MODEL_CREATED_AT' => 'Создана',
+    'SERVICE_MODEL_UPDATED_AT' => 'Обновлена',
+    'SERVICE_MODEL_NAME' => 'Название',
+    'SERVICE_MODEL_PRICE' => 'Цена',
+    'SERVICE_MODEL_DESCRIPTION' => 'Описание',
+    /* Сообщения модели Service */
+    'SERVICE_MODEL_MESSAGE_PRICE' => 'Неправильно указана цена.',
     /* Project */
     'PROJECT_MODEL_ID'=> 'ID',
     'PROJECT_MODEL_CREATED_AT' => 'Создан',
@@ -288,4 +423,31 @@ return [
     'PUBLICATION_MODEL_NAME' => 'Название',
     'PUBLICATION_MODEL_LINK' => 'Ссылка',
     'PUBLICATION_MODEL_TEXT' => 'Текст',
+    'REVIEW_MODEL_VERIFICATION_CODE' => 'Проверочный код',
+    /* Review */
+    'REVIEW_MODEL_ID'=> 'ID',
+    'REVIEW_MODEL_CREATED_AT' => 'Создан',
+    'REVIEW_MODEL_UPDATED_AT' => 'Обновлен',
+    'REVIEW_MODEL_NAME' => 'Имя',
+    'REVIEW_MODEL_CITY' => 'Город',
+    'REVIEW_MODEL_OCCUPATION' => 'Род занятий',
+    'REVIEW_MODEL_TEXT' => 'Текст',
+    /* MusicTrackReview */
+    'MUSIC_TRACK_REVIEW_MODEL_ID' => 'ID',
+    'MUSIC_TRACK_REVIEW_MODEL_CREATED_AT' => 'Создан',
+    'MUSIC_TRACK_REVIEW_MODEL_UPDATED_AT' => 'Обновлен',
+    'MUSIC_TRACK_REVIEW_MODEL_MUSIC_TRACK' => 'Аудио',
+    'MUSIC_TRACK_REVIEW_MODEL_REVIEW' => 'Отзыв',
+    /* SheetMusicReview */
+    'SHEET_MUSIC_REVIEW_MODEL_ID' => 'ID',
+    'SHEET_MUSIC_REVIEW_MODEL_CREATED_AT' => 'Создан',
+    'SHEET_MUSIC_REVIEW_MODEL_UPDATED_AT' => 'Обновлен',
+    'SHEET_MUSIC_REVIEW_MODEL_SHEET_MUSIC' => 'Ноты',
+    'SHEET_MUSIC_REVIEW_MODEL_REVIEW' => 'Отзыв',
+    /* ServiceReview */
+    'SERVICE_REVIEW_MODEL_ID' => 'ID',
+    'SERVICE_REVIEW_MODEL_CREATED_AT' => 'Создан',
+    'SERVICE_REVIEW_MODEL_UPDATED_AT' => 'Обновлен',
+    'SERVICE_REVIEW_MODEL_SHEET_MUSIC' => 'Услуга',
+    'SERVICE_REVIEW_MODEL_REVIEW' => 'Отзыв',
 ];

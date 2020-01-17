@@ -67,9 +67,9 @@ class PublicationSearch extends Publication
             'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['ilike', 'name', $this->name])
-            ->andFilterWhere(['ilike', 'link', $this->link])
-            ->andFilterWhere(['ilike', 'text', $this->text]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'link', $this->link])
+            ->andFilterWhere(['like', 'text', $this->text]);
 
         return $dataProvider;
     }

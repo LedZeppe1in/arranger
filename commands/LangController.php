@@ -42,7 +42,7 @@ class LangController extends Controller
             $ru_lang->default = 1;
             $this->log($ru_lang->save());
         } else
-            $this->stdout('Default languages created!', Console::FG_GREEN, Console::BOLD);
+            $this->stdout('Default languages are created!', Console::FG_GREEN, Console::BOLD);
     }
 
     /**

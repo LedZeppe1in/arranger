@@ -3,42 +3,46 @@
 /* @var $this yii\web\View */
 /* @var $dataProvider app\modules\main\controllers\DefaultController */
 
-use yii\helpers\Html;
 use yii\widgets\ListView;
 
-$this->title = Yii::t('app', 'STEMS_PAGE_TITLE');
-
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = Yii::t('app', 'MUSIC_TRACKS_PAGE_TITLE');
 ?>
 
-<h1><?= Html::encode($this->title) ?></h1>
+<!-- Breadcrumbs Section -->
+<section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(/web/images/breadcrumbs-stems.jpg);">
+    <div class="container">
+        <h3 class="breadcrumbs-custom-title"><?= $this->title ?></h3>
+        <pre-footer-classic class="breadcrumbs-custom-subtitle">
+            <?= Yii::t('app', 'MUSIC_TRACKS_PAGE_TEXT') ?>
+        </pre-footer-classic>
+    </div>
+</section>
 
-<?php echo ListView::widget([
-    'dataProvider' => $dataProvider,
-    'beforeItem' => function ($model , $key , $index , $widget) {
-        if (($index == 0) || (($index % 3) == 0))
-            return '<div class="row">';
-        return false;
-    },
-    'afterItem' => function ($model , $key , $index , $widget) {
-        if (($index + 1) % 3 == 0)
-            return '</div>';
-        return false;
-    },
-    'itemView' => function ($model, $key, $index, $widget) {
-        return $this->render('_stems_list', [
-            'model' => $model,
-            'key' => $key,
-            'index' => $index,
-            'widget' => $widget,
-        ]);
-    },
-    'options' => [
-        'tag' => 'div',
-        'id' => 'stems-list',
-    ],
-    'itemOptions' => [
-        'tag' => 'div',
-        'class' => 'col-sm-4',
-    ],
-]); ?>
+<!-- Stems Section -->
+<section class="section section-lg bg-default">
+    <div class="container">
+        <h3 class="custom-title"><?= Yii::t('app', 'STEMS_PAGE_TITLE') ?></h3>
+        <?php echo ListView::widget([
+            'dataProvider' => $dataProvider,
+            'itemView' => '_stems_list',
+            'layout' => "{summary}\n{items}\n</table>{pager}",
+            'options' => [
+                'tag' => 'table',
+                'class' => 'table-custom table-custom-responsive',
+            ],
+            'summary' => '',
+            'itemOptions' => [
+                'tag' => false,
+            ],
+            'pager' => [
+                'prevPageLabel' => '<span class="icon" aria-hidden="true"></span>',
+                'nextPageLabel' => '<span class="icon" aria-hidden="true"></span>',
+                'linkOptions' => ['class' => 'page-link'],
+                'pageCssClass' => 'page-item',
+                'activePageCssClass' => 'active',
+                'prevPageCssClass' => 'page-item page-item-control',
+                'nextPageCssClass' => 'page-item page-item-control',
+            ],
+        ]); ?>
+    </div>
+</section>

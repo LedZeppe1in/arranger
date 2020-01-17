@@ -1,12 +1,38 @@
-<div class="text-block">
-    <a href="event-view/<?= $model->id ?>" class="text-title"><?= $model->name ?></a>
-    <div class="text-date"><?= Yii::$app->formatter->asDate($model->date, "dd MMMM Y, HH:mm") ?></div>
-    <div>
-        <i><?= Yii::t('app', 'EVENT_MODEL_DURATION') . ': ' ?></i>
-        <?= Yii::$app->formatter->asDate($model->duration, "HH:mm") ?>
+<?php
+
+/* @var $this yii\web\View */
+/* @var $model app\modules\admin\models\Event */
+/* @var $index app\modules\main\controllers\DefaultController */
+
+use yii\helpers\Html;
+use yii\helpers\StringHelper;
+?>
+
+<?php if($index == 0): ?>
+    <div class="col-sm-6 col-md-4 wow fadeInUp" style="visibility: hidden; animation-name: none;">
+<?php endif; ?>
+
+<?php if($index == 3 || $index == 6): ?>
+    <div class="col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
+<?php endif; ?>
+
+<?php if($index == 1 || $index == 4 || $index == 7): ?>
+    <div class="col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
+<?php endif; ?>
+
+<?php if($index == 2 || $index == 5 || $index == 8): ?>
+    <div class="col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s" style="visibility: hidden; animation-delay: 0.6s; animation-name: none;">
+<?php endif; ?>
+
+    <div class="blurb-boxed">
+        <div class="blurb-boxed-header">
+            <h5 class="blurb-boxed-title"><?= Html::a($model->name, ['/event-view/' . $model->id]) ?></h5>
+            <div class="blurb-boxed-icon linearicons-calendar-full"></div>
+        </div>
+        <ul class="blurb-boxed-list">
+            <li><?= StringHelper::truncate($model->description, 100, '...') ?></li>
+        </ul>
+        <?= Html::a(Yii::t('app', 'BUTTON_VIEW'), ['/event-view/' . $model->id],
+            ['class' => 'button button-default']) ?>
     </div>
-    <div>
-        <i><?= Yii::t('app', 'EVENT_MODEL_LOCATION') . ': ' ?></i>
-        <?= $model->location ?>
-    </div>
-</div><br />
+</div>

@@ -19,6 +19,9 @@ use yii\behaviors\TimestampBehavior;
  * @property string $preview
  * @property string $file
  * @property string $description
+ *
+ * @property SheetMusicReview[] $SheetMusicReviews
+ * @property Review[] $Reviews
  */
 class SheetMusic extends \yii\db\ActiveRecord
 {
@@ -79,6 +82,22 @@ class SheetMusic extends \yii\db\ActiveRecord
     }
 
     /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSheetMusicReviews()
+    {
+        return $this->hasMany(SheetMusicReview::className(), ['sheet_music' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getReviews()
+    {
+        return $this->hasMany(Review::className(), ['id' => 'review'])->via('sheetMusicReviews');
+    }
+
+    /**
      * Получение списка типов партитур.
      * @return array - массив всех возможных типов партитур
      */
@@ -98,5 +117,18 @@ class SheetMusic extends \yii\db\ActiveRecord
     public function getTypeName()
     {
         return ArrayHelper::getValue(self::getTypesArray(), $this->type);
+    }
+
+    /**
+     * Получение кол-ва страниц в партитуре.
+     * @return int
+     */
+    public function getPdfPageCount()
+    {
+        $im = new Imagick();
+        $im->pingImage($this->file);
+        $page_count = $im->getNumberImages();
+
+        return $page_count;
     }
 }

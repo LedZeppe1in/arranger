@@ -19,14 +19,18 @@ use yii\behaviors\TimestampBehavior;
  * @property string $preview
  * @property string $file
  * @property string $description
+ *
+ * @property MusicTrackReview[] $MusicTrackReviews
+ * @property Review[] $Reviews
  */
 class MusicTrack extends \yii\db\ActiveRecord
 {
-    const TYPE_JINGLE = 0; // Тип трека "Джингл"
-    const TYPE_STEMS = 1;  // Тип трека "Мультитрек"
+    const TYPE_JINGLE = 0;     // Тип трека "Джингл"
+    const TYPE_STEMS = 1;      // Тип трека "Мультитрек"
+    const TYPE_MINUS_ONE = 2;  // Тип трека "Минус"
 
-    public $preview_file;     // Файл превью трека
-    public $music_track_file; // Файл трека
+    public $preview_file;      // Файл превью трека
+    public $music_track_file;  // Файл трека
 
     /**
      * @return string table name
@@ -49,8 +53,10 @@ class MusicTrack extends \yii\db\ActiveRecord
             ['price', 'match', 'pattern'=>'/^[0-9]{1,12}(\.[0-9]{0,2})?$/',
                 'message' => Yii::t('app', 'MUSIC_TRACK_MODEL_MESSAGE_PRICE')],
             [['preview', 'file', 'description'], 'string'],
-            ['preview_file', 'file', 'skipOnEmpty' => !$this->isNewRecord, 'extensions' => 'mp3'],
-            ['music_track_file', 'file', 'skipOnEmpty' => !$this->isNewRecord, 'extensions' => 'wav'],
+            ['preview_file', 'file', 'skipOnEmpty' => !$this->isNewRecord, 'checkExtensionByMimeType' => false,
+                'extensions' => 'mp3'],
+            ['music_track_file', 'file', 'skipOnEmpty' => !$this->isNewRecord, 'checkExtensionByMimeType' => false,
+                'extensions' => 'wav'],
         ];
     }
 
@@ -83,6 +89,22 @@ class MusicTrack extends \yii\db\ActiveRecord
     }
 
     /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getMusicTrackReviews()
+    {
+        return $this->hasMany(MusicTrackReview::className(), ['music_track' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getReviews()
+    {
+        return $this->hasMany(Review::className(), ['id' => 'review'])->via('musicTrackReviews');
+    }
+
+    /**
      * Получение списка типов треков.
      * @return array - массив всех возможных типов треков
      */
@@ -91,6 +113,7 @@ class MusicTrack extends \yii\db\ActiveRecord
         return [
             self::TYPE_JINGLE => Yii::t('app', 'MUSIC_TRACK_MODEL_TYPE_JINGLE'),
             self::TYPE_STEMS => Yii::t('app', 'MUSIC_TRACK_MODEL_TYPE_STEMS'),
+            self::TYPE_MINUS_ONE => Yii::t('app', 'MUSIC_TRACK_MODEL_TYPE_MINUS_ONE'),
         ];
     }
 

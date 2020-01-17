@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\components\widgets\WLang;
+use app\modules\admin\models\User;
 
 AppAsset::register($this);
 ?>
@@ -29,11 +30,11 @@ AppAsset::register($this);
 
 <body>
 <?php $this->beginBody() ?>
-
     <div class="admin-wrap">
         <?php
         NavBar::begin([
-            'brandLabel' => Yii::t('app', 'FIRST_NAME') . ' ' . Yii::t('app', 'LAST_NAME'),
+            'brandLabel' => Yii::$app->language == 'ru-RU' ? User::find()->one()->full_name_ru :
+                User::find()->one()->full_name_en,
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
                 'class' => 'navbar-default navbar-fixed-top',
@@ -44,12 +45,14 @@ AppAsset::register($this);
             'options' => ['class' => 'navbar-nav navbar-left'],
             'encodeLabels' => false,
             'items' => [
-                ['label' => '<span class="glyphicon glyphicon-bullhorn"></span> ' .
-                    Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
                 ['label' => '<span class="glyphicon glyphicon-list-alt"></span> ' .
                     Yii::t('app', 'NAV_ADMIN_SHEET_MUSIC'), 'url' => ['/admin/sheet-music/list']],
                 ['label' => '<span class="glyphicon glyphicon-music"></span> ' .
-                    Yii::t('app', 'NAV_ADMIN_MUSIC_TRACKS'), 'url' => ['/admin/music-tracks/list']],
+                    Yii::t('app', 'NAV_ADMIN_AUDIO'), 'url' => ['/admin/audio/list']],
+                ['label' => '<span class="glyphicon glyphicon-usd"></span> ' .
+                    Yii::t('app', 'NAV_ADMIN_SERVICES'), 'url' => ['/admin/services/list']],
+                ['label' => '<span class="glyphicon glyphicon-bullhorn"></span> ' .
+                    Yii::t('app', 'NAV_ADMIN_EVENTS'), 'url' => ['/admin/events/list']],
                 ['label' => '<span class="glyphicon glyphicon-blackboard"></span> ' .
                     Yii::t('app', 'NAV_ADMIN_PROJECTS'), 'url' => ['/admin/projects/list']],
                 ['label' => '<span class="glyphicon glyphicon-file"></span> ' .
@@ -93,9 +96,11 @@ AppAsset::register($this);
     <footer class="admin-footer">
         <div class="container">
             <p class="pull-left">
-                <?= Yii::t('app', 'FOOTER_COPYRIGHT') . ' &copy; ' . date('Y') . ' ' . Yii::t('app', 'FIRST_NAME')
-                    . ' ' . Yii::t('app', 'LAST_NAME') ?> | <?= '<a href="mailto:' . Yii::$app->params['adminEmail']
-                    . '">' . Yii::t('app', 'FOOTER_POWERED_BY') . ' ' . Yii::t('app', 'FOOTER_DEVELOPER') . '</a>' ?>
+                <?= Yii::$app->language == 'ru-RU' ? Yii::t('app', 'FOOTER_COPYRIGHT') . ' &copy; ' . date('Y') . ' ' .
+                    User::find()->one()->full_name_ru : Yii::t('app', 'FOOTER_COPYRIGHT') . ' &copy; ' . date('Y') .
+                    ' ' . User::find()->one()->full_name_en ?> | <?= '<a href="mailto:' .
+                Yii::$app->params['adminEmail'] . '">' . Yii::t('app', 'FOOTER_POWERED_BY') . ' ' .
+                Yii::t('app', 'FOOTER_DEVELOPER') . '</a>' ?>
             </p>
         </div>
     </footer>

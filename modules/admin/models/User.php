@@ -21,6 +21,8 @@ use yii\behaviors\TimestampBehavior;
  * @property string $password_reset_token
  * @property string $full_name_ru
  * @property string $full_name_en
+ * @property string $address_ru
+ * @property string $address_en
  * @property string $email
  * @property string $phone
  * @property string $youtube_link
@@ -56,14 +58,15 @@ class User extends ActiveRecord implements IdentityInterface
                 'message' => Yii::t('app', 'USER_MODEL_MESSAGE_USERNAME')],
             ['password', 'required', 'on' => 'create_and_update_password_hash'],
             ['password', 'string', 'min' => 5, 'on' => 'create_and_update_password_hash'],
-            [['full_name_ru', 'full_name_en', 'email', 'phone'], 'required'],
+            [['full_name_ru', 'full_name_en', 'address_ru', 'address_en', 'email', 'phone'], 'required'],
             ['full_name_ru', 'match', 'pattern' => '/^[ А-Яа-яs,]+$/u',
                 'message' => Yii::t('app', 'USER_MODEL_MESSAGE_FULL_NAME_RU')],
             ['full_name_en', 'match', 'pattern' => '/^[ A-Za-zs,]+$/u',
                 'message' => Yii::t('app', 'USER_MODEL_MESSAGE_FULL_NAME_EN')],
             [['full_name_ru', 'full_name_en'], 'string', 'min' => 5, 'max' => 100],
             [['email', 'phone'], 'string', 'max' => 255],
-            [['youtube_link', 'instagram_link', 'facebook_link', 'twitter_link', 'vk_link'], 'string', 'max' => 600],
+            [['address_ru', 'address_en', 'youtube_link', 'instagram_link', 'facebook_link', 'twitter_link', 'vk_link'],
+                'string', 'max' => 600],
             [['biography_ru', 'biography_en'], 'safe'],
         ];
     }
@@ -85,6 +88,8 @@ class User extends ActiveRecord implements IdentityInterface
             'password_reset_token' => Yii::t('app', 'USER_MODEL_PASSWORD_RESET_TOKEN'),
             'full_name_ru' => Yii::t('app', 'USER_MODEL_FULL_NAME_RU'),
             'full_name_en' => Yii::t('app', 'USER_MODEL_FULL_NAME_EN'),
+            'address_ru' => Yii::t('app', 'USER_MODEL_ADDRESS_RU'),
+            'address_en' => Yii::t('app', 'USER_MODEL_ADDRESS_EN'),
             'email' => Yii::t('app', 'USER_MODEL_EMAIL'),
             'phone' => Yii::t('app', 'USER_MODEL_PHONE'),
             'youtube_link' => Yii::t('app', 'USER_MODEL_YOUTUBE_LINK'),

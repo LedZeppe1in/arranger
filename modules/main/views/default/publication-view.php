@@ -1,27 +1,37 @@
 <?php
 
-use yii\helpers\Html;
-
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Publication */
 
-$this->title = Yii::t('app', 'PUBLICATION_PAGE_TITLE') . ' - ' . $model->name;
+use yii\helpers\Html;
 
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'PUBLICATIONS_PAGE_TITLE'), 'url' => ['publications']];
-$this->params['breadcrumbs'][] = $this->title;
-\yii\web\YiiAsset::register($this);
+$this->title = Yii::t('app', 'PUBLICATION_PAGE_TITLE');
 ?>
 
-<div class="publication-view">
-    <h1><?= $model->name ?></h1>
-
-    <div class="text-field">
-        <i><?= Yii::t('app', 'READ_MORE') . ': ' ?></i>
-        <a href="<?= $model->link ?>" ><?= $model->link ?></a>
+<!-- Breadcrumbs Section -->
+<section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(/web/images/breadcrumbs-publication.jpg);">
+    <div class="container">
+        <h3 class="breadcrumbs-custom-title"><?= $this->title ?></h3>
+        <pre-footer-classic class="breadcrumbs-custom-subtitle">
+            <?= Yii::t('app', 'PUBLICATION_PAGE_TEXT') ?>
+        </pre-footer-classic>
     </div>
+</section>
 
-    <div class="text-field">
-        <i><?= Yii::t('app', 'PUBLICATION_MODEL_TEXT') . ': ' ?></i>
-        <div><?= $model->text ?></div>
+<!-- Project Section -->
+<section class="section section-lg bg-default">
+    <div class="container">
+        <div class="row row-50 justify-content-between">
+            <div class="col-md-7">
+                <h3 class="custom-title"><?= $model->name ?></h3>
+                <p class="big"><?= $model->text ?></p><br />
+                <?php if($model->link != '') {
+                    echo Html::a(Yii::t('app', 'BUTTON_READ_MORE'), $model->link,
+                        ['class' => 'button button-default offset-left-106']);
+                } ?>
+                <?= Html::a(Yii::t('app', 'BUTTON_VIEW_MORE_INFO'), ['/main/default/publications'],
+                    ['class' => 'button button-default offset-left-106']) ?>
+            </div>
+        </div>
     </div>
-</div>
+</section>

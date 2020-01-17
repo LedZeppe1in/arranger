@@ -36,7 +36,7 @@ class PublicationController extends Controller
                 $this->log($new_publication->save());
             }
         } else
-            $this->stdout('Default publications created!', Console::FG_GREEN, Console::BOLD);
+            $this->stdout('Default publications are created!', Console::FG_GREEN, Console::BOLD);
     }
 
     /**

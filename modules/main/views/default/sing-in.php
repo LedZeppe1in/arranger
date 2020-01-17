@@ -7,39 +7,65 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = Yii::t('app', 'SIGN_IN_PAGE_TITLE');
-
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = Yii::t('app', 'SIGN_IN_PAGE_TITLE');;
 ?>
 
-<div class="main-default-sing-in">
-    <h1><?= Html::encode($this->title) ?></h1>
+<!-- Breadcrumbs Section -->
+<section class="breadcrumbs-custom bg-image context-dark" style="background-image: url(/web/images/breadcrumbs-sing-in.jpg);">
+    <div class="container">
+        <h3 class="breadcrumbs-custom-title"><?= $this->title ?></h3>
+    </div>
+</section>
 
-    <p><?= Yii::t('app', 'SIGN_IN_PAGE_TEXT') ?></p>
+<!-- Login Forms -->
+<section class="section section-md bg-default">
+    <div class="container">
+        <div class="row row-50 justify-content-md-between">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <h4><?= Html::encode($this->title) ?></h4>
+                <?php $form = ActiveForm::begin([
+                    'id' => 'sign-in-form',
+                    'options' => [
+                        'class' => 'rd-form',
+                    ]
+                ]); ?>
 
-    <div class="row">
-        <div class="col-lg-5">
+                    <div class="form-wrap form-wrap-icon">
+                        <div class="form-icon mdi mdi-account-outline"></div>
+                        <?= $form->field($model, 'username')->textInput(['class' => 'form-input'])->label(false) ?>
+                        <label class="form-label rd-input-label" for="loginform-username">
+                            <?= Yii::t('app', 'LOGIN_FORM_USERNAME') ?>
+                        </label>
+                    </div>
 
-            <?php $form = ActiveForm::begin(['id' => 'sign-in-form']); ?>
+                    <div class="form-wrap form-wrap-icon">
+                        <div class="form-icon mdi mdi-key"></div>
+                        <?= $form->field($model, 'password')->passwordInput()->textInput(['class' => 'form-input'])
+                            ->label(false) ?>
+                        <label class="form-label rd-input-label" for="loginform-password">
+                            <?= Yii::t('app', 'LOGIN_FORM_PASSWORD') ?>
+                        </label>
+                    </div>
 
-                <?= $form->field($model, 'username') ?>
+                    <div class="form-wrap form-wrap-checkbox">
+                        <label class="checkbox">
+                            <?= $form->field($model, 'rememberMe')->checkbox() ?>
+                            <span class="label"> <?= Yii::t('app', 'LOGIN_FORM_REMEMBER_ME') ?></span>
+                        </label>
+                    </div>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
-
-                <?= $form->field($model, 'rememberMe')->checkbox() ?>
-
-                <div style="color:#999;margin:1em 0">
-                    <?= Yii::t('app', 'SIGN_IN_PAGE_RESET_TEXT') . ' ' .
+                    <div style="color:#999;margin:1em 0">
+                        <?= Yii::t('app', 'SIGN_IN_PAGE_RESET_TEXT') . ' ' .
                         Html::a(Yii::t('app', 'SIGN_IN_PAGE_RESET_LINK'), ['password-reset-request']) ?>.
-                </div>
+                    </div>
 
-                <div class="form-group">
-                    <?= Html::submitButton(Yii::t('app', 'BUTTON_SIGN_IN'),
-                        ['class' => 'btn btn-primary', 'name' => 'sign-in-button']) ?>
-                </div>
+                    <div class="button-wrap group-md">
+                        <?= Html::submitButton(Yii::t('app', 'BUTTON_SIGN_IN'),
+                            ['class' => 'button button-default', 'name' => 'sign-in-button']) ?>
+                    </div>
 
-            <?php ActiveForm::end(); ?>
-
+                <?php ActiveForm::end(); ?>
+            </div>
         </div>
     </div>
-</div>
+</section>

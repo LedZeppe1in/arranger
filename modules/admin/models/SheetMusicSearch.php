@@ -70,10 +70,10 @@ class SheetMusicSearch extends SheetMusic
             'price' => $this->price,
         ]);
 
-        $query->andFilterWhere(['ilike', 'name', $this->name])
-            ->andFilterWhere(['ilike', 'preview', $this->preview])
-            ->andFilterWhere(['ilike', 'file', $this->file])
-            ->andFilterWhere(['ilike', 'description', $this->description]);
+        $query->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'preview', $this->preview])
+            ->andFilterWhere(['like', 'file', $this->file])
+            ->andFilterWhere(['like', 'description', $this->description]);
 
         return $dataProvider;
     }
