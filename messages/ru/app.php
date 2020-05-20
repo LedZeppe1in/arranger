@@ -78,7 +78,7 @@ return [
     'BRANDING_SIGNATURE' => 'Эдвард Григ',
 
     /* Блок рекламы */
-    'BLURB_ORIGINAL_ARRANGEMENT' => 'Оригенальная Аранжировка',
+    'BLURB_ORIGINAL_ARRANGEMENT' => 'Оригинальная Аранжировка',
     'BLURB_ORIGINAL_ARRANGEMENT_TEXT' => 'Я делаю оригинальные аранжировки в любом стиле.',
     'BLURB_BEST_EQUIPMENT' => 'Лучшее Оборудование',
     'BLURB_BEST_EQUIPMENT_TEXT' => 'Я использую первоклассное оборудование для создания выдающихся шедевров.',
