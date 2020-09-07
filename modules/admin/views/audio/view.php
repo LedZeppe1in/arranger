@@ -59,4 +59,15 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+    <h4 style="padding-left: 20px"><?= Yii::t('app', 'MUSIC_TRACK_MODEL_PREVIEW') ?>:</h4>
+    <audio controls>
+        <source src="/web/uploads/music-tracks/<?= $model->id ?>/<?= basename($model->preview) ?>"
+                type="audio/mpeg">
+    </audio><br/>
+
+    <h4 style="padding-left: 20px"><?= Yii::t('app', 'MUSIC_TRACK_MODEL_FILE') ?>:</h4>
+    <audio controls>
+        <source src="/web/uploads/music-tracks/<?= $model->id ?>/<?= basename($model->file) ?>"
+                type="audio/mpeg">
+    </audio>
 </div>
