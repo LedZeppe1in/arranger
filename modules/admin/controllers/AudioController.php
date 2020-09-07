@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use Exception;
 use Yii;
 use yii\web\Controller;
 use yii\web\UploadedFile;
@@ -194,6 +195,52 @@ class AudioController extends Controller
     }
 
     /**
+     * Скачивание аудио-файла с превью.
+     *
+     * @param $id - идентификатор аудио
+     * @return string|\yii\console\Response|\yii\web\Response
+     * @throws NotFoundHttpException
+     */
+    public function actionPreviewDownload($id)
+    {
+        $model = $this->findModel($id);
+        // Проверка существования файла
+        if ($model->preview != '' && file_exists($model->preview))
+            // Скачивание аудио-файла с превью
+            return Yii::$app->response->sendFile($model->preview);
+        else {
+            // Сообщение об ошибке
+            Yii::$app->getSession()->setFlash('error',
+                Yii::t('app', 'ERROR_MESSAGE_PAGE_FILE_NOT_FOUND'));
+
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
+    }
+
+    /**
+     * Скачивание аудио-файла с музыкальным треком.
+     *
+     * @param $id - идентификатор аудио
+     * @return string|\yii\console\Response|\yii\web\Response
+     * @throws NotFoundHttpException
+     */
+    public function actionFileDownload($id)
+    {
+        $model = $this->findModel($id);
+        // Проверка существования файла
+        if ($model->file != '' && file_exists($model->file))
+            // Скачивание аудио-файла с музыкальным треком
+            return Yii::$app->response->sendFile($model->file);
+        else {
+            // Сообщение об ошибке
+            Yii::$app->getSession()->setFlash('error',
+                Yii::t('app', 'ERROR_MESSAGE_PAGE_FILE_NOT_FOUND'));
+
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
+    }
+
+    /**
      * Finds the MusicTrack model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
@@ -202,9 +249,8 @@ class AudioController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = MusicTrack::findOne($id)) !== null) {
+        if (($model = MusicTrack::findOne($id)) !== null)
             return $model;
-        }
 
         throw new NotFoundHttpException(Yii::t('app', 'ERROR_MESSAGE_PAGE_NOT_FOUND'));
     }

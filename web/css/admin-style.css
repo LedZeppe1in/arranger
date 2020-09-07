@@ -445,6 +445,13 @@ a.desc:after {
     display: block;
 }
 
+table.detail-view > th {
+    width: 20%;
+}
+
+table.detail-view td {
+    width: 80%;
+}
 
 /* Обработка стилей под размер экрана */
 /*@media (min-width: 992px) {*/

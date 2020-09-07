@@ -143,6 +143,7 @@ return [
     'GENERAL_NOTICE_NO_DESCRIPTION' => 'No description',
 
     /* Общие сообщения об ошибках */
+    'ERROR_MESSAGE_PAGE_FILE_NOT_FOUND' => 'File not found!',
     'ERROR_MESSAGE_PAGE_NOT_FOUND' => 'Page not found.',
     'ERROR_MESSAGE_ACCESS_DENIED' => 'You are not allowed to perform this action.',
 

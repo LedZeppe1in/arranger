@@ -41,12 +41,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'price',
             [
                 'label' => Yii::t('app', 'MUSIC_TRACK_MODEL_PREVIEW'),
-                'value' => Html::a($model->preview, $model->preview, ['target' => '_blank']),
+                'value' => ($model->preview != '') ? Html::a('скачать',
+                    ['/audio/preview-download/' . $model->id], ['target' => '_blank']) : null,
                 'format' => 'raw'
             ],
             [
                 'label' => Yii::t('app', 'MUSIC_TRACK_MODEL_FILE'),
-                'value' => Html::a($model->file, $model->file, ['target' => '_blank']),
+                'value' => ($model->file != '') ? Html::a('скачать',
+                    ['/audio/file-download/' . $model->id], ['target' => '_blank']) : null,
                 'format' => 'raw'
             ],
             [
