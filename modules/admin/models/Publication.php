@@ -34,7 +34,7 @@ class Publication extends \yii\db\ActiveRecord
         return [
             ['name', 'required'],
             ['name', 'string', 'max' => 255],
-            [['link', 'text'], 'string', 'max' => 600],
+            ['link', 'string', 'max' => 600],
         ];
     }
 

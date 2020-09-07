@@ -79,11 +79,11 @@ return [
 
     /* Блок рекламы */
     'BLURB_ORIGINAL_ARRANGEMENT' => 'Original Arrangement',
-    'BLURB_ORIGINAL_ARRANGEMENT_TEXT' => 'I make original arrangements in any style.',
-    'BLURB_BEST_EQUIPMENT' => 'Best Equipment',
-    'BLURB_BEST_EQUIPMENT_TEXT' => 'I use the top-notch equipment to forge outstanding masterpieces.',
-    'BLURB_UNIQUE_ART' => 'Unique Art',
-    'BLURB_UNIQUE_ART_TEXT' => 'Every hand-crafted music art I offer you is unique in every way.',
+    'BLURB_ORIGINAL_ARRANGEMENT_TEXT' => 'I make original arrangements in various musical styles.',
+    'BLURB_BEST_EQUIPMENT' => 'Professional Equipment',
+    'BLURB_BEST_EQUIPMENT_TEXT' => 'I use professional musical equipment.',
+    'BLURB_UNIQUE_ART' => 'Individual Approach',
+    'BLURB_UNIQUE_ART_TEXT' => 'I find unique features of a music artist and try to reflect them in my work.',
 
     /* Блок обо мне */
     'ABOUT_ME' => 'About Me',

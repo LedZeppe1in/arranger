@@ -43,7 +43,6 @@ class Review extends \yii\db\ActiveRecord
         return [
             [['name', 'text'], 'required'],
             [['name', 'city', 'occupation'], 'string', 'max' => 255],
-            [['text'], 'string'],
             // verifyCode needs to be entered correctly
             ['verifyCode', 'captcha', 'captchaAction' => '/main/default/captcha'],
         ];

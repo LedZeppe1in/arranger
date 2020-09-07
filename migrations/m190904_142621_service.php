@@ -18,7 +18,7 @@ class m190904_142621_service extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
             'name' => $this->string()->notNull(),
-            'price' => $this->money(12, 2)->notNull(),
+            'price' => $this->string()->notNull(),
             'description' => $this->text(),
         ], $tableOptions);
 

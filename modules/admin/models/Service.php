@@ -35,9 +35,8 @@ class Service extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'price'], 'required'],
-            ['price', 'match', 'pattern'=>'/^[0-9]{1,12}(\.[0-9]{0,2})?$/',
-                'message' => Yii::t('app', 'SERVICE_MODEL_MESSAGE_PRICE')],
-            [['description'], 'string', 'max' => 600],
+//            ['price', 'match', 'pattern'=>'/^[0-9]{1,12}(\.[0-9]{0,2})?$/',
+//                'message' => Yii::t('app', 'SERVICE_MODEL_MESSAGE_PRICE')],
             [['name'], 'string', 'max' => 255],
         ];
     }

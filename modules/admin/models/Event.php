@@ -40,7 +40,7 @@ class Event extends \yii\db\ActiveRecord
             [['date'], 'date', 'format' => 'php:d.m.Y H:i'],
             ['duration', 'safe'],
             [['name', 'location'], 'string', 'max' => 255],
-            [['link', 'description'], 'string', 'max' => 600],
+            ['link', 'string', 'max' => 600],
         ];
     }
 

@@ -22,7 +22,9 @@ use yii\helpers\StringHelper;
     </td>
     <td>
         <div class="price-box-minimal">
-            <div class="heading-5 price">&#8381; <?= $model->price ?></div>
+            <div class="heading-5 price">
+                <?= preg_match("/^([0-9])+$/", $model->price) ? '&#8381; ' . $model->price : $model->price ?>
+            </div>
         </div>
     </td>
 </tr>

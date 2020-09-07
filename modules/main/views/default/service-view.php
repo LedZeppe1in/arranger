@@ -33,8 +33,12 @@ $this->title = Yii::t('app', 'SERVICE_PAGE_TITLE');
             <div class="col-md-5 inset-left-80">
                 <ul class="box-list">
                     <li>
-                        <div class="heading-6 title text-primary"><?= Yii::t('app', 'SERVICE_MODEL_PRICE') ?></div>
-                        <p class="font-weight-regular">&#8381;<?= $model->price ?></p>
+                        <div class="heading-6 title text-primary">
+                            <?= Yii::t('app', 'SERVICE_MODEL_PRICE') ?>
+                        </div>
+                        <p class="font-weight-regular">
+                            <?= preg_match("/^([0-9])+$/", $model->price) ? '&#8381; ' . $model->price : $model->price ?>
+                        </p>
                     </li>
                 </ul>
             </div>
